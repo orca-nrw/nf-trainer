@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b153a7e.chunk.css",
-    "main.js": "/static/js/main.1d6fef10.chunk.js",
-    "main.js.map": "/static/js/main.1d6fef10.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.4a7b83ae.js",
-    "runtime-main.js.map": "/static/js/runtime-main.4a7b83ae.js.map",
-    "static/js/2.ec5e72f3.chunk.js": "/static/js/2.ec5e72f3.chunk.js",
-    "static/js/2.ec5e72f3.chunk.js.map": "/static/js/2.ec5e72f3.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.6b153a7e.chunk.css.map": "/static/css/main.6b153a7e.chunk.css.map",
-    "static/js/2.ec5e72f3.chunk.js.LICENSE.txt": "/static/js/2.ec5e72f3.chunk.js.LICENSE.txt",
-    "static/media/eild_header_logo.da7d7cde.png": "/static/media/eild_header_logo.da7d7cde.png"
+    "main.css": "/nf-trainer/static/css/main.6b153a7e.chunk.css",
+    "main.js": "/nf-trainer/static/js/main.1d6fef10.chunk.js",
+    "main.js.map": "/nf-trainer/static/js/main.1d6fef10.chunk.js.map",
+    "runtime-main.js": "/nf-trainer/static/js/runtime-main.c35518a7.js",
+    "runtime-main.js.map": "/nf-trainer/static/js/runtime-main.c35518a7.js.map",
+    "static/js/2.ec5e72f3.chunk.js": "/nf-trainer/static/js/2.ec5e72f3.chunk.js",
+    "static/js/2.ec5e72f3.chunk.js.map": "/nf-trainer/static/js/2.ec5e72f3.chunk.js.map",
+    "index.html": "/nf-trainer/index.html",
+    "static/css/main.6b153a7e.chunk.css.map": "/nf-trainer/static/css/main.6b153a7e.chunk.css.map",
+    "static/js/2.ec5e72f3.chunk.js.LICENSE.txt": "/nf-trainer/static/js/2.ec5e72f3.chunk.js.LICENSE.txt",
+    "static/media/eild_header_logo.da7d7cde.png": "/nf-trainer/static/media/eild_header_logo.da7d7cde.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4a7b83ae.js",
+    "static/js/runtime-main.c35518a7.js",
     "static/js/2.ec5e72f3.chunk.js",
     "static/css/main.6b153a7e.chunk.css",
     "static/js/main.1d6fef10.chunk.js"
