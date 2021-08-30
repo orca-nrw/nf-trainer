@@ -1,6 +1,6 @@
 {
   "name": "nf-trainer",
-  "homepage": "https://eild-nrw.github.io/nf-trainer",
+  "homepage": "./",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
