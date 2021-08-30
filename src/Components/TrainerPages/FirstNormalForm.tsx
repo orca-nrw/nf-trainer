@@ -1,11 +1,20 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Redirect, useParams } from 'react-router-dom'
+import tasks from '../../data'
 
 export default function FirstNormalForm () {
+  // Get task from url param
   const { id } = useParams<ParamTypes>()
+  const task = tasks.find(task => task.id === Number(id))
+
+  // Redirect to index if there is no task with the given id
+  if (!task) return <Redirect to="/" />
 
   return (
-    <h1>First Normal Form (Task {id})</h1>
+    <>
+      <h1>First Normal Form (Task {task.id})</h1>
+      <p>{task.description}</p>
+    </>
   )
 }
 
