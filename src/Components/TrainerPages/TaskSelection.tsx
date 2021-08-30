@@ -1,13 +1,14 @@
 import React from 'react'
-import TaskBlock from '../Subcomponents/TaskBlock'
+import TaskGridElement from '../Subcomponents/TaskGridElement'
+import tasks from '../../data'
 
 export default function TaskSelection () {
   return (
     <div>
       <h1>Task Selection</h1>
       <div className="grid grid-cols-2 gap-4">
-        {['1', '2', '3', '4'].map(x => {
-          return <TaskBlock key={x} taskId={x} />
+        {tasks.map(task => {
+          return <TaskGridElement key={task.id} task={task} />
         })}
       </div>
     </div>
