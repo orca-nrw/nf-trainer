@@ -1,14 +1,18 @@
 import React from 'react'
-import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import Home from './TrainerPages/Home'
 import FirstNormalForm from './TrainerPages/FirstNormalForm'
 import TaskSelection from './TrainerPages/TaskSelection'
 
 export default function Trainer () {
   return (
-    <div className="bg-white p-4">
-      <h1 className="text-4xl font-mono">NF-Trainer</h1>
-      <Router basename="/">
+    <>
+      <div className="bg-white p-4">
+        <Link to="/">
+          <h1 className="text-4xl font-mono">NF-Trainer</h1>
+        </Link>
+      </div>
+      <div className="bg-white p-4">
         <Switch>
         <Route exact path="/">
             <Home />
@@ -38,7 +42,7 @@ export default function Trainer () {
             <ThirdNormalForm />
           </Route> */}
         </Switch>
-      </Router>
-    </div>
+      </div>
+    </>
   )
 }
