@@ -12,7 +12,7 @@ export default function FirstNormalForm () {
 
   return (
     <>
-      <h1>First Normal Form (Task {task.id})</h1>
+      <h1 className="font-bold text-xl">Erste Normalform</h1>
       <p>{task.description}</p>
     </>
   )
