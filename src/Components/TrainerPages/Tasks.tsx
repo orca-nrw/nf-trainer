@@ -9,11 +9,9 @@ export default function Tasks () {
   return (
     <Switch>
       <Route exact path={path}>
-        <h1>Test</h1>
         <TaskSelection />
       </Route>
       <Route path={`${path}/:id/firstNormalForm`}>
-        <h1>Test</h1>
         <FirstNormalForm />
       </Route>
     {/* <Route path="/violatingColumns">
