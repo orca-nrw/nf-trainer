@@ -1,18 +1,44 @@
 export default [
   {
     id: 1,
-    description: 'Dummy description 1'
-  },
-  {
-    id: 2,
-    description: 'Dummy description 2'
-  },
-  {
-    id: 3,
-    description: 'Dummy description 3'
-  },
-  {
-    id: 4,
-    description: 'Dummy description 4'
+    description: 'In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.',
+    tableData: [
+      {
+        Veranstaltungnummer: 112,
+        Veranstaltungsname: 'Englisch',
+        Personalnummer: 198,
+        Name: 'Schulz',
+        Skriptnummer: 2,
+        Preis: 25,
+        Anzahl: 4
+      },
+      {
+        Veranstaltungnummer: 112,
+        Veranstaltungsname: 'Englisch',
+        Personalnummer: 237,
+        Name: 'Lange',
+        Skriptnummer: 9,
+        Preis: 44,
+        Anzahl: 5
+      },
+      {
+        Veranstaltungnummer: 112,
+        Veranstaltungsname: 'Englisch',
+        Personalnummer: 11,
+        Name: 'Meyer',
+        Skriptnummer: 2,
+        Preis: 25,
+        Anzahl: 4
+      },
+      {
+        Veranstaltungnummer: 202,
+        Veranstaltungsname: 'Spanisch',
+        Personalnummer: 198,
+        Name: 'Schulz',
+        Skriptnummer: 4,
+        Preis: 22,
+        Anzahl: 9
+      }
+    ]
   }
 ]
