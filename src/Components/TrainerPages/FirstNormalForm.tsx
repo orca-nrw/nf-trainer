@@ -14,7 +14,6 @@ export default function FirstNormalForm () {
   const nextPage = task.hasViolatingColumns ? `/tasks/${id}/violatingColumns` : `/tasks/${id}/functionalDependencies`
 
   return (
-    <>
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Erste Normalform</h1>
       <p>{task.description}</p>
@@ -22,7 +21,6 @@ export default function FirstNormalForm () {
       <p className="text-center">Befindet sich die Tabelle in der ersten Normalform?</p>
       <BooleanResponseHandler isCorrect={true} redirectTo={nextPage} />
     </div>
-    </>
   )
 }
 
