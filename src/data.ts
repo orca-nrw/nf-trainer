@@ -39,6 +39,8 @@ export default [
         Preis: 22,
         Anzahl: 9
       }
-    ]
+    ],
+    hasViolatingColumns: false,
+    violatingColumns: []
   }
 ]
