@@ -3,6 +3,8 @@ import { Switch, Route, Link } from 'react-router-dom'
 import Home from './TrainerPages/Home'
 import TaskSelection from './TrainerPages/TaskSelection'
 import FirstNormalForm from './TrainerPages/FirstNormalForm'
+import ViolatingColumns from './TrainerPages/ViolatingColumns'
+import FunctionalDependencies from './TrainerPages/FunctionalDependencies'
 
 export default function Trainer () {
   return (
@@ -21,22 +23,22 @@ export default function Trainer () {
           <Route path="/tasks/:id/firstNormalForm">
             <FirstNormalForm />
           </Route>
-          {/* <Route path="/violatingColumns">
+          <Route path="/tasks/:id/violatingColumns">
             <ViolatingColumns />
-          </Route> */}
-          <Route path="/functionalDependencies">
+          </Route>
+          <Route path="/tasks/:id/functionalDependencies">
             <FunctionalDependencies />
           </Route>
-          {/* <Route path="/primaryKeys">
+          {/* <Route path="/tasks/:id/primaryKeys">
             <PrimaryKeys />
           </Route>
-          <Route path="/functionalDependencyTypes">
+          <Route path="/tasks/:id/functionalDependencyTypes">
             <FunctionalDependencyTypes />
           </Route>
-          <Route path="/secondNormalForm">
+          <Route path="/tasks/:id/secondNormalForm">
             <SecondNormalForm />
           </Route>
-          <Route path="/thirdNormalForm">
+          <Route path="/tasks/:id/thirdNormalForm">
             <ThirdNormalForm />
           </Route> */}
         </Switch>
