@@ -8,9 +8,7 @@ export default function Trainer () {
   return (
     <>
       <div className="bg-white p-4">
-        <Link to="/">
-          <h1 className="text-4xl font-mono">NF-Trainer</h1>
-        </Link>
+        <Link className="no-underline text-black text-4xl font-semibold font-mono" to="/">NF-Trainer</Link>
       </div>
       <div className="bg-white p-4">
       <Switch>
