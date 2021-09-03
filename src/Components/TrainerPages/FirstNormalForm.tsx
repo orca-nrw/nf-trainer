@@ -11,6 +11,7 @@ export default function FirstNormalForm () {
 
   // Redirect to index if there is no task with the given id
   if (!task) return <Redirect to="/" />
+  const nextPage = task.hasViolatingColumns ? `/tasks/${id}/violatingColumns` : `/tasks/${id}/functionalDependencies`
 
   return (
     <>
@@ -19,7 +20,7 @@ export default function FirstNormalForm () {
       <p>{task.description}</p>
       <Table tableData={task.tableData}/>
       <p className="text-center">Befindet sich die Tabelle in der ersten Normalform?</p>
-      <BooleanResponseHandler isCorrect={true} redirectTo="/" />
+      <BooleanResponseHandler isCorrect={true} redirectTo={nextPage} />
     </div>
     </>
   )

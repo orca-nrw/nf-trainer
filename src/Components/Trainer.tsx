@@ -23,11 +23,11 @@ export default function Trainer () {
           </Route>
           {/* <Route path="/violatingColumns">
             <ViolatingColumns />
-          </Route>
+          </Route> */}
           <Route path="/functionalDependencies">
             <FunctionalDependencies />
           </Route>
-          <Route path="/primaryKeys">
+          {/* <Route path="/primaryKeys">
             <PrimaryKeys />
           </Route>
           <Route path="/functionalDependencyTypes">
