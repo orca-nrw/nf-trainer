@@ -10,7 +10,7 @@ export default function TaskGridElement ({ task }: PropTypes) {
         {task.description}
       </p>
       <Link to={`/tasks/${task.id}/firstNormalForm`}>
-        <button type="button" className="px-2 py-1 bg-pink-600 hover:bg-pink-500 text-white text-lg rounded-md cursor-pointer">Begin</button>
+        <button type="button" className="px-2 py-1 bg-red-500 hover:bg-red-600 text-white text-lg rounded-md cursor-pointer">Begin</button>
       </Link>
     </div>
   )
