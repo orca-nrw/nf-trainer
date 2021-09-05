@@ -12,7 +12,7 @@ export default function Home () {
       </p>
 
       <Link to="/tasks">
-        <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg rounded-md cursor-pointer" type="button">
+        <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer" type="button">
           Aufgabe auswählen
         </button>
       </Link>
