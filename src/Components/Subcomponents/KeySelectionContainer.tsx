@@ -13,11 +13,11 @@ export default function KeySelectionContainer ({ keys }: PropTypes) {
     <div className="grid grid-cols-2 gap-4 border p-4 shadow-md">
       <div>
         <h1 className="font-bold">Primärschlüssel</h1>
-        <CheckboxResponseHandler entryList={keys} selectedEntries={selectedPrimaryKeys} setSelectedEntries={setSelectedPrimaryKeys} selectionColor="purple" />
+        <CheckboxResponseHandler entryList={keys} selectedEntries={selectedPrimaryKeys} setSelectedEntries={setSelectedPrimaryKeys} useAccent={true} />
       </div>
       <div>
         <h1 className="font-bold">Spalten</h1>
-        <CheckboxResponseHandler entryList={keys} selectedEntries={selectedColumns} setSelectedEntries={setSelectedColumns} selectionColor="red" />
+        <CheckboxResponseHandler entryList={keys} selectedEntries={selectedColumns} setSelectedEntries={setSelectedColumns} useAccent={false} />
       </div>
     </div>
   )
