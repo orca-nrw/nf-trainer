@@ -12,7 +12,7 @@ interface PropTypes {
   updateAssociation: (x: Association) => void
 }
 
-export default function KeySelectionContainer ({ keys, association, updateAssociation }: PropTypes) {
+export default function KeyAssociation ({ keys, association, updateAssociation }: PropTypes) {
   function updatePrimaryKeys (updatedPrimaryKeys: string[]) {
     updateAssociation({
       primaryKeys: updatedPrimaryKeys,

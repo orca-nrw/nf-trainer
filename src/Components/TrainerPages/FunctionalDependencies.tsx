@@ -2,7 +2,7 @@ import React from 'react'
 import tasks from '../../data'
 import { Redirect, useParams } from 'react-router-dom'
 import Table from '../Subcomponents/Table'
-import KeySelectionResponseHandler from '../Subcomponents/KeySelectionResponseHandler'
+import AssociationResponseHandler from '../Subcomponents/AssociationResponseHandler'
 
 export default function FunctionalDependencies () {
   // Get task from url param
@@ -21,7 +21,7 @@ export default function FunctionalDependencies () {
       <p>{task.description}</p>
       <Table tableData={task.tableData}/>
       <p className="text-center">Bestimmen Sie alle funktionalen Abhängigkeiten!</p>
-      <KeySelectionResponseHandler keys={taskKeys} associationsSolution={functionalDependencies} redirectTo="/" />
+      <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} redirectTo="/" />
     </div>
   )
 }
