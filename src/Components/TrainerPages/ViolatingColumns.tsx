@@ -27,7 +27,7 @@ export default function ViolatingColumns () {
   const [message, setMessage] = useState('')
 
   function evaluateEntries () {
-    if (selectedEntries.every(entry => violatingColumns.includes(entry))) return true
+    if (selectedEntries.length === violatingColumns.length && selectedEntries.every(entry => violatingColumns.includes(entry))) return true
     return false
   }
 
