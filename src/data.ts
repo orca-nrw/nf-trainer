@@ -4,7 +4,7 @@ export default [
     description: 'In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.',
     tableData: [
       {
-        Veranstaltungnummer: 112,
+        Veranstaltungsnummer: 112,
         Veranstaltungsname: 'Englisch',
         Personalnummer: 198,
         Name: 'Schulz',
@@ -13,7 +13,7 @@ export default [
         Anzahl: 4
       },
       {
-        Veranstaltungnummer: 112,
+        Veranstaltungsnummer: 112,
         Veranstaltungsname: 'Englisch',
         Personalnummer: 237,
         Name: 'Lange',
@@ -22,7 +22,7 @@ export default [
         Anzahl: 5
       },
       {
-        Veranstaltungnummer: 112,
+        Veranstaltungsnummer: 112,
         Veranstaltungsname: 'Englisch',
         Personalnummer: 11,
         Name: 'Meyer',
@@ -31,7 +31,7 @@ export default [
         Anzahl: 4
       },
       {
-        Veranstaltungnummer: 202,
+        Veranstaltungsnummer: 202,
         Veranstaltungsname: 'Spanisch',
         Personalnummer: 198,
         Name: 'Schulz',
