@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Task } from '../../types/task'
+import { Task } from '../../types/global'
 
 export default function TaskGridElement ({ task }: PropTypes) {
   return (
