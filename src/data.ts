@@ -45,20 +45,25 @@ export default [
     functionalDependencies: [
       {
         primaryKeys: ['Veranstaltungsnummer'],
-        columns: ['Veranstaltungsname']
+        columns: ['Veranstaltungsname'],
+        type: 'partiell'
       },
       {
         primaryKeys: ['Personalnummer'],
-        columns: ['Name']
+        columns: ['Name'],
+        type: 'partiell'
       },
       {
         primaryKeys: ['Skriptnummer'],
-        columns: ['Preis']
+        columns: ['Preis'],
+        type: 'partiell'
       },
       {
         primaryKeys: ['Veranstaltungsnummer', 'Skriptnummer'],
-        columns: ['Anzahl']
+        columns: ['Anzahl'],
+        type: 'voll'
       }
-    ]
+    ],
+    primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer']
   }
 ]
