@@ -29,7 +29,7 @@ export default function Trainer () {
           <Route path="/tasks/:id/functionalDependencies">
             <FunctionalDependencies />
           </Route>
-          {/* <Route path="/tasks/:id/primaryKeys">
+          <Route path="/tasks/:id/primaryKeys">
             <PrimaryKeys />
           </Route>
           <Route path="/tasks/:id/functionalDependencyTypes">
