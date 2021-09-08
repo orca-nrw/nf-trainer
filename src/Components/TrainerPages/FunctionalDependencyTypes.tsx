@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect, useHistory, useParams } from 'react-router'
 import tasks from '../../data'
+import FunctionalDependencyHandler from '../Subcomponents/FunctionalDependencyHandler'
 import Table from '../Subcomponents/Table'
 
 interface ParamTypes {
@@ -18,7 +19,7 @@ export default function FunctionalDependencyTypes () {
   const history = useHistory()
 
   // Task Variables
-  // const taskKeys = Object.keys(task.tableData[0])
+  const functionalDependencies = task.functionalDependencies
 
   // Component State
   const [message, setMessage] = useState('')
@@ -43,7 +44,7 @@ export default function FunctionalDependencyTypes () {
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>
-
+        <FunctionalDependencyHandler functionalDependencies={functionalDependencies} />
         <p className="text-l font-bold text-center">{message}</p>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
       </div>
