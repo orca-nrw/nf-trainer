@@ -34,7 +34,7 @@ export default function PrimaryKeys () {
   function handleSubmit () {
     if (evaluateEntries()) {
       setMessage('Korrekt!')
-      setTimeout(() => history.push(`/tasks/${id}/functionalDependencyType`), 2000)
+      setTimeout(() => history.push(`/tasks/${id}/functionalDependencyTypes`), 2000)
     } else {
       setMessage('Leider falsch!')
     }
