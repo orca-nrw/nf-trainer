@@ -5,6 +5,8 @@ import TaskSelection from './TrainerPages/TaskSelection'
 import FirstNormalForm from './TrainerPages/FirstNormalForm'
 import ViolatingColumns from './TrainerPages/ViolatingColumns'
 import FunctionalDependencies from './TrainerPages/FunctionalDependencies'
+import PrimaryKeys from './TrainerPages/PrimaryKeys'
+import FunctionalDependencyTypes from './TrainerPages/FunctionalDependencyTypes'
 
 export default function Trainer () {
   return (
@@ -35,7 +37,7 @@ export default function Trainer () {
           <Route path="/tasks/:id/functionalDependencyTypes">
             <FunctionalDependencyTypes />
           </Route>
-          <Route path="/tasks/:id/secondNormalForm">
+          {/* <Route path="/tasks/:id/secondNormalForm">
             <SecondNormalForm />
           </Route>
           <Route path="/tasks/:id/thirdNormalForm">
