@@ -21,7 +21,7 @@ export default function FunctionalDependencies () {
       <p>{task.description}</p>
       <Table tableData={task.tableData}/>
       <p className="text-center">Bestimmen Sie alle funktionalen Abhängigkeiten!</p>
-      <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} redirectTo="/" />
+      <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} redirectTo={`/tasks/${id}/primaryKeys`} />
     </div>
   )
 }
