@@ -1,5 +1,4 @@
 import React from 'react'
-import uniqueId from '../../utils/uniqueId'
 
 interface FunctionalDependency {
   primaryKeys: string[],
@@ -8,18 +7,27 @@ interface FunctionalDependency {
 }
 
 interface PropTypes {
-  functionalDependencies: FunctionalDependency[]
+  functionalDependencies: FunctionalDependency[],
+  selectedTypes: string[]
+  setSelectedTypes: (types: string[]) => void
 }
 
-export default function FunctionalDependencyHandler ({ functionalDependencies }: PropTypes) {
+export default function FunctionalDependencyHandler ({ functionalDependencies, selectedTypes, setSelectedTypes }: PropTypes) {
+  function handleChange (e: React.ChangeEvent, index: number) {
+    const value = (e.target as HTMLInputElement).value
+    const newSelectedTypes = [...selectedTypes]
+    newSelectedTypes.splice(index, 1, value)
+    setSelectedTypes(newSelectedTypes)
+  }
+
   return (
     <div className="flex flex-col space-y-4">
-      {functionalDependencies.map(dependency => {
+      {functionalDependencies.map((dependency, index) => {
         const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
         return (
-          <div className="text-right" key={uniqueId()}>
+          <div className="text-right" key={index}>
             <label className="mr-4 font-semibold">{dependencyString}</label>
-            <select className="border rounded p-1">
+            <select className="border rounded p-1" onChange={(event: React.ChangeEvent) => handleChange(event, index)} key={index} value={selectedTypes[index]} >
               <option value="voll">Voll</option>
               <option value="partiell">Partiell</option>
               <option value="transitiv">Transitiv</option>
