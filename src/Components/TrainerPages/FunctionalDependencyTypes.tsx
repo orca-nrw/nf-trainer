@@ -22,9 +22,13 @@ export default function FunctionalDependencyTypes () {
   const functionalDependencies = task.functionalDependencies
 
   // Component State
+  const [selectedTypes, setSelectedTypes] = useState(Array(functionalDependencies.length).fill('voll'))
   const [message, setMessage] = useState('')
 
-  function evaluateEntries () {
+  function evaluateEntries (): boolean {
+    for (const index in functionalDependencies) {
+      if (functionalDependencies[index].type !== selectedTypes[index]) return false
+    }
     return true
   }
 
@@ -44,7 +48,7 @@ export default function FunctionalDependencyTypes () {
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>
-        <FunctionalDependencyHandler functionalDependencies={functionalDependencies} />
+        <FunctionalDependencyHandler functionalDependencies={functionalDependencies} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
         <p className="text-l font-bold text-center">{message}</p>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
       </div>
