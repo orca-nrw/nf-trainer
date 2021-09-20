@@ -26,7 +26,7 @@ export default function ThirdNormalForm () {
       <p>{task.description}</p>
       <TableGrid gridData={task.secondFormTableData} />
       <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
-      <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} redirectTo={`/task/${id}/thirdNormalForm`} />
+      <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} redirectTo={'/done'} />
     </div>
   )
 }
