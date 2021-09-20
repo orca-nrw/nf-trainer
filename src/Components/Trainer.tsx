@@ -7,6 +7,8 @@ import ViolatingColumns from './TrainerPages/ViolatingColumns'
 import FunctionalDependencies from './TrainerPages/FunctionalDependencies'
 import PrimaryKeys from './TrainerPages/PrimaryKeys'
 import FunctionalDependencyTypes from './TrainerPages/FunctionalDependencyTypes'
+import SecondNormalForm from './TrainerPages/SecondNormalForm'
+import ThirdNormalForm from './TrainerPages/ThirdNormalForm'
 
 export default function Trainer () {
   return (
@@ -37,12 +39,12 @@ export default function Trainer () {
           <Route path="/tasks/:id/functionalDependencyTypes">
             <FunctionalDependencyTypes />
           </Route>
-          {/* <Route path="/tasks/:id/secondNormalForm">
+          <Route path="/tasks/:id/secondNormalForm">
             <SecondNormalForm />
           </Route>
           <Route path="/tasks/:id/thirdNormalForm">
             <ThirdNormalForm />
-          </Route> */}
+          </Route>
         </Switch>
       </div>
     </>
