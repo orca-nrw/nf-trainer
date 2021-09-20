@@ -64,6 +64,24 @@ export default [
         type: 'voll'
       }
     ],
-    primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer']
+    primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
+    secondNormalForm: [
+      {
+        primaryKeys: ['Veranstaltungsnummer'],
+        columns: ['Veranstaltungsname']
+      },
+      {
+        primaryKeys: ['Personalnummer'],
+        columns: ['Name']
+      },
+      {
+        primaryKeys: ['Skriptnummer'],
+        columns: ['Preis']
+      },
+      {
+        primaryKeys: ['Veranstaltungsnummer', 'Skriptnummer'],
+        columns: ['Anzahl']
+      }
+    ]
   }
 ]
