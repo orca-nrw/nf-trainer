@@ -10,7 +10,7 @@ import FunctionalDependencyTypes from './TrainerPages/FunctionalDependencyTypes'
 import SecondNormalForm from './TrainerPages/SecondNormalForm'
 import ThirdNormalForm from './TrainerPages/ThirdNormalForm'
 
-export default function Trainer () {
+export default function TrainerRouter () {
   return (
     <>
       <div className="bg-white p-4">
