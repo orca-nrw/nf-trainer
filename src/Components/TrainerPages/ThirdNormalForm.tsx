@@ -2,7 +2,7 @@ import React from 'react'
 import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import AssociationResponseHandler from '../Subcomponents/AssociationResponseHandler'
-import Table from '../Subcomponents/Table'
+import TableGrid from '../Subcomponents/TableGrid'
 
 interface ParamTypes {
   id: string
@@ -18,13 +18,13 @@ export default function ThirdNormalForm () {
 
   // Task Variables
   const taskKeys = Object.keys(task.tableData[0])
-  const associations = task.thirdNormalForm
+  const associations = task.thirdNormalFormSolutions
 
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Dritte Normalform</h1>
       <p>{task.description}</p>
-      <Table tableData={task.tableData} />
+      <TableGrid gridData={task.secondFormTableData} />
       <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} redirectTo={`/task/${id}/thirdNormalForm`} />
     </div>
