@@ -9,6 +9,7 @@ import PrimaryKeys from './TrainerPages/PrimaryKeys'
 import FunctionalDependencyTypes from './TrainerPages/FunctionalDependencyTypes'
 import SecondNormalForm from './TrainerPages/SecondNormalForm'
 import ThirdNormalForm from './TrainerPages/ThirdNormalForm'
+import Done from './TrainerPages/Done'
 
 export default function TrainerRouter () {
   return (
@@ -44,6 +45,9 @@ export default function TrainerRouter () {
           </Route>
           <Route path="/tasks/:id/thirdNormalForm">
             <ThirdNormalForm />
+          </Route>
+          <Route path="/done">
+            <Done />
           </Route>
         </Switch>
       </div>
