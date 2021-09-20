@@ -26,7 +26,7 @@ export default function SecondNormalForm () {
       <p>{task.description}</p>
       <Table tableData={task.tableData} />
       <p className="text-center">Bringen Sie das Schema in die zweite Normalform!</p>
-      <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} redirectTo={`/task/${id}/thirdNormalForm`} />
+      <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} redirectTo={`/tasks/${id}/thirdNormalForm`} />
     </div>
   )
 }
