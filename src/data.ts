@@ -59,7 +59,7 @@ export default [
         type: 'partiell'
       },
       {
-        primaryKeys: ['Veranstaltungsnummer', 'Skriptnummer'],
+        primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
         columns: ['Anzahl'],
         type: 'voll'
       }
@@ -79,7 +79,7 @@ export default [
         columns: ['Preis']
       },
       {
-        primaryKeys: ['Veranstaltungsnummer', 'Skriptnummer'],
+        primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
         columns: ['Anzahl']
       }
     ],
@@ -97,7 +97,7 @@ export default [
         columns: ['Preis']
       },
       {
-        primaryKeys: ['Veranstaltungsnummer', 'Skriptnummer'],
+        primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
         columns: ['Anzahl']
       }
     ]
