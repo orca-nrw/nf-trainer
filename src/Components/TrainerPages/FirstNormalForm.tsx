@@ -13,6 +13,18 @@ export default function FirstNormalForm () {
   if (!task) return <Redirect to="/" />
   const nextPage = task.hasViolatingColumns ? `/tasks/${id}/violatingColumns` : `/tasks/${id}/functionalDependencies`
 
+  const [message, setMessage] = useState('')
+  const [isEnabled, setIsEnabled] = useState(false)
+
+  function handleResponse (response: boolean) {
+    if (response !== task?.hasViolatingColumns) {
+      setMessage('Korrekt!')
+      setIsEnabled(true)
+    } else {
+      setMessage('Leider falsch!')
+    }
+  }
+
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Erste Normalform</h1>
@@ -24,6 +36,8 @@ export default function FirstNormalForm () {
             {task.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
         </SampleSolution>
       </div>
+      <BooleanResponseHandler responseHandler={handleResponse} />
+      <p className="text-l font-bold text-center">{message}</p>
     </div>
   )
 }
