@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
 import tasks from '../../data'
 import BooleanResponseHandler from '../Subcomponents/BooleanResponseHandler'
+import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
+import SampleSolution from '../Subcomponents/SampleSolution'
 import Table from '../Subcomponents/Table'
 
 export default function FirstNormalForm () {
@@ -38,6 +40,7 @@ export default function FirstNormalForm () {
       </div>
       <BooleanResponseHandler responseHandler={handleResponse} />
       <p className="text-l font-bold text-center">{message}</p>
+      <PrevNextNavigation prev="/tasks" next={nextPage} nextIsEnabled={isEnabled} />
     </div>
   )
 }
