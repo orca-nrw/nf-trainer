@@ -18,8 +18,12 @@ export default function FirstNormalForm () {
       <h1 className="font-bold text-xl">Erste Normalform</h1>
       <p>{task.description}</p>
       <Table tableData={task.tableData}/>
-      <p className="text-center">Befindet sich die Tabelle in der ersten Normalform?</p>
-      <BooleanResponseHandler isCorrect={true} redirectTo={nextPage} />
+      <div className="flex flex-col items-center space-y-4">
+        <p>Befindet sich die Tabelle in der ersten Normalform?</p>
+        <SampleSolution >
+            {task.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
+        </SampleSolution>
+      </div>
     </div>
   )
 }
