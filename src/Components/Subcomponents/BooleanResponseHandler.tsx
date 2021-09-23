@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
+interface PropType {
+  isCorrect: boolean,
+  redirectTo: string
+}
+
 export default function BooleanResponseHandler ({ isCorrect, redirectTo }: PropType) {
   const [message, setMessage] = useState('')
   const history = useHistory()
@@ -23,9 +28,4 @@ export default function BooleanResponseHandler ({ isCorrect, redirectTo }: PropT
         </form>
       </div>
   )
-}
-
-interface PropType {
-  isCorrect: boolean,
-  redirectTo: string
 }
