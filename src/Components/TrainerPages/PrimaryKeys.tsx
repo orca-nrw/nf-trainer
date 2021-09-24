@@ -48,7 +48,10 @@ export default function PrimaryKeys () {
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Bestimmen Sie alle eindeutigen Schlüssel!</p>
-        <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
+        <div className="p-4 border shadow-md">
+          <h1 className="font-bold">Schlüssel</h1>
+          <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
+        </div>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
         <SampleSolution >
           <p>{primaryKeys.join(', ')}</p>
