@@ -3,6 +3,7 @@ import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import CheckboxResponseHandler from '../Subcomponents/CheckboxResponseHandler'
 import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
+import SampleSolution from '../Subcomponents/SampleSolution'
 import Table from '../Subcomponents/Table'
 
 interface ParamTypes {
@@ -49,6 +50,9 @@ export default function PrimaryKeys () {
         <p>Bestimmen Sie alle eindeutigen Schlüssel!</p>
         <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <SampleSolution >
+          <p>{primaryKeys.join(', ')}</p>
+        </SampleSolution>
         <p className="text-l font-bold text-center">{message}</p>
       </div>
       <PrevNextNavigation prev={`/tasks/${id}/functionalDependencies`} next={`/tasks/${id}/functionalDependencyTypes`} nextIsEnabled={isEnabled} />

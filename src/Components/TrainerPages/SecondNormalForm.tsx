@@ -3,6 +3,7 @@ import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import AssociationResponseHandler from '../Subcomponents/AssociationResponseHandler'
 import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
+import SampleSolution from '../Subcomponents/SampleSolution'
 import Table from '../Subcomponents/Table'
 
 interface ParamTypes {
@@ -40,6 +41,12 @@ export default function SecondNormalForm () {
       <Table tableData={task.tableData} />
       <p className="text-center">Bringen Sie das Schema in die zweite Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
+      <SampleSolution >
+          {task.secondNormalForm.map((dependency, index) => {
+            const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+            return <p key={index}>{dependencyString}</p>
+          })}
+      </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
       <PrevNextNavigation prev={`/tasks/${id}/functionalDependencyTypes`} next={`/tasks/${id}/thirdNormalForm`} nextIsEnabled={isEnabled} />
     </div>

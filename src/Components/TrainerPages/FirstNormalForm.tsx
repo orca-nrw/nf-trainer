@@ -34,11 +34,11 @@ export default function FirstNormalForm () {
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Befindet sich die Tabelle in der ersten Normalform?</p>
-        <SampleSolution >
-            {task.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
-        </SampleSolution>
       </div>
       <BooleanResponseHandler responseHandler={handleResponse} />
+      <SampleSolution >
+        {task.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
+      </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
       <PrevNextNavigation prev="/tasks" next={nextPage} nextIsEnabled={isEnabled} />
     </div>

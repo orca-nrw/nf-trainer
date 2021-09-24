@@ -3,6 +3,7 @@ import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import FunctionalDependencyHandler from '../Subcomponents/FunctionalDependencyHandler'
 import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
+import SampleSolution from '../Subcomponents/SampleSolution'
 import Table from '../Subcomponents/Table'
 
 interface ParamTypes {
@@ -50,6 +51,12 @@ export default function FunctionalDependencyTypes () {
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>
         <FunctionalDependencyHandler functionalDependencies={functionalDependencies} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <SampleSolution >
+          {task.functionalDependencies.map((dependency, index) => {
+            const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')} : ${dependency.type}`
+            return <p key={index}>{dependencyString}</p>
+          })}
+        </SampleSolution>
         <p className="text-l font-bold text-center">{message}</p>
       </div>
       <PrevNextNavigation prev={`/tasks/${id}/primaryKeys`} next={`/tasks/${id}/secondNormalForm`} nextIsEnabled={isEnabled} />

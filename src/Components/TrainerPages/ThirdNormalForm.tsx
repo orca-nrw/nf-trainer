@@ -3,6 +3,7 @@ import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import AssociationResponseHandler from '../Subcomponents/AssociationResponseHandler'
 import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
+import SampleSolution from '../Subcomponents/SampleSolution'
 import TableGrid from '../Subcomponents/TableGrid'
 
 interface ParamTypes {
@@ -40,6 +41,12 @@ export default function ThirdNormalForm () {
       <TableGrid gridData={task.secondFormTableData} />
       <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
+      <SampleSolution >
+          {task.thirdNormalFormSolutions.map((dependency, index) => {
+            const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+            return <p key={index}>{dependencyString}</p>
+          })}
+      </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
       <PrevNextNavigation prev={`/tasks/${id}/secondNormalForm`} next={'/done'} nextIsEnabled={isEnabled} />
     </div>

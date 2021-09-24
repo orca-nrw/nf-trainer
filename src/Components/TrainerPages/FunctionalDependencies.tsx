@@ -4,6 +4,7 @@ import { Redirect, useParams } from 'react-router-dom'
 import Table from '../Subcomponents/Table'
 import AssociationResponseHandler from '../Subcomponents/AssociationResponseHandler'
 import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
+import SampleSolution from '../Subcomponents/SampleSolution'
 
 export default function FunctionalDependencies () {
   // Get task from url param
@@ -35,6 +36,12 @@ export default function FunctionalDependencies () {
       <Table tableData={task.tableData}/>
       <p className="text-center">Bestimmen Sie alle funktionalen Abhängigkeiten!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} responseHandler={handleResponse} />
+      <SampleSolution >
+        {functionalDependencies.map((dependency, index) => {
+          const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+          return <p key={index}>{dependencyString}</p>
+        })}
+      </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
       <PrevNextNavigation prev={`/tasks/${id}/firstNormalForm`} next={`/tasks/${id}/primaryKeys`} nextIsEnabled={isEnabled} />
     </div>
