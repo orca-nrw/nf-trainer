@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
-import tasks from '../../data'
-import BooleanResponseHandler from '../Subcomponents/BooleanResponseHandler'
-import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
-import SampleSolution from '../Subcomponents/SampleSolution'
-import Table from '../Subcomponents/Table'
+import BooleanResponseHandler from '../Components/BooleanResponseHandler'
+import PrevNextNavigation from '../Components/PrevNextNavigation'
+import SampleSolution from '../Components/SampleSolution'
+import Table from '../Components/Table'
+import tasks from '../data'
 
 export default function FirstNormalForm () {
   // Get task from url param

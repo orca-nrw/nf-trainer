@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
-import tasks from '../../data'
-import FunctionalDependencyHandler from '../Subcomponents/FunctionalDependencyHandler'
-import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
-import SampleSolution from '../Subcomponents/SampleSolution'
-import Table from '../Subcomponents/Table'
+import FunctionalDependencyHandler from '../Components/FunctionalDependencyHandler'
+import PrevNextNavigation from '../Components/PrevNextNavigation'
+import SampleSolution from '../Components/SampleSolution'
+import Table from '../Components/Table'
+import tasks from '../data'
 
 interface ParamTypes {
   id: string

@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
-import tasks from '../../data'
-import AssociationResponseHandler from '../Subcomponents/AssociationResponseHandler'
-import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
-import SampleSolution from '../Subcomponents/SampleSolution'
-import Table from '../Subcomponents/Table'
+import AssociationResponseHandler from '../Components/AssociationResponseHandler'
+import PrevNextNavigation from '../Components/PrevNextNavigation'
+import SampleSolution from '../Components/SampleSolution'
+import TableGrid from '../Components/TableGrid'
+import tasks from '../data'
 
 interface ParamTypes {
   id: string
 }
 
-export default function SecondNormalForm () {
+export default function ThirdNormalForm () {
   // Get task from url param
   const { id } = useParams<ParamTypes>()
   const task = tasks.find(task => task.id === Number(id))
@@ -20,7 +20,7 @@ export default function SecondNormalForm () {
 
   // Task Variables
   const taskKeys = Object.keys(task.tableData[0])
-  const associations = task.secondNormalForm
+  const associations = task.thirdNormalFormSolutions
 
   const [message, setMessage] = useState('')
   const [isEnabled, setIsEnabled] = useState(false)
@@ -36,19 +36,19 @@ export default function SecondNormalForm () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Zweite Normalform</h1>
+      <h1 className="font-bold text-xl">Dritte Normalform</h1>
       <p>{task.description}</p>
-      <Table tableData={task.tableData} />
-      <p className="text-center">Bringen Sie das Schema in die zweite Normalform!</p>
+      <TableGrid gridData={task.secondFormTableData} />
+      <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
       <SampleSolution >
-          {task.secondNormalForm.map((dependency, index) => {
+          {task.thirdNormalFormSolutions.map((dependency, index) => {
             const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
             return <p key={index}>{dependencyString}</p>
           })}
       </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
-      <PrevNextNavigation prev={`/tasks/${id}/functionalDependencyTypes`} next={`/tasks/${id}/thirdNormalForm`} nextIsEnabled={isEnabled} />
+      <PrevNextNavigation prev={`/tasks/${id}/secondNormalForm`} next={'/done'} nextIsEnabled={isEnabled} />
     </div>
   )
 }

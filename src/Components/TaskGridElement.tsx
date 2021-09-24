@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Task } from '../../types/global'
 
 export default function TaskGridElement ({ task }: PropTypes) {
   return (
@@ -17,5 +16,8 @@ export default function TaskGridElement ({ task }: PropTypes) {
 }
 
 interface PropTypes {
-  task: Task
+  task: {
+    id: number,
+    description: string
+  }
 }
