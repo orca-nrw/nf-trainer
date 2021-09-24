@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router'
 import KeyAssociation from './KeyAssociation'
 
 interface Association {
@@ -10,13 +9,10 @@ interface Association {
 interface PropTypes {
   keys: string[],
   associationsSolutions: Association[],
-  redirectTo: string
+  responseHandler: (response: boolean) => void
 }
 
-export default function AssociationResponseHandler ({ keys, associationsSolutions, redirectTo }: PropTypes) {
-  const [message, setMessage] = useState('')
-  const history = useHistory()
-
+export default function AssociationResponseHandler ({ keys, associationsSolutions, responseHandler }: PropTypes) {
   const [userAssociations, setUserAssociations] = useState<Association[]>([
     { primaryKeys: [], columns: [] },
     { primaryKeys: [], columns: [] },
@@ -52,12 +48,8 @@ export default function AssociationResponseHandler ({ keys, associationsSolution
   }
 
   function handleSubmit () {
-    if (evaluateAssociations()) {
-      setMessage('Korrekt!')
-      setTimeout(() => history.push(redirectTo), 2000)
-    } else {
-      setMessage('Leider falsch!')
-    }
+    const result = evaluateAssociations()
+    responseHandler(result)
   }
 
   return (
@@ -68,7 +60,6 @@ export default function AssociationResponseHandler ({ keys, associationsSolution
         <KeyAssociation keys={keys} association={userAssociations[2]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 2)} />
         <KeyAssociation keys={keys} association={userAssociations[3]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 3)} />
       </div>
-      <p className="text-l font-bold text-center">{message}</p>
       <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
     </>
   )
