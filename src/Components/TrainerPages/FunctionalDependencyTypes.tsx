@@ -43,7 +43,7 @@ export default function FunctionalDependencyTypes () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Primärschlüssel</h1>
+      <h1 className="font-bold text-xl">Typen der funktionalen Abhängigkeiten</h1>
       <p>{task.description}</p>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
