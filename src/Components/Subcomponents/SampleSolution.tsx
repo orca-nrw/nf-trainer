@@ -6,11 +6,13 @@ interface PropTypes {
 
 export default function SampleSolution ({ children }: PropTypes) {
   return (
-    <details className="p-2 bg-yellow-300 rounded-lg cursor-pointer select-none">
-          <summary>Musterlösung einblenden</summary>
-          <div className="cursor-default">
-            {children}
-          </div>
-        </details>
+    <div className="flex justify-around">
+      <details className="p-2 bg-yellow-300 rounded-lg cursor-pointer select-none inline-block">
+        <summary>Musterlösung einblenden</summary>
+        <div className="cursor-default">
+          {children}
+        </div>
+      </details>
+    </div>
   )
 }
