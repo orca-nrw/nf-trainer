@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Redirect, useHistory, useParams } from 'react-router'
+import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import CheckboxResponseHandler from '../Subcomponents/CheckboxResponseHandler'
+import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
 import Table from '../Subcomponents/Table'
 
 interface ParamTypes {
@@ -16,8 +17,6 @@ export default function PrimaryKeys () {
   // Redirect to index if there is no task with the given id
   if (!task) return <Redirect to="/" />
 
-  const history = useHistory()
-
   // Task Variables
   const taskKeys = Object.keys(task.tableData[0])
   const primaryKeys = task.primaryKeys
@@ -25,6 +24,7 @@ export default function PrimaryKeys () {
   // Component State
   const [selectedEntries, setSelectedEntries] = useState<string[]>([])
   const [message, setMessage] = useState('')
+  const [isEnabled, setIsEnabled] = useState(false)
 
   function evaluateEntries () {
     if (selectedEntries.length === primaryKeys.length && selectedEntries.every(entry => primaryKeys.includes(entry))) return true
@@ -34,7 +34,7 @@ export default function PrimaryKeys () {
   function handleSubmit () {
     if (evaluateEntries()) {
       setMessage('Korrekt!')
-      setTimeout(() => history.push(`/tasks/${id}/functionalDependencyTypes`), 2000)
+      setIsEnabled(true)
     } else {
       setMessage('Leider falsch!')
     }
@@ -48,9 +48,10 @@ export default function PrimaryKeys () {
       <div className="flex flex-col items-center space-y-4">
         <p>Bestimmen Sie alle eindeutigen Schlüssel!</p>
         <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
-        <p className="text-l font-bold text-center">{message}</p>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <p className="text-l font-bold text-center">{message}</p>
       </div>
+      <PrevNextNavigation prev={`/tasks/${id}/functionalDependencies`} next={`/tasks/${id}/functionalDependencyTypes`} nextIsEnabled={isEnabled} />
     </div>
   )
 }

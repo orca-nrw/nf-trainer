@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Redirect, useHistory, useParams } from 'react-router'
+import { Redirect, useParams } from 'react-router'
 import tasks from '../../data'
 import FunctionalDependencyHandler from '../Subcomponents/FunctionalDependencyHandler'
+import PrevNextNavigation from '../Subcomponents/PrevNextNavigation'
 import Table from '../Subcomponents/Table'
 
 interface ParamTypes {
@@ -16,14 +17,13 @@ export default function FunctionalDependencyTypes () {
   // Redirect to index if there is no task with the given id
   if (!task) return <Redirect to="/" />
 
-  const history = useHistory()
-
   // Task Variables
   const functionalDependencies = task.functionalDependencies
 
   // Component State
   const [selectedTypes, setSelectedTypes] = useState(Array(functionalDependencies.length).fill('voll'))
   const [message, setMessage] = useState('')
+  const [isEnabled, setIsEnabled] = useState(false)
 
   function evaluateEntries (): boolean {
     for (const index in functionalDependencies) {
@@ -35,7 +35,7 @@ export default function FunctionalDependencyTypes () {
   function handleSubmit () {
     if (evaluateEntries()) {
       setMessage('Korrekt!')
-      setTimeout(() => history.push(`/tasks/${id}/secondNormalForm`), 2000)
+      setIsEnabled(true)
     } else {
       setMessage('Leider falsch!')
     }
@@ -49,9 +49,10 @@ export default function FunctionalDependencyTypes () {
       <div className="flex flex-col items-center space-y-4">
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>
         <FunctionalDependencyHandler functionalDependencies={functionalDependencies} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
-        <p className="text-l font-bold text-center">{message}</p>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <p className="text-l font-bold text-center">{message}</p>
       </div>
+      <PrevNextNavigation prev={`/tasks/${id}/primaryKeys`} next={`/tasks/${id}/secondNormalForm`} nextIsEnabled={isEnabled} />
     </div>
   )
 }
