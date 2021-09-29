@@ -1,4 +1,27 @@
-export default [
+interface Task {
+  id: number,
+  description: string,
+  tableData: Object[],
+  hasViolatingColumns: boolean,
+  violatingColumns: string[],
+  functionalDependencies: {
+    primaryKeys: string[],
+    columns: string[],
+    type: string
+  }[],
+  primaryKeys: string[],
+  secondNormalForm: {
+    primaryKeys: string[],
+    columns: string[]
+  }[],
+  secondFormTableData: Object[][],
+  thirdNormalFormSolutions: {
+    primaryKeys: string[],
+    columns: string[]
+  }[]
+}
+
+const tasks: Task[] = [
   {
     id: 1,
     description: 'In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.',
@@ -169,3 +192,5 @@ export default [
     ]
   }
 ]
+
+export default tasks
