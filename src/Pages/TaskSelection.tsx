@@ -1,6 +1,6 @@
 import React from 'react'
 import TaskGridElement from '../Components/TaskGridElement'
-import tasks from '../data'
+import tasks from '../Tasks'
 
 export default function TaskSelection () {
   return (

@@ -3,7 +3,7 @@ import { Redirect, useParams } from 'react-router'
 import CheckboxResponseHandler from '../Components/CheckboxResponseHandler'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import Table from '../Components/Table'
-import tasks from '../data'
+import tasks from '../Tasks'
 
 interface ParamTypes {
   id: string

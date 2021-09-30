@@ -4,7 +4,7 @@ import BooleanResponseHandler from '../Components/BooleanResponseHandler'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import Table from '../Components/Table'
-import tasks from '../data'
+import tasks from '../Tasks'
 
 export default function FirstNormalForm () {
   // Get task from url param

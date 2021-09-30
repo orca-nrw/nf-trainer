@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import tasks from '../data'
+import tasks from '../Tasks'
 import { Redirect, useParams } from 'react-router-dom'
 import Table from '../Components/Table'
 import AssociationResponseHandler from '../Components/AssociationResponseHandler'

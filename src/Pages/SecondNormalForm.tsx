@@ -4,7 +4,7 @@ import AssociationResponseHandler from '../Components/AssociationResponseHandler
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import Table from '../Components/Table'
-import tasks from '../data'
+import tasks from '../Tasks'
 
 interface ParamTypes {
   id: string
