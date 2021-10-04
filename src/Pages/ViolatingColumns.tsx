@@ -43,7 +43,7 @@ export default function ViolatingColumns () {
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Erste Normalform</h1>
-      <p>{task.description}</p>
+      <pre className="font-sans">{task.description}</pre>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Markieren Sie alle Spalten die die erste Normalform verletzen!</p>

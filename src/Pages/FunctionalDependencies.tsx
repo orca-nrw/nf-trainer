@@ -32,7 +32,7 @@ export default function FunctionalDependencies () {
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Funktionale Abhängigkeiten</h1>
-      <p>{task.description}</p>
+      <pre className="font-sans">{task.description}</pre>
       <Table tableData={task.tableData}/>
       <p className="text-center">Bestimmen Sie alle funktionalen Abhängigkeiten!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} responseHandler={handleResponse} />

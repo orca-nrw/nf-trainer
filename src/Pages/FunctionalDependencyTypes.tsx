@@ -45,7 +45,7 @@ export default function FunctionalDependencyTypes () {
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Typen der funktionalen Abhängigkeiten</h1>
-      <p>{task.description}</p>
+      <pre className="font-sans">{task.description}</pre>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>

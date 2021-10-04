@@ -37,7 +37,7 @@ export default function SecondNormalForm () {
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Zweite Normalform</h1>
-      <p>{task.description}</p>
+      <pre className="font-sans">{task.description}</pre>
       <Table tableData={task.tableData} />
       <p className="text-center">Bringen Sie das Schema in die zweite Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />

@@ -37,7 +37,7 @@ export default function ThirdNormalForm () {
   return (
     <div className="space-y-4">
       <h1 className="font-bold text-xl">Dritte Normalform</h1>
-      <p>{task.description}</p>
+      <pre className="font-sans">{task.description}</pre>
       <TableGrid gridData={task.secondFormTableData} />
       <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
