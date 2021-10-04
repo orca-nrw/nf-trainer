@@ -989,137 +989,137 @@ const tasks: Task[] = [
   },
   {
     id: 5,
-    description: '<p>Betrachten Sie die folgende, im Pr&uuml;fungsamt gef&uuml;hrte Tabelle, wobei die FAK_NR (Fakult&auml;tsnummer)&nbsp; einer Pr&uuml;fung zugeordnet ist, nicht den Studenten:</p>',
+    description: 'Betrachten Sie die folgende, im Prüfungsamt geführte Tabelle. \n\nDabei stehen die Präfixe P_ für Prüfer, S_ für Studierender und Fak_ für Fakultät. \nAußerdem ist die Fakultätsnummer einer Prüfung zugeordnet, nicht dem Studierenden.',
     tableData: [
       {
-        pruef_nr: '1',
-        pruefer: 'Bertelsmeier',
-        fach: 'Datenbanken',
-        mat_nr: '230800',
-        stud_name: 'Schmidt',
-        geburtstag: '04.05.79',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '2.7',
-        datum_pruefung: '11.07.2008'
+        P_NR: '1',
+        P_Name: 'Bertelsmeier',
+        Fach: 'Datenbanken',
+        Mat_NR: '230800',
+        S_Name: 'Schmidt',
+        S_Geb_Tag: '04.05.79',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '2.7',
+        Datum_Pruefung: '11.07.2008'
       },
       {
-        pruef_nr: '1',
-        pruefer: 'Bertelsmeier',
-        fach: 'Datenbanken',
-        mat_nr: '230799',
-        stud_name: 'Maier',
-        geburtstag: '04.04.79',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '3',
-        datum_pruefung: '11.07.2008'
+        P_NR: '1',
+        P_Name: 'Bertelsmeier',
+        Fach: 'Datenbanken',
+        Mat_NR: '230799',
+        S_Name: 'Maier',
+        S_Geb_Tag: '04.04.79',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '3',
+        Datum_Pruefung: '11.07.2008'
       },
       {
-        pruef_nr: '2',
-        pruefer: 'Buse',
-        fach: 'Mathematik',
-        mat_nr: '237681',
-        stud_name: 'Wein',
-        geburtstag: '01.04.80',
-        fak_nr: '18',
-        fak_name: 'Elektrotechnik',
-        dekan: 'Bongrads',
-        note: '3',
-        datum_pruefung: '15.07.2008'
+        P_NR: '2',
+        P_Name: 'Buse',
+        Fach: 'Mathematik',
+        Mat_NR: '237681',
+        S_Name: 'Wein',
+        S_Geb_Tag: '01.04.80',
+        Fak_NR: '18',
+        Fak_Name: 'Elektrotechnik',
+        Dekan: 'Bongrads',
+        Note: '3',
+        Datum_Pruefung: '15.07.2008'
       },
       {
-        pruef_nr: '2',
-        pruefer: 'Buse',
-        fach: 'Mathematik',
-        mat_nr: '237682',
-        stud_name: 'Josch',
-        geburtstag: '08.09.70',
-        fak_nr: '18',
-        fak_name: 'Elektrotechnik',
-        dekan: 'Bongrads',
-        note: '4',
-        datum_pruefung: '15.07.2008'
+        P_NR: '2',
+        P_Name: 'Buse',
+        Fach: 'Mathematik',
+        Mat_NR: '237682',
+        S_Name: 'Josch',
+        S_Geb_Tag: '08.09.70',
+        Fak_NR: '18',
+        Fak_Name: 'Elektrotechnik',
+        Dekan: 'Bongrads',
+        Note: '4',
+        Datum_Pruefung: '15.07.2008'
       },
       {
-        pruef_nr: '3',
-        pruefer: 'Victor',
-        fach: 'Java',
-        mat_nr: '203491',
-        stud_name: 'Hein',
-        geburtstag: '04.05.81',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '2.7',
-        datum_pruefung: '12.07.2008'
+        P_NR: '3',
+        P_Name: 'Victor',
+        Fach: 'Java',
+        Mat_NR: '203491',
+        S_Name: 'Hein',
+        S_Geb_Tag: '04.05.81',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '2.7',
+        Datum_Pruefung: '12.07.2008'
       },
       {
-        pruef_nr: '5',
-        pruefer: 'Victor',
-        fach: 'Algorithmen',
-        mat_nr: '230799',
-        stud_name: 'Maier',
-        geburtstag: '04.04.79',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '3',
-        datum_pruefung: '12.10.2008'
+        P_NR: '5',
+        P_Name: 'Victor',
+        Fach: 'Algorithmen',
+        Mat_NR: '230799',
+        S_Name: 'Maier',
+        S_Geb_Tag: '04.04.79',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '3',
+        Datum_Pruefung: '12.10.2008'
       },
       {
-        pruef_nr: '3',
-        pruefer: 'Victor',
-        fach: 'Java',
-        mat_nr: '203491',
-        stud_name: 'Hein',
-        geburtstag: '04.05.81',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '2.3',
-        datum_pruefung: '12.07.2008'
+        P_NR: '3',
+        P_Name: 'Victor',
+        Fach: 'Java',
+        Mat_NR: '203491',
+        S_Name: 'Hein',
+        S_Geb_Tag: '04.05.81',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '2.3',
+        Datum_Pruefung: '12.07.2008'
       },
       {
-        pruef_nr: '3',
-        pruefer: 'Victor',
-        fach: 'Java',
-        mat_nr: '230799',
-        stud_name: 'Maier',
-        geburtstag: '04.04.79',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '2.3',
-        datum_pruefung: '12.07.2008'
+        P_NR: '3',
+        P_Name: 'Victor',
+        Fach: 'Java',
+        Mat_NR: '230799',
+        S_Name: 'Maier',
+        S_Geb_Tag: '04.04.79',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '2.3',
+        Datum_Pruefung: '12.07.2008'
       },
       {
-        pruef_nr: '4',
-        pruefer: 'Victor',
-        fach: 'Algorithmen',
-        mat_nr: '230799',
-        stud_name: 'Maier',
-        geburtstag: '04.04.79',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '5',
-        datum_pruefung: '12.07.2008'
+        P_NR: '4',
+        P_Name: 'Victor',
+        Fach: 'Algorithmen',
+        Mat_NR: '230799',
+        S_Name: 'Maier',
+        S_Geb_Tag: '04.04.79',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '5',
+        Datum_Pruefung: '12.07.2008'
       },
       {
-        pruef_nr: '4',
-        pruefer: 'Victor',
-        fach: 'Algorithmen',
-        mat_nr: '203491',
-        stud_name: 'Hein',
-        geburtstag: '04.05.81',
-        fak_nr: '20',
-        fak_name: 'Informatik',
-        dekan: 'Stahl',
-        note: '5',
-        datum_pruefung: '12.07.2008'
+        P_NR: '4',
+        P_Name: 'Victor',
+        Fach: 'Algorithmen',
+        Mat_NR: '203491',
+        S_Name: 'Hein',
+        S_Geb_Tag: '04.05.81',
+        Fak_NR: '20',
+        Fak_Name: 'Informatik',
+        Dekan: 'Stahl',
+        Note: '5',
+        Datum_Pruefung: '12.07.2008'
       }
     ],
     hasViolatingColumns: false,
@@ -1127,251 +1127,251 @@ const tasks: Task[] = [
     functionalDependencies: [
       {
         primaryKeys: [
-          'PRUEF_NR'
+          'P_NR'
         ],
         columns: [
-          'PRUEFER',
-          'FACH',
-          'FAK_NR',
-          'FAK_NAME',
-          'DEKAN',
-          'DATUM_PRUEFUNG'
+          'P_Name',
+          'Fach',
+          'Fak_NR',
+          'Fak_Name',
+          'Dekan',
+          'Datum_Pruefung'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'MAT_NR'
+          'Mat_NR'
         ],
         columns: [
-          'STUD_NAME',
-          'GEBURTSTAG'
+          'S_Name',
+          'S_Geb_Tag'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'PRUEF_NR',
-          'MAT_NR'
+          'P_NR',
+          'Mat_NR'
         ],
         columns: [
-          'NOTE'
+          'Note'
         ],
         type: 'voll'
       },
       {
         primaryKeys: [
-          'FAK_NR'
+          'Fak_NR'
         ],
         columns: [
-          'DEKAN',
-          'FAK_NAME'
+          'Dekan',
+          'Fak_Name'
         ],
         type: 'transitiv'
       }
     ],
     primaryKeys: [
-      'PRUEF_NR',
-      'MAT_NR'
+      'P_NR',
+      'Mat_NR'
     ],
     secondNormalForm: [
       {
         primaryKeys: [
-          'PRUEF_NR'
+          'P_NR'
         ],
         columns: [
-          'PRUEFER',
-          'FACH',
-          'FAK_NR',
-          'FAK_NAME',
-          'DEKAN',
-          'DATUM_PRUEFUNG'
+          'P_Name',
+          'Fach',
+          'Fak_NR',
+          'Fak_Name',
+          'Dekan',
+          'Datum_Pruefung'
         ]
       },
       {
         primaryKeys: [
-          'MAT_NR'
+          'Mat_NR'
         ],
         columns: [
-          'STUD_NAME',
-          'GEBURTSTAG'
+          'S_Name',
+          'S_Geb_Tag'
         ]
       },
       {
         primaryKeys: [
-          'PRUEF_NR',
-          'MAT_NR'
+          'P_NR',
+          'Mat_NR'
         ],
         columns: [
-          'NOTE'
+          'Note'
         ]
       }
     ],
     secondFormTableData: [
       [
         {
-          pruef_nr: '4',
-          pruefer: 'Victor',
-          fach: 'Algorithmen',
-          fak_nr: '20',
-          fak_name: 'Informatik',
-          dekan: 'Stahl',
-          datum_pruefung: '12.07.2008'
+          P_NR: '4',
+          P_Name: 'Victor',
+          Fach: 'Algorithmen',
+          Fak_NR: '20',
+          Fak_Name: 'Informatik',
+          Dekan: 'Stahl',
+          Datum_Pruefung: '12.07.2008'
         },
         {
-          pruef_nr: '2',
-          pruefer: 'Buse',
-          fach: 'Mathematik',
-          fak_nr: '18',
-          fak_name: 'Elektrotechnik',
-          dekan: 'Bongrads',
-          datum_pruefung: '15.07.2008'
+          P_NR: '2',
+          P_Name: 'Buse',
+          Fach: 'Mathematik',
+          Fak_NR: '18',
+          Fak_Name: 'Elektrotechnik',
+          Dekan: 'Bongrads',
+          Datum_Pruefung: '15.07.2008'
         },
         {
-          pruef_nr: '1',
-          pruefer: 'Bertelsmeier',
-          fach: 'Datenbanken',
-          fak_nr: '20',
-          fak_name: 'Informatik',
-          dekan: 'Stahl',
-          datum_pruefung: '11.07.2008'
+          P_NR: '1',
+          P_Name: 'Bertelsmeier',
+          Fach: 'Datenbanken',
+          Fak_NR: '20',
+          Fak_Name: 'Informatik',
+          Dekan: 'Stahl',
+          Datum_Pruefung: '11.07.2008'
         },
         {
-          pruef_nr: '5',
-          pruefer: 'Victor',
-          fach: 'Algorithmen',
-          fak_nr: '20',
-          fak_name: 'Informatik',
-          dekan: 'Stahl',
-          datum_pruefung: '12.10.2008'
+          P_NR: '5',
+          P_Name: 'Victor',
+          Fach: 'Algorithmen',
+          Fak_NR: '20',
+          Fak_Name: 'Informatik',
+          Dekan: 'Stahl',
+          Datum_Pruefung: '12.10.2008'
         },
         {
-          pruef_nr: '3',
-          pruefer: 'Victor',
-          fach: 'Java',
-          fak_nr: '20',
-          fak_name: 'Informatik',
-          dekan: 'Stahl',
-          datum_pruefung: '12.07.2008'
+          P_NR: '3',
+          P_Name: 'Victor',
+          Fach: 'Java',
+          Fak_NR: '20',
+          Fak_Name: 'Informatik',
+          Dekan: 'Stahl',
+          Datum_Pruefung: '12.07.2008'
         }
       ],
       [
         {
-          mat_nr: '230799',
-          stud_name: 'Maier',
-          geburtstag: '04.04.79'
+          Mat_NR: '230799',
+          S_Name: 'Maier',
+          S_Geb_Tag: '04.04.79'
         },
         {
-          mat_nr: '237682',
-          stud_name: 'Josch',
-          geburtstag: '08.09.70'
+          Mat_NR: '237682',
+          S_Name: 'Josch',
+          S_Geb_Tag: '08.09.70'
         },
         {
-          mat_nr: '237681',
-          stud_name: 'Wein',
-          geburtstag: '01.04.80'
+          Mat_NR: '237681',
+          S_Name: 'Wein',
+          S_Geb_Tag: '01.04.80'
         },
         {
-          mat_nr: '203491',
-          stud_name: 'Hein',
-          geburtstag: '04.05.81'
+          Mat_NR: '203491',
+          S_Name: 'Hein',
+          S_Geb_Tag: '04.05.81'
         },
         {
-          mat_nr: '230800',
-          stud_name: 'Schmidt',
-          geburtstag: '04.05.79'
+          Mat_NR: '230800',
+          S_Name: 'Schmidt',
+          S_Geb_Tag: '04.05.79'
         }
       ],
       [
         {
-          pruef_nr: '4',
-          mat_nr: '203491',
-          note: '5'
+          P_NR: '4',
+          Mat_NR: '203491',
+          Note: '5'
         },
         {
-          pruef_nr: '3',
-          mat_nr: '203491',
-          note: '2.3'
+          P_NR: '3',
+          Mat_NR: '203491',
+          Note: '2.3'
         },
         {
-          pruef_nr: '2',
-          mat_nr: '237681',
-          note: '3'
+          P_NR: '2',
+          Mat_NR: '237681',
+          Note: '3'
         },
         {
-          pruef_nr: '3',
-          mat_nr: '203491',
-          note: '2.7'
+          P_NR: '3',
+          Mat_NR: '203491',
+          Note: '2.7'
         },
         {
-          pruef_nr: '4',
-          mat_nr: '230799',
-          note: '5'
+          P_NR: '4',
+          Mat_NR: '230799',
+          Note: '5'
         },
         {
-          pruef_nr: '1',
-          mat_nr: '230800',
-          note: '2.7'
+          P_NR: '1',
+          Mat_NR: '230800',
+          Note: '2.7'
         },
         {
-          pruef_nr: '5',
-          mat_nr: '230799',
-          note: '3'
+          P_NR: '5',
+          Mat_NR: '230799',
+          Note: '3'
         },
         {
-          pruef_nr: '2',
-          mat_nr: '237682',
-          note: '4'
+          P_NR: '2',
+          Mat_NR: '237682',
+          Note: '4'
         },
         {
-          pruef_nr: '3',
-          mat_nr: '230799',
-          note: '2.3'
+          P_NR: '3',
+          Mat_NR: '230799',
+          Note: '2.3'
         },
         {
-          pruef_nr: '1',
-          mat_nr: '230799',
-          note: '3'
+          P_NR: '1',
+          Mat_NR: '230799',
+          Note: '3'
         }
       ]
     ],
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
-          'PRUEF_NR'
+          'P_NR'
         ],
         columns: [
-          'PRUEFER',
-          'FACH',
-          'FAK_NR',
-          'DATUM_PRUEFUNG'
+          'P_Name',
+          'Fach',
+          'Fak_NR',
+          'Datum_Pruefung'
         ]
       },
       {
         primaryKeys: [
-          'PRUEF_NR',
-          'MAT_NR'
+          'P_NR',
+          'Mat_NR'
         ],
         columns: [
-          'NOTE'
+          'Note'
         ]
       },
       {
         primaryKeys: [
-          'MAT_NR'
+          'Mat_NR'
         ],
         columns: [
-          'STUD_NAME',
-          'GEBURTSTAG'
+          'S_Name',
+          'S_Geb_Tag'
         ]
       },
       {
         primaryKeys: [
-          'FAK_NR'
+          'Fak_NR'
         ],
         columns: [
-          'DEKAN',
-          'FAK_NAME'
+          'Dekan',
+          'Fak_Name'
         ]
       }
     ]
