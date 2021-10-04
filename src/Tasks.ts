@@ -1378,175 +1378,175 @@ const tasks: Task[] = [
   },
   {
     id: 6,
-    description: 'Der Lebensmittelprüfer Dr. Gesund hat für den Gehalt von Lebensmitteln an Vitaminen und Mineralstoffen folgende Relation entwickelt, wobei gilt:<br />LID: Eindeutige Nummer für das Lebensmittel.<br />STOFF: Name des Inhaltsstoffs<br />MENGE: Gehalt an dem Inhaltsstoff in 100g des Lebensmittels.<br />EINHEIT: Einheit für Mengenangaben des Inhaltsstoffs. Dies hängt vom jeweiligen Stoff ab, im Beispiel wird z.B. Vitamin A in mcg angegeben, die anderen Stoffe in mg. Die Einheit hängt nicht vom Lebensmittel ab.<br />EMPFOHLEN: Täglich empfohlene Menge eines Stoffes für einen Menschen<br /><br />Die Tabelle erscheint zu groß. Können Sie Dr. Gesund helfen, seine redundaten Daten zu verringern?',
+    description: 'Der Lebensmittelprüfer Dr. Gesund hat für den Gehalt von Lebensmitteln an Vitaminen und Mineralstoffen folgende Relation entwickelt, wobei gilt: \n\nLebensmittel_ID: Eindeutige Nummer für das Lebensmittel. \nSTOFF: Name des Inhaltsstoffs \nMENGE: Gehalt an dem Inhaltsstoff in 100g des Lebensmittels. \nEINHEIT: Einheit für Mengenangaben des Inhaltsstoffs. \n\tDies hängt vom jeweiligen Stoff ab, im Beispiel wird z.B. Vitamin A in mcg angegeben, die anderen Stoffe in mg. \n\tDie Einheit hängt nicht vom Lebensmittel ab. \nEMPFOHLEN: Täglich empfohlene Menge eines Stoffes für einen Menschen \n\nDie Tabelle erscheint zu groß. Können Sie Dr. Gesund helfen, seine redundaten Daten zu verringern?',
     tableData: [
       {
-        lid: '1',
-        lebensmittel: 'Ananas',
-        stoff: 'Calcium',
-        menge: '16',
-        einheit: 'mg',
-        empfohlen: '1000'
+        Lebensmittel_ID: '1',
+        Lebensmittel_Name: 'Ananas',
+        Stoff: 'Calcium',
+        Menge: '16',
+        Einheit: 'mg',
+        Empfohlen: '1000'
       },
       {
-        lid: '1',
-        lebensmittel: 'Ananas',
-        stoff: 'Kalium',
-        menge: '173',
-        einheit: 'mg',
-        empfohlen: '2000'
+        Lebensmittel_ID: '1',
+        Lebensmittel_Name: 'Ananas',
+        Stoff: 'Kalium',
+        Menge: '173',
+        Einheit: 'mg',
+        Empfohlen: '2000'
       },
       {
-        lid: '1',
-        lebensmittel: 'Ananas',
-        stoff: 'Magnesium',
-        menge: '17',
-        einheit: 'mg',
-        empfohlen: '350'
+        Lebensmittel_ID: '1',
+        Lebensmittel_Name: 'Ananas',
+        Stoff: 'Magnesium',
+        Menge: '17',
+        Einheit: 'mg',
+        Empfohlen: '350'
       },
       {
-        lid: '1',
-        lebensmittel: 'Ananas',
-        stoff: 'Vitamin C',
-        menge: '19',
-        einheit: 'mg',
-        empfohlen: '100'
+        Lebensmittel_ID: '1',
+        Lebensmittel_Name: 'Ananas',
+        Stoff: 'Vitamin C',
+        Menge: '19',
+        Einheit: 'mg',
+        Empfohlen: '100'
       },
       {
-        lid: '2',
-        lebensmittel: 'Apfel',
-        stoff: 'Calcium',
-        menge: '7',
-        einheit: 'mg',
-        empfohlen: '1000'
+        Lebensmittel_ID: '2',
+        Lebensmittel_Name: 'Apfel',
+        Stoff: 'Calcium',
+        Menge: '7',
+        Einheit: 'mg',
+        Empfohlen: '1000'
       },
       {
-        lid: '2',
-        lebensmittel: 'Apfel',
-        stoff: 'Kalium',
-        menge: '144',
-        einheit: 'mg',
-        empfohlen: '2000'
+        Lebensmittel_ID: '2',
+        Lebensmittel_Name: 'Apfel',
+        Stoff: 'Kalium',
+        Menge: '144',
+        Einheit: 'mg',
+        Empfohlen: '2000'
       },
       {
-        lid: '2',
-        lebensmittel: 'Apfel',
-        stoff: 'Magnesium',
-        menge: '6',
-        einheit: 'mg',
-        empfohlen: '350'
+        Lebensmittel_ID: '2',
+        Lebensmittel_Name: 'Apfel',
+        Stoff: 'Magnesium',
+        Menge: '6',
+        Einheit: 'mg',
+        Empfohlen: '350'
       },
       {
-        lid: '2',
-        lebensmittel: 'Apfel',
-        stoff: 'Vitamin A',
-        menge: '10',
-        einheit: 'mcg',
-        empfohlen: '800'
+        Lebensmittel_ID: '2',
+        Lebensmittel_Name: 'Apfel',
+        Stoff: 'Vitamin A',
+        Menge: '10',
+        Einheit: 'mcg',
+        Empfohlen: '800'
       },
       {
-        lid: '2',
-        lebensmittel: 'Apfel',
-        stoff: 'Vitamin C',
-        menge: '12',
-        einheit: 'mg',
-        empfohlen: '100'
+        Lebensmittel_ID: '2',
+        Lebensmittel_Name: 'Apfel',
+        Stoff: 'Vitamin C',
+        Menge: '12',
+        Einheit: 'mg',
+        Empfohlen: '100'
       },
       {
-        lid: '3',
-        lebensmittel: 'Banane',
-        stoff: 'Calcium',
-        menge: '9',
-        einheit: 'mg',
-        empfohlen: '1000'
+        Lebensmittel_ID: '3',
+        Lebensmittel_Name: 'Banane',
+        Stoff: 'Calcium',
+        Menge: '9',
+        Einheit: 'mg',
+        Empfohlen: '1000'
       },
       {
-        lid: '3',
-        lebensmittel: 'Banane',
-        stoff: 'Kalium',
-        menge: '393',
-        einheit: 'mg',
-        empfohlen: '2000'
+        Lebensmittel_ID: '3',
+        Lebensmittel_Name: 'Banane',
+        Stoff: 'Kalium',
+        Menge: '393',
+        Einheit: 'mg',
+        Empfohlen: '2000'
       },
       {
-        lid: '3',
-        lebensmittel: 'Banane',
-        stoff: 'Magnesium',
-        menge: '36',
-        einheit: 'mg',
-        empfohlen: '350'
+        Lebensmittel_ID: '3',
+        Lebensmittel_Name: 'Banane',
+        Stoff: 'Magnesium',
+        Menge: '36',
+        Einheit: 'mg',
+        Empfohlen: '350'
       },
       {
-        lid: '3',
-        lebensmittel: 'Banane',
-        stoff: 'Vitamin C',
-        menge: '12',
-        einheit: 'mg',
-        empfohlen: '100'
+        Lebensmittel_ID: '3',
+        Lebensmittel_Name: 'Banane',
+        Stoff: 'Vitamin C',
+        Menge: '12',
+        Einheit: 'mg',
+        Empfohlen: '100'
       },
       {
-        lid: '4',
-        lebensmittel: 'Birne',
-        stoff: 'Calcium',
-        menge: '10',
-        einheit: 'mg',
-        empfohlen: '1000'
+        Lebensmittel_ID: '4',
+        Lebensmittel_Name: 'Birne',
+        Stoff: 'Calcium',
+        Menge: '10',
+        Einheit: 'mg',
+        Empfohlen: '1000'
       },
       {
-        lid: '4',
-        lebensmittel: 'Birne',
-        stoff: 'Kalium',
-        menge: '126',
-        einheit: 'mg',
-        empfohlen: '2000'
+        Lebensmittel_ID: '4',
+        Lebensmittel_Name: 'Birne',
+        Stoff: 'Kalium',
+        Menge: '126',
+        Einheit: 'mg',
+        Empfohlen: '2000'
       },
       {
-        lid: '4',
-        lebensmittel: 'Birne',
-        stoff: 'Magnesium',
-        menge: '8',
-        einheit: 'mg',
-        empfohlen: '350'
+        Lebensmittel_ID: '4',
+        Lebensmittel_Name: 'Birne',
+        Stoff: 'Magnesium',
+        Menge: '8',
+        Einheit: 'mg',
+        Empfohlen: '350'
       },
       {
-        lid: '4',
-        lebensmittel: 'Birne',
-        stoff: 'Vitamin C',
-        menge: '5',
-        einheit: 'mg',
-        empfohlen: '100'
+        Lebensmittel_ID: '4',
+        Lebensmittel_Name: 'Birne',
+        Stoff: 'Vitamin C',
+        Menge: '5',
+        Einheit: 'mg',
+        Empfohlen: '100'
       },
       {
-        lid: '5',
-        lebensmittel: 'Erdbeeren',
-        stoff: 'Calcium',
-        menge: '26',
-        einheit: 'mg',
-        empfohlen: '1000'
+        Lebensmittel_ID: '5',
+        Lebensmittel_Name: 'Erdbeeren',
+        Stoff: 'Calcium',
+        Menge: '26',
+        Einheit: 'mg',
+        Empfohlen: '1000'
       },
       {
-        lid: '5',
-        lebensmittel: 'Erdbeeren',
-        stoff: 'Kalium',
-        menge: '147',
-        einheit: 'mg',
-        empfohlen: '2000'
+        Lebensmittel_ID: '5',
+        Lebensmittel_Name: 'Erdbeeren',
+        Stoff: 'Kalium',
+        Menge: '147',
+        Einheit: 'mg',
+        Empfohlen: '2000'
       },
       {
-        lid: '5',
-        lebensmittel: 'Erdbeeren',
-        stoff: 'Magnesium',
-        menge: '15',
-        einheit: 'mg',
-        empfohlen: '350'
+        Lebensmittel_ID: '5',
+        Lebensmittel_Name: 'Erdbeeren',
+        Stoff: 'Magnesium',
+        Menge: '15',
+        Einheit: 'mg',
+        Empfohlen: '350'
       },
       {
-        lid: '5',
-        lebensmittel: 'Erdbeeren',
-        stoff: 'Vitamin C',
-        menge: '64',
-        einheit: 'mg',
-        empfohlen: '100'
+        Lebensmittel_ID: '5',
+        Lebensmittel_Name: 'Erdbeeren',
+        Stoff: 'Vitamin C',
+        Menge: '64',
+        Einheit: 'mg',
+        Empfohlen: '100'
       }
     ],
     hasViolatingColumns: false,
@@ -1554,249 +1554,249 @@ const tasks: Task[] = [
     functionalDependencies: [
       {
         primaryKeys: [
-          'LID'
+          'Lebensmittel_ID'
         ],
         columns: [
-          'LEBENSMITTEL'
+          'Lebensmittel_Name'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'STOFF'
+          'Stoff'
         ],
         columns: [
-          'EMPFOHLEN',
-          'EINHEIT'
+          'Empfohlen',
+          'Einheit'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'LID',
-          'STOFF'
+          'Lebensmittel_ID',
+          'Stoff'
         ],
         columns: [
-          'MENGE'
+          'Menge'
         ],
         type: 'voll'
       }
     ],
     primaryKeys: [
-      'LID',
-      'STOFF'
+      'Lebensmittel_ID',
+      'Stoff'
     ],
     secondNormalForm: [
       {
         primaryKeys: [
-          'LID'
+          'Lebensmittel_ID'
         ],
         columns: [
-          'LEBENSMITTEL'
+          'Lebensmittel_Name'
         ]
       },
       {
         primaryKeys: [
-          'STOFF'
+          'Stoff'
         ],
         columns: [
-          'EMPFOHLEN',
-          'EINHEIT'
+          'Empfohlen',
+          'Einheit'
         ]
       },
       {
         primaryKeys: [
-          'LID',
-          'STOFF'
+          'Lebensmittel_ID',
+          'Stoff'
         ],
         columns: [
-          'MENGE'
+          'Menge'
         ]
       }
     ],
     secondFormTableData: [
       [
         {
-          lid: '1',
-          lebensmittel: 'Ananas'
+          Lebensmittel_ID: '1',
+          Lebensmittel_Name: 'Ananas'
         },
         {
-          lid: '2',
-          lebensmittel: 'Apfel'
+          Lebensmittel_ID: '2',
+          Lebensmittel_Name: 'Apfel'
         },
         {
-          lid: '3',
-          lebensmittel: 'Banane'
+          Lebensmittel_ID: '3',
+          Lebensmittel_Name: 'Banane'
         },
         {
-          lid: '4',
-          lebensmittel: 'Birne'
+          Lebensmittel_ID: '4',
+          Lebensmittel_Name: 'Birne'
         },
         {
-          lid: '5',
-          lebensmittel: 'Erdbeeren'
+          Lebensmittel_ID: '5',
+          Lebensmittel_Name: 'Erdbeeren'
         }
       ],
       [
         {
-          stoff: 'Kalium',
-          empfohlen: '2000',
-          einheit: 'mg'
+          Stoff: 'Kalium',
+          Empfohlen: '2000',
+          Einheit: 'mg'
         },
         {
-          stoff: 'Vitamin C',
-          empfohlen: '100',
-          einheit: 'mg'
+          Stoff: 'Vitamin C',
+          Empfohlen: '100',
+          Einheit: 'mg'
         },
         {
-          stoff: 'Vitamin A',
-          empfohlen: '800',
-          einheit: 'mcg'
+          Stoff: 'Vitamin A',
+          Empfohlen: '800',
+          Einheit: 'mcg'
         },
         {
-          stoff: 'Calcium',
-          empfohlen: '1000',
-          einheit: 'mg'
+          Stoff: 'Calcium',
+          Empfohlen: '1000',
+          Einheit: 'mg'
         },
         {
-          stoff: 'Magnesium',
-          empfohlen: '350',
-          einheit: 'mg'
+          Stoff: 'Magnesium',
+          Empfohlen: '350',
+          Einheit: 'mg'
         }
       ],
       [
         {
-          lid: '4',
-          stoff: 'Calcium',
-          menge: '10'
+          Lebensmittel_ID: '4',
+          Stoff: 'Calcium',
+          Menge: '10'
         },
         {
-          lid: '1',
-          stoff: 'Vitamin C',
-          menge: '19'
+          Lebensmittel_ID: '1',
+          Stoff: 'Vitamin C',
+          Menge: '19'
         },
         {
-          lid: '3',
-          stoff: 'Calcium',
-          menge: '9'
+          Lebensmittel_ID: '3',
+          Stoff: 'Calcium',
+          Menge: '9'
         },
         {
-          lid: '2',
-          stoff: 'Vitamin A',
-          menge: '10'
+          Lebensmittel_ID: '2',
+          Stoff: 'Vitamin A',
+          Menge: '10'
         },
         {
-          lid: '5',
-          stoff: 'Magnesium',
-          menge: '15'
+          Lebensmittel_ID: '5',
+          Stoff: 'Magnesium',
+          Menge: '15'
         },
         {
-          lid: '5',
-          stoff: 'Kalium',
-          menge: '147'
+          Lebensmittel_ID: '5',
+          Stoff: 'Kalium',
+          Menge: '147'
         },
         {
-          lid: '3',
-          stoff: 'Vitamin C',
-          menge: '12'
+          Lebensmittel_ID: '3',
+          Stoff: 'Vitamin C',
+          Menge: '12'
         },
         {
-          lid: '5',
-          stoff: 'Vitamin C',
-          menge: '64'
+          Lebensmittel_ID: '5',
+          Stoff: 'Vitamin C',
+          Menge: '64'
         },
         {
-          lid: '5',
-          stoff: 'Calcium',
-          menge: '26'
+          Lebensmittel_ID: '5',
+          Stoff: 'Calcium',
+          Menge: '26'
         },
         {
-          lid: '4',
-          stoff: 'Kalium',
-          menge: '126'
+          Lebensmittel_ID: '4',
+          Stoff: 'Kalium',
+          Menge: '126'
         },
         {
-          lid: '4',
-          stoff: 'Magnesium',
-          menge: '8'
+          Lebensmittel_ID: '4',
+          Stoff: 'Magnesium',
+          Menge: '8'
         },
         {
-          lid: '2',
-          stoff: 'Magnesium',
-          menge: '6'
+          Lebensmittel_ID: '2',
+          Stoff: 'Magnesium',
+          Menge: '6'
         },
         {
-          lid: '3',
-          stoff: 'Magnesium',
-          menge: '36'
+          Lebensmittel_ID: '3',
+          Stoff: 'Magnesium',
+          Menge: '36'
         },
         {
-          lid: '1',
-          stoff: 'Kalium',
-          menge: '173'
+          Lebensmittel_ID: '1',
+          Stoff: 'Kalium',
+          Menge: '173'
         },
         {
-          lid: '2',
-          stoff: 'Kalium',
-          menge: '144'
+          Lebensmittel_ID: '2',
+          Stoff: 'Kalium',
+          Menge: '144'
         },
         {
-          lid: '1',
-          stoff: 'Magnesium',
-          menge: '17'
+          Lebensmittel_ID: '1',
+          Stoff: 'Magnesium',
+          Menge: '17'
         },
         {
-          lid: '2',
-          stoff: 'Vitamin C',
-          menge: '12'
+          Lebensmittel_ID: '2',
+          Stoff: 'Vitamin C',
+          Menge: '12'
         },
         {
-          lid: '2',
-          stoff: 'Calcium',
-          menge: '7'
+          Lebensmittel_ID: '2',
+          Stoff: 'Calcium',
+          Menge: '7'
         },
         {
-          lid: '3',
-          stoff: 'Kalium',
-          menge: '393'
+          Lebensmittel_ID: '3',
+          Stoff: 'Kalium',
+          Menge: '393'
         },
         {
-          lid: '1',
-          stoff: 'Calcium',
-          menge: '16'
+          Lebensmittel_ID: '1',
+          Stoff: 'Calcium',
+          Menge: '16'
         },
         {
-          lid: '4',
-          stoff: 'Vitamin C',
-          menge: '5'
+          Lebensmittel_ID: '4',
+          Stoff: 'Vitamin C',
+          Menge: '5'
         }
       ]
     ],
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
-          'LID'
+          'Lebensmittel_ID'
         ],
         columns: [
-          'LEBENSMITTEL'
+          'Lebensmittel_Name'
         ]
       },
       {
         primaryKeys: [
-          'STOFF'
+          'Stoff'
         ],
         columns: [
-          'EMPFOHLEN',
-          'EINHEIT'
+          'Empfohlen',
+          'Einheit'
         ]
       },
       {
         primaryKeys: [
-          'LID',
-          'STOFF'
+          'Lebensmittel_ID',
+          'Stoff'
         ],
         columns: [
-          'MENGE'
+          'Menge'
         ]
       }
     ]
