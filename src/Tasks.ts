@@ -411,95 +411,95 @@ const tasks: Task[] = [
   },
   {
     id: 3,
-    description: 'Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst, dabei bedeutet: <br><br>KNR = eindeutige Kundennummer,KNA = Kundenname,<br>KA = Kundenadresse, ANR = eindeutige Artikelnummer, <BR>ABZ = Artikelbezeichnung, HNR = Herstellernummer, <BR>HNA = Herstellername, APR = Artikelpreis und BM = Bestellmenge. <br> <BR>Die Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. Ein Artikel wird immer nur von einem Hersteller geliefert.',
+    description: 'Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst. \nDabei stehen die Präfixe K_ für Kunden, A_ für Artikel und H_ für Hersteller. \n\nAußerdem gilt: \nDie Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. \nEin Artikel wird immer nur von einem Hersteller geliefert.',
     tableData: [
       {
-        knr: '1003',
-        kna: 'Lüdtke',
-        ka: 'Marienheide',
-        anr: 'A13',
-        abz: 'Alu-Topf1',
-        hnr: 'H01',
-        hna: 'PBTopf',
-        apr: '10,70',
-        bm: '100'
+        K_NR: '1003',
+        K_Name: 'Lüdtke',
+        K_Adresse: 'Marienheide',
+        A_NR: 'A13',
+        A_Bezeichnung: 'Alu-Topf1',
+        H_NR: 'H01',
+        H_Name: 'PBTopf',
+        A_Preis: '10,70',
+        Bestellmenge: '100'
       },
       {
-        knr: '1003',
-        kna: 'Lüdtke',
-        ka: 'Marienheide',
-        anr: 'A36',
-        abz: 'Besteck',
-        hnr: 'H03',
-        hna: 'Kochass',
-        apr: '21,80',
-        bm: '80'
+        K_NR: '1003',
+        K_Name: 'Lüdtke',
+        K_Adresse: 'Marienheide',
+        A_NR: 'A36',
+        A_Bezeichnung: 'Besteck',
+        H_NR: 'H03',
+        H_Name: 'Kochass',
+        A_Preis: '21,80',
+        Bestellmenge: '80'
       },
       {
-        knr: '1004',
-        kna: 'Maier',
-        ka: 'Dortmund',
-        anr: 'A11',
-        abz: 'Stahl-Topf',
-        hnr: 'H10',
-        hna: 'IKEA',
-        apr: '16,20',
-        bm: '150'
+        K_NR: '1004',
+        K_Name: 'Maier',
+        K_Adresse: 'Dortmund',
+        A_NR: 'A11',
+        A_Bezeichnung: 'Stahl-Topf',
+        H_NR: 'H10',
+        H_Name: 'IKEA',
+        A_Preis: '16,20',
+        Bestellmenge: '150'
       },
       {
-        knr: '1001',
-        kna: 'Schmidt',
-        ka: 'Gummersbach',
-        anr: 'A11',
-        abz: 'Stahl-Topf',
-        hnr: 'H10',
-        hna: 'IKEA',
-        apr: '16,20',
-        bm: '90'
+        K_NR: '1001',
+        K_Name: 'Schmidt',
+        K_Adresse: 'Gummersbach',
+        A_NR: 'A11',
+        A_Bezeichnung: 'Stahl-Topf',
+        H_NR: 'H10',
+        H_Name: 'IKEA',
+        A_Preis: '16,20',
+        Bestellmenge: '90'
       },
       {
-        knr: '1001',
-        kna: 'Schmidt',
-        ka: 'Gummersbach',
-        anr: 'A17',
-        abz: 'Bratpfanne',
-        hnr: 'H04',
-        hna: 'Gourmet',
-        apr: '31,50',
-        bm: '50'
+        K_NR: '1001',
+        K_Name: 'Schmidt',
+        K_Adresse: 'Gummersbach',
+        A_NR: 'A17',
+        A_Bezeichnung: 'Bratpfanne',
+        H_NR: 'H04',
+        H_Name: 'Gourmet',
+        A_Preis: '31,50',
+        Bestellmenge: '50'
       },
       {
-        knr: '1002',
-        kna: 'Müller',
-        ka: 'Lindlar',
-        anr: 'A09',
-        abz: 'Schüssel',
-        hnr: 'H03',
-        hna: 'Kochass',
-        apr: '23,30',
-        bm: '80'
+        K_NR: '1002',
+        K_Name: 'Müller',
+        K_Adresse: 'Lindlar',
+        A_NR: 'A09',
+        A_Bezeichnung: 'Schüssel',
+        H_NR: 'H03',
+        H_Name: 'Kochass',
+        A_Preis: '23,30',
+        Bestellmenge: '80'
       },
       {
-        knr: '1003',
-        kna: 'Lüdtke',
-        ka: 'Marienheide',
-        anr: 'A14',
-        abz: 'Alu-Topf2',
-        hnr: 'H01',
-        hna: 'PBTopf',
-        apr: '14,50',
-        bm: '50'
+        K_NR: '1003',
+        K_Name: 'Lüdtke',
+        K_Adresse: 'Marienheide',
+        A_NR: 'A14',
+        A_Bezeichnung: 'Alu-Topf2',
+        H_NR: 'H01',
+        H_Name: 'PBTopf',
+        A_Preis: '14,50',
+        Bestellmenge: '50'
       },
       {
-        knr: '1004',
-        kna: 'Maier',
-        ka: 'Dortmund',
-        anr: 'A09',
-        abz: 'Schüssel',
-        hnr: 'H03',
-        hna: 'Kochass',
-        apr: '23,30',
-        bm: '100'
+        K_NR: '1004',
+        K_Name: 'Maier',
+        K_Adresse: 'Dortmund',
+        A_NR: 'A09',
+        A_Bezeichnung: 'Schüssel',
+        H_NR: 'H03',
+        H_Name: 'Kochass',
+        A_Preis: '23,30',
+        Bestellmenge: '100'
       }
     ],
     hasViolatingColumns: false,
@@ -507,226 +507,226 @@ const tasks: Task[] = [
     functionalDependencies: [
       {
         primaryKeys: [
-          'KNR'
+          'K_NR'
         ],
         columns: [
-          'KNA',
-          'KA'
+          'K_Name',
+          'K_Adresse'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'ANR'
+          'A_NR'
         ],
         columns: [
-          'ABZ',
-          'HNR',
-          'HNA',
-          'APR'
+          'A_Bezeichnung',
+          'H_NR',
+          'H_Name',
+          'A_Preis'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'HNR'
+          'H_NR'
         ],
         columns: [
-          'HNA'
+          'H_Name'
         ],
         type: 'transitiv'
       },
       {
         primaryKeys: [
-          'KNR',
-          'ANR'
+          'K_NR',
+          'A_NR'
         ],
         columns: [
-          'BM'
+          'Bestellmenge'
         ],
         type: 'voll'
       }
     ],
     primaryKeys: [
-      'KNR',
-      'ANR'
+      'K_NR',
+      'A_NR'
     ],
     secondNormalForm: [
       {
         primaryKeys: [
-          'KNR'
+          'K_NR'
         ],
         columns: [
-          'KNA',
-          'KA'
+          'K_Name',
+          'K_Adresse'
         ]
       },
       {
         primaryKeys: [
-          'ANR'
+          'A_NR'
         ],
         columns: [
-          'ABZ',
-          'HNR',
-          'HNA',
-          'APR'
+          'A_Bezeichnung',
+          'H_NR',
+          'H_Name',
+          'A_Preis'
         ]
       },
       {
         primaryKeys: [
-          'KNR',
-          'ANR'
+          'K_NR',
+          'A_NR'
         ],
         columns: [
-          'BM'
+          'Bestellmenge'
         ]
       }
     ],
     secondFormTableData: [
       [
         {
-          knr: '1002',
-          kna: 'Müller',
-          ka: 'Lindlar'
+          K_NR: '1002',
+          K_Name: 'Müller',
+          K_Adresse: 'Lindlar'
         },
         {
-          knr: '1001',
-          kna: 'Schmidt',
-          ka: 'Gummersbach'
+          K_NR: '1001',
+          K_Name: 'Schmidt',
+          K_Adresse: 'Gummersbach'
         },
         {
-          knr: '1003',
-          kna: 'Lüdtke',
-          ka: 'Marienheide'
+          K_NR: '1003',
+          K_Name: 'Lüdtke',
+          K_Adresse: 'Marienheide'
         },
         {
-          knr: '1004',
-          kna: 'Maier',
-          ka: 'Dortmund'
+          K_NR: '1004',
+          K_Name: 'Maier',
+          K_Adresse: 'Dortmund'
         }
       ],
       [
         {
-          anr: 'A13',
-          abz: 'Alu-Topf1',
-          hnr: 'H01',
-          hna: 'PBTopf',
-          apr: '10,70'
+          A_NR: 'A13',
+          A_Bezeichnung: 'Alu-Topf1',
+          H_NR: 'H01',
+          H_Name: 'PBTopf',
+          A_Preis: '10,70'
         },
         {
-          anr: 'A09',
-          abz: 'Schüssel',
-          hnr: 'H03',
-          hna: 'Kochass',
-          apr: '23,30'
+          A_NR: 'A09',
+          A_Bezeichnung: 'Schüssel',
+          H_NR: 'H03',
+          H_Name: 'Kochass',
+          A_Preis: '23,30'
         },
         {
-          anr: 'A14',
-          abz: 'Alu-Topf2',
-          hnr: 'H01',
-          hna: 'PBTopf',
-          apr: '14,50'
+          A_NR: 'A14',
+          A_Bezeichnung: 'Alu-Topf2',
+          H_NR: 'H01',
+          H_Name: 'PBTopf',
+          A_Preis: '14,50'
         },
         {
-          anr: 'A36',
-          abz: 'Besteck',
-          hnr: 'H03',
-          hna: 'Kochass',
-          apr: '21,80'
+          A_NR: 'A36',
+          A_Bezeichnung: 'Besteck',
+          H_NR: 'H03',
+          H_Name: 'Kochass',
+          A_Preis: '21,80'
         },
         {
-          anr: 'A11',
-          abz: 'Stahl-Topf',
-          hnr: 'H10',
-          hna: 'IKEA',
-          apr: '16,20'
+          A_NR: 'A11',
+          A_Bezeichnung: 'Stahl-Topf',
+          H_NR: 'H10',
+          H_Name: 'IKEA',
+          A_Preis: '16,20'
         },
         {
-          anr: 'A17',
-          abz: 'Bratpfanne',
-          hnr: 'H04',
-          hna: 'Gourmet',
-          apr: '31,50'
+          A_NR: 'A17',
+          A_Bezeichnung: 'Bratpfanne',
+          H_NR: 'H04',
+          H_Name: 'Gourmet',
+          A_Preis: '31,50'
         }
       ],
       [
         {
-          knr: '1003',
-          anr: 'A36',
-          bm: '80'
+          K_NR: '1003',
+          A_NR: 'A36',
+          Bestellmenge: '80'
         },
         {
-          knr: '1001',
-          anr: 'A11',
-          bm: '90'
+          K_NR: '1001',
+          A_NR: 'A11',
+          Bestellmenge: '90'
         },
         {
-          knr: '1003',
-          anr: 'A13',
-          bm: '100'
+          K_NR: '1003',
+          A_NR: 'A13',
+          Bestellmenge: '100'
         },
         {
-          knr: '1003',
-          anr: 'A14',
-          bm: '50'
+          K_NR: '1003',
+          A_NR: 'A14',
+          Bestellmenge: '50'
         },
         {
-          knr: '1001',
-          anr: 'A17',
-          bm: '50'
+          K_NR: '1001',
+          A_NR: 'A17',
+          Bestellmenge: '50'
         },
         {
-          knr: '1004',
-          anr: 'A11',
-          bm: '150'
+          K_NR: '1004',
+          A_NR: 'A11',
+          Bestellmenge: '150'
         },
         {
-          knr: '1004',
-          anr: 'A09',
-          bm: '100'
+          K_NR: '1004',
+          A_NR: 'A09',
+          Bestellmenge: '100'
         },
         {
-          knr: '1002',
-          anr: 'A09',
-          bm: '80'
+          K_NR: '1002',
+          A_NR: 'A09',
+          Bestellmenge: '80'
         }
       ]
     ],
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
-          'KNR'
+          'K_NR'
         ],
         columns: [
-          'KNA',
-          'KA'
+          'K_Name',
+          'K_Adresse'
         ]
       },
       {
         primaryKeys: [
-          'KNR',
-          'ANR'
+          'K_NR',
+          'A_NR'
         ],
         columns: [
-          'BM'
+          'Bestellmenge'
         ]
       },
       {
         primaryKeys: [
-          'HNR'
+          'H_NR'
         ],
         columns: [
-          'HNA'
+          'H_Name'
         ]
       },
       {
         primaryKeys: [
-          'ANR'
+          'A_NR'
         ],
         columns: [
-          'ABZ',
-          'HNR',
-          'APR'
+          'A_Bezeichnung',
+          'H_NR',
+          'A_Preis'
         ]
       }
     ]
@@ -2173,7 +2173,7 @@ const tasks: Task[] = [
     tableData: [
       {
         mnr: '1',
-        hnr: '1',
+        H_NR: '1',
         hersteller: 'Opel',
         typ: 'Kadett',
         neupreis: '18000',
@@ -2186,7 +2186,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '1',
-        hnr: '1',
+        H_NR: '1',
         hersteller: 'Opel',
         typ: 'Kadett',
         neupreis: '18000',
@@ -2199,7 +2199,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '2',
-        hnr: '1',
+        H_NR: '1',
         hersteller: 'Opel',
         typ: 'Vectra',
         neupreis: '25000',
@@ -2212,7 +2212,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '3',
-        hnr: '1',
+        H_NR: '1',
         hersteller: 'Opel',
         typ: 'Omega',
         neupreis: '30000',
@@ -2225,7 +2225,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '4',
-        hnr: '2',
+        H_NR: '2',
         hersteller: 'VW',
         typ: 'Golf',
         neupreis: '25000',
@@ -2238,7 +2238,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '4',
-        hnr: '2',
+        H_NR: '2',
         hersteller: 'VW',
         typ: 'Golf',
         neupreis: '25000',
@@ -2251,7 +2251,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '5',
-        hnr: '2',
+        H_NR: '2',
         hersteller: 'VW',
         typ: 'Golf',
         neupreis: '28000',
@@ -2264,7 +2264,7 @@ const tasks: Task[] = [
       },
       {
         mnr: '6',
-        hnr: '2',
+        H_NR: '2',
         hersteller: 'VW',
         typ: 'Polo',
         neupreis: '19000',
@@ -2284,7 +2284,7 @@ const tasks: Task[] = [
           'MNR'
         ],
         columns: [
-          'HNR',
+          'H_NR',
           'HERSTELLER',
           'TYP',
           'NEUPREIS',
@@ -2294,7 +2294,7 @@ const tasks: Task[] = [
       },
       {
         primaryKeys: [
-          'HNR'
+          'H_NR'
         ],
         columns: [
           'HERSTELLER'
@@ -2307,7 +2307,7 @@ const tasks: Task[] = [
         ],
         columns: [
           'MNR',
-          'HNR',
+          'H_NR',
           'HERSTELLER',
           'TYP',
           'NEUPREIS',
@@ -2330,7 +2330,7 @@ const tasks: Task[] = [
         ],
         columns: [
           'MNR',
-          'HNR',
+          'H_NR',
           'HERSTELLER',
           'TYP',
           'NEUPREIS',
@@ -2347,7 +2347,7 @@ const tasks: Task[] = [
         {
           fznr: 'G789',
           mnr: '4',
-          hnr: '2',
+          H_NR: '2',
           hersteller: 'VW',
           typ: 'Golf',
           neupreis: '25000',
@@ -2360,7 +2360,7 @@ const tasks: Task[] = [
         {
           fznr: 'V459',
           mnr: '2',
-          hnr: '1',
+          H_NR: '1',
           hersteller: 'Opel',
           typ: 'Vectra',
           neupreis: '25000',
@@ -2373,7 +2373,7 @@ const tasks: Task[] = [
         {
           fznr: 'G762',
           mnr: '5',
-          hnr: '2',
+          H_NR: '2',
           hersteller: 'VW',
           typ: 'Golf',
           neupreis: '28000',
@@ -2386,7 +2386,7 @@ const tasks: Task[] = [
         {
           fznr: 'G713',
           mnr: '4',
-          hnr: '2',
+          H_NR: '2',
           hersteller: 'VW',
           typ: 'Golf',
           neupreis: '25000',
@@ -2399,7 +2399,7 @@ const tasks: Task[] = [
         {
           fznr: 'K635',
           mnr: '6',
-          hnr: '2',
+          H_NR: '2',
           hersteller: 'VW',
           typ: 'Polo',
           neupreis: '19000',
@@ -2412,7 +2412,7 @@ const tasks: Task[] = [
         {
           fznr: 'K674',
           mnr: '1',
-          hnr: '1',
+          H_NR: '1',
           hersteller: 'Opel',
           typ: 'Kadett',
           neupreis: '18000',
@@ -2425,7 +2425,7 @@ const tasks: Task[] = [
         {
           fznr: 'K634',
           mnr: '1',
-          hnr: '1',
+          H_NR: '1',
           hersteller: 'Opel',
           typ: 'Kadett',
           neupreis: '18000',
@@ -2438,7 +2438,7 @@ const tasks: Task[] = [
         {
           fznr: 'O634',
           mnr: '3',
-          hnr: '1',
+          H_NR: '1',
           hersteller: 'Opel',
           typ: 'Omega',
           neupreis: '30000',
@@ -2456,7 +2456,7 @@ const tasks: Task[] = [
           'MNR'
         ],
         columns: [
-          'HNR',
+          'H_NR',
           'TYP',
           'NEUPREIS',
           'PS'
@@ -2464,7 +2464,7 @@ const tasks: Task[] = [
       },
       {
         primaryKeys: [
-          'HNR'
+          'H_NR'
         ],
         columns: [
           'HERSTELLER'
