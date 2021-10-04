@@ -1,5 +1,6 @@
 interface Task {
   id: number,
+  title: string,
   description: string,
   tableData: Object[],
   hasViolatingColumns: boolean,
@@ -24,6 +25,7 @@ interface Task {
 const tasks: Task[] = [
   {
     id: 1,
+    title: 'Skriptverkauf',
     description: 'In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.',
     tableData: [
       {
@@ -193,6 +195,7 @@ const tasks: Task[] = [
   },
   {
     id: 2,
+    title: 'Patienten der Arztpraxis',
     description: 'Betrachten Sie die folgende, in der Arztpraxis von Dr. Beschränkt geführte Tabelle, wobei KK für Krankenkasse und P für Patient steht. \nEin Patient gehört genau einer Krankenkasse an und hat an einem Behandlungstag zu einer Diagnose höchsten eine Therapie.',
     tableData: [
       {
@@ -410,6 +413,7 @@ const tasks: Task[] = [
   },
   {
     id: 3,
+    title: 'Küchen-Großhändler',
     description: 'Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst. \nDabei stehen die Präfixe K_ für Kunden, A_ für Artikel und H_ für Hersteller. \n\nAußerdem gilt: \nDie Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. \nEin Artikel wird immer nur von einem Hersteller geliefert.',
     tableData: [
       {
@@ -732,6 +736,7 @@ const tasks: Task[] = [
   },
   {
     id: 4,
+    title: 'Autohändler',
     description: 'Ein Autohändler speichert die von ihm angebotenen Fahrzeuge in einer redundanten Tabelle. \n\nDabei gilt: \nAdresse und das Land beziehen sich auf den Hersteller. \nDie Adresse wird nur als zusammenhängendes Textfeld gespeichert. \nDie ID bezieht sich auf ein konkretes Fahrzeug bzw. Motorrad. \nDer Typ und die Anzahl der Räder hängen vom Modell und vom Hersteller ab.',
     tableData: [
       {
@@ -989,6 +994,7 @@ const tasks: Task[] = [
   },
   {
     id: 5,
+    title: 'Prüfungsamt',
     description: 'Betrachten Sie die folgende, im Prüfungsamt geführte Tabelle. \n\nDabei stehen die Präfixe P_ für Prüfer, S_ für Studierender und Fak_ für Fakultät. \nAußerdem ist die Fakultätsnummer einer Prüfung zugeordnet, nicht dem Studierenden.',
     tableData: [
       {
@@ -1378,6 +1384,7 @@ const tasks: Task[] = [
   },
   {
     id: 6,
+    title: 'Lebensmittelprüfung',
     description: 'Der Lebensmittelprüfer Dr. Gesund hat für den Gehalt von Lebensmitteln an Vitaminen und Mineralstoffen folgende Relation entwickelt, wobei gilt: \n\nLebensmittel_ID: Eindeutige Nummer für das Lebensmittel. \nSTOFF: Name des Inhaltsstoffs \nMENGE: Gehalt an dem Inhaltsstoff in 100g des Lebensmittels. \nEINHEIT: Einheit für Mengenangaben des Inhaltsstoffs. \n\tDies hängt vom jeweiligen Stoff ab, im Beispiel wird z.B. Vitamin A in mcg angegeben, die anderen Stoffe in mg. \n\tDie Einheit hängt nicht vom Lebensmittel ab. \nEMPFOHLEN: Täglich empfohlene Menge eines Stoffes für einen Menschen \n\nDie Tabelle erscheint zu groß. Können Sie Dr. Gesund helfen, seine redundaten Daten zu verringern?',
     tableData: [
       {
@@ -1803,6 +1810,7 @@ const tasks: Task[] = [
   },
   {
     id: 7,
+    title: 'Zimmer im Krankenhaus',
     description: 'Betrachten Sie die folgende, in einem Krankenhaus geführte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. \n\nEin Patient kann mehrere Krankheiten haben. \nDabei stehen die Präfixe S_ für Station, Z_ für Zimmer, P_ für Patient, A_ für Arzt und Pf_ für Pfleger. \n\nDie Anzahl der Betten soll von der SNR und der ZNR abhängen.',
     tableData: [
       {
@@ -2168,6 +2176,7 @@ const tasks: Task[] = [
   },
   {
     id: 8,
+    title: 'Autohändler 2',
     description: 'Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. \nDie Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. \n\nJedes Fahrzeug ist durch die Fahrzeug_NR identifiziert. \nBei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. \nSofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos. \n\nDer Präfix H_ steht hier für den Hersteller des Fahrzeugs. \n\nNach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will - die Datenmodellierung scheint nicht gut durchdacht! \nKönnen Sie Frau Weber helfen?',
     tableData: [
       {
