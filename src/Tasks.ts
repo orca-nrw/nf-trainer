@@ -732,84 +732,84 @@ const tasks: Task[] = [
   },
   {
     id: 4,
-    description: 'Ein Autohändler speichert die von ihm angebotenen Fahrzeuge in einer redundanten Tabelle: <br>Dabei beziehen sich die Adresse und das Land auf den Hersteller. Die Adresse wird nur als zusammenhängendes Textfeld gespeichert.Die ID bezieht sich auf ein konkretes Fahrzeug bzw. Motorrad. Der Typ und die Anzahl der Räder hängen vom Modell und vom Hersteller ab.',
+    description: 'Ein Autohändler speichert die von ihm angebotenen Fahrzeuge in einer redundanten Tabelle. \n\nDabei gilt: \nAdresse und das Land beziehen sich auf den Hersteller. \nDie Adresse wird nur als zusammenhängendes Textfeld gespeichert. \nDie ID bezieht sich auf ein konkretes Fahrzeug bzw. Motorrad. \nDer Typ und die Anzahl der Räder hängen vom Modell und vom Hersteller ab.',
     tableData: [
       {
-        id: '4718',
-        hersteller: 'Vespa',
-        modell: 'II',
-        typ: 'Motorrad',
-        raeder: '2',
-        ps: '6',
-        adresse: 'La Strada 2, 1223 Rom',
-        land: 'Italien',
-        klimaanlage: 'Nein'
+        ID: '4718',
+        Hersteller: 'Vespa',
+        Modell: 'II',
+        Typ: 'Motorrad',
+        Anz_Raeder: '2',
+        PS: '6',
+        Adresse: 'La Strada 2, 1223 Rom',
+        Land: 'Italien',
+        Klimaanlage: 'Nein'
       },
       {
-        id: '4714',
-        hersteller: 'Suzuki',
-        modell: 'GX',
-        typ: 'Motorrad',
-        raeder: '2',
-        ps: '80',
-        adresse: 'Koniciva 3, Yokahama',
-        land: 'Japan',
-        klimaanlage: 'Nein'
+        ID: '4714',
+        Hersteller: 'Suzuki',
+        Modell: 'GX',
+        Typ: 'Motorrad',
+        Anz_Raeder: '2',
+        PS: '80',
+        Adresse: 'Koniciva 3, Yokahama',
+        Land: 'Japan',
+        Klimaanlage: 'Nein'
       },
       {
-        id: '4717',
-        hersteller: 'VW',
-        modell: 'Golf',
-        typ: 'PKW',
-        raeder: '4',
-        ps: '92',
-        adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
-        land: 'Deutschland',
-        klimaanlage: 'Ja'
+        ID: '4717',
+        Hersteller: 'VW',
+        Modell: 'Golf',
+        Typ: 'PKW',
+        Anz_Raeder: '4',
+        PS: '92',
+        Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
+        Land: 'Deutschland',
+        Klimaanlage: 'Ja'
       },
       {
-        id: '4711',
-        hersteller: 'VW',
-        modell: 'Käfer',
-        typ: 'PKW',
-        raeder: '4',
-        ps: '45',
-        adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
-        land: 'Deutschland',
-        klimaanlage: 'Ja'
+        ID: '4711',
+        Hersteller: 'VW',
+        Modell: 'Käfer',
+        Typ: 'PKW',
+        Anz_Raeder: '4',
+        PS: '45',
+        Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
+        Land: 'Deutschland',
+        Klimaanlage: 'Ja'
       },
       {
-        id: '4712',
-        hersteller: 'Hanomag',
-        modell: 'II',
-        typ: 'LKW',
-        raeder: '4',
-        ps: '220',
-        adresse: 'Musterstr,27, 2222 Hamburg',
-        land: 'Deutschland',
-        klimaanlage: 'Nein'
+        ID: '4712',
+        Hersteller: 'Hanomag',
+        Modell: 'II',
+        Typ: 'LKW',
+        Anz_Raeder: '4',
+        PS: '220',
+        Adresse: 'Musterstr,27, 2222 Hamburg',
+        Land: 'Deutschland',
+        Klimaanlage: 'Nein'
       },
       {
-        id: '4715',
-        hersteller: 'Ford',
-        modell: 'Focus',
-        typ: 'PKW',
-        raeder: '4',
-        ps: '65',
-        adresse: 'Fritzweg 26, 54478 Köln',
-        land: 'Deutschland',
-        klimaanlage: 'Ja'
+        ID: '4715',
+        Hersteller: 'Ford',
+        Modell: 'Focus',
+        Typ: 'PKW',
+        Anz_Raeder: '4',
+        PS: '65',
+        Adresse: 'Fritzweg 26, 54478 Köln',
+        Land: 'Deutschland',
+        Klimaanlage: 'Ja'
       },
       {
-        id: '4716',
-        hersteller: 'VW',
-        modell: 'Golf',
-        typ: 'PKW',
-        raeder: '4',
-        ps: '72',
-        adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
-        land: 'Deutschland',
-        klimaanlage: 'Nein'
+        ID: '4716',
+        Hersteller: 'VW',
+        Modell: 'Golf',
+        Typ: 'PKW',
+        Anz_Raeder: '4',
+        PS: '72',
+        Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
+        Land: 'Deutschland',
+        Klimaanlage: 'Nein'
       }
     ],
     hasViolatingColumns: false,
@@ -817,22 +817,22 @@ const tasks: Task[] = [
     functionalDependencies: [
       {
         primaryKeys: [
-          'HERSTELLER'
+          'Hersteller'
         ],
         columns: [
-          'ADRESSE',
-          'LAND'
+          'Adresse',
+          'Land'
         ],
         type: 'transitiv'
       },
       {
         primaryKeys: [
-          'HERSTELLER',
-          'MODELL'
+          'Hersteller',
+          'Modell'
         ],
         columns: [
-          'TYP',
-          'RAEDER'
+          'Typ',
+          'Anz_Raeder'
         ],
         type: 'transitiv'
       },
@@ -841,14 +841,14 @@ const tasks: Task[] = [
           'ID'
         ],
         columns: [
-          'HERSTELLER',
-          'MODELL',
-          'TYP',
-          'RAEDER',
+          'Hersteller',
+          'Modell',
+          'Typ',
+          'Anz_Raeder',
           'PS',
-          'ADRESSE',
-          'LAND',
-          'KLIMAANLAGE'
+          'Adresse',
+          'Land',
+          'Klimaanlage'
         ],
         type: 'voll'
       }
@@ -862,95 +862,95 @@ const tasks: Task[] = [
           'ID'
         ],
         columns: [
-          'HERSTELLER',
-          'MODELL',
-          'TYP',
-          'RAEDER',
+          'Hersteller',
+          'Modell',
+          'Typ',
+          'Anz_Raeder',
           'PS',
-          'ADRESSE',
-          'LAND',
-          'KLIMAANLAGE'
+          'Adresse',
+          'Land',
+          'Klimaanlage'
         ]
       }
     ],
     secondFormTableData: [
       [
         {
-          id: '4717',
-          hersteller: 'VW',
-          modell: 'Golf',
-          typ: 'PKW',
-          raeder: '4',
-          ps: '92',
-          adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
-          land: 'Deutschland',
-          klimaanlage: 'Ja'
+          ID: '4717',
+          Hersteller: 'VW',
+          Modell: 'Golf',
+          Typ: 'PKW',
+          Anz_Raeder: '4',
+          PS: '92',
+          Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
+          Land: 'Deutschland',
+          Klimaanlage: 'Ja'
         },
         {
-          id: '4718',
-          hersteller: 'Vespa',
-          modell: 'II',
-          typ: 'Motorrad',
-          raeder: '2',
-          ps: '6',
-          adresse: 'La Strada 2, 1223 Rom',
-          land: 'Italien',
-          klimaanlage: 'Nein'
+          ID: '4718',
+          Hersteller: 'Vespa',
+          Modell: 'II',
+          Typ: 'Motorrad',
+          Anz_Raeder: '2',
+          PS: '6',
+          Adresse: 'La Strada 2, 1223 Rom',
+          Land: 'Italien',
+          Klimaanlage: 'Nein'
         },
         {
-          id: '4715',
-          hersteller: 'Ford',
-          modell: 'Focus',
-          typ: 'PKW',
-          raeder: '4',
-          ps: '65',
-          adresse: 'Fritzweg 26, 54478 Köln',
-          land: 'Deutschland',
-          klimaanlage: 'Ja'
+          ID: '4715',
+          Hersteller: 'Ford',
+          Modell: 'Focus',
+          Typ: 'PKW',
+          Anz_Raeder: '4',
+          PS: '65',
+          Adresse: 'Fritzweg 26, 54478 Köln',
+          Land: 'Deutschland',
+          Klimaanlage: 'Ja'
         },
         {
-          id: '4711',
-          hersteller: 'VW',
-          modell: 'Käfer',
-          typ: 'PKW',
-          raeder: '4',
-          ps: '45',
-          adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
-          land: 'Deutschland',
-          klimaanlage: 'Ja'
+          ID: '4711',
+          Hersteller: 'VW',
+          Modell: 'Käfer',
+          Typ: 'PKW',
+          Anz_Raeder: '4',
+          PS: '45',
+          Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
+          Land: 'Deutschland',
+          Klimaanlage: 'Ja'
         },
         {
-          id: '4716',
-          hersteller: 'VW',
-          modell: 'Golf',
-          typ: 'PKW',
-          raeder: '4',
-          ps: '72',
-          adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
-          land: 'Deutschland',
-          klimaanlage: 'Nein'
+          ID: '4716',
+          Hersteller: 'VW',
+          Modell: 'Golf',
+          Typ: 'PKW',
+          Anz_Raeder: '4',
+          PS: '72',
+          Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
+          Land: 'Deutschland',
+          Klimaanlage: 'Nein'
         },
         {
-          id: '4712',
-          hersteller: 'Hanomag',
-          modell: 'II',
-          typ: 'LKW',
-          raeder: '4',
-          ps: '220',
-          adresse: 'Musterstr,27, 2222 Hamburg',
-          land: 'Deutschland',
-          klimaanlage: 'Nein'
+          ID: '4712',
+          Hersteller: 'Hanomag',
+          Modell: 'II',
+          Typ: 'LKW',
+          Anz_Raeder: '4',
+          PS: '220',
+          Adresse: 'Musterstr,27, 2222 Hamburg',
+          Land: 'Deutschland',
+          Klimaanlage: 'Nein'
         },
         {
-          id: '4714',
-          hersteller: 'Suzuki',
-          modell: 'GX',
-          typ: 'Motorrad',
-          raeder: '2',
-          ps: '80',
-          adresse: 'Koniciva 3, Yokahama',
-          land: 'Japan',
-          klimaanlage: 'Nein'
+          ID: '4714',
+          Hersteller: 'Suzuki',
+          Modell: 'GX',
+          Typ: 'Motorrad',
+          Anz_Raeder: '2',
+          PS: '80',
+          Adresse: 'Koniciva 3, Yokahama',
+          Land: 'Japan',
+          Klimaanlage: 'Nein'
         }
       ]
     ],
@@ -960,29 +960,29 @@ const tasks: Task[] = [
           'ID'
         ],
         columns: [
-          'HERSTELLER',
-          'MODELL',
+          'Hersteller',
+          'Modell',
           'PS',
-          'KLIMAANLAGE'
+          'Klimaanlage'
         ]
       },
       {
         primaryKeys: [
-          'HERSTELLER'
+          'Hersteller'
         ],
         columns: [
-          'ADRESSE',
-          'LAND'
+          'Adresse',
+          'Land'
         ]
       },
       {
         primaryKeys: [
-          'HERSTELLER',
-          'MODELL'
+          'Hersteller',
+          'Modell'
         ],
         columns: [
-          'TYP',
-          'RAEDER'
+          'Typ',
+          'Anz_Raeder'
         ]
       }
     ]
@@ -2173,11 +2173,11 @@ const tasks: Task[] = [
       {
         mnr: '1',
         H_NR: '1',
-        hersteller: 'Opel',
-        typ: 'Kadett',
+        Hersteller: 'Opel',
+        Typ: 'Kadett',
         neupreis: '18000',
         verkaufspreis: '13000',
-        ps: '60',
+        PS: '60',
         fznr: 'K674',
         baujahr: '1999',
         km: '10000',
@@ -2186,11 +2186,11 @@ const tasks: Task[] = [
       {
         mnr: '1',
         H_NR: '1',
-        hersteller: 'Opel',
-        typ: 'Kadett',
+        Hersteller: 'Opel',
+        Typ: 'Kadett',
         neupreis: '18000',
         verkaufspreis: '12000',
-        ps: '60',
+        PS: '60',
         fznr: 'K634',
         baujahr: '1998',
         km: '34000',
@@ -2199,11 +2199,11 @@ const tasks: Task[] = [
       {
         mnr: '2',
         H_NR: '1',
-        hersteller: 'Opel',
-        typ: 'Vectra',
+        Hersteller: 'Opel',
+        Typ: 'Vectra',
         neupreis: '25000',
         verkaufspreis: '18000',
-        ps: '90',
+        PS: '90',
         fznr: 'V459',
         baujahr: '1990',
         km: '15000',
@@ -2212,11 +2212,11 @@ const tasks: Task[] = [
       {
         mnr: '3',
         H_NR: '1',
-        hersteller: 'Opel',
-        typ: 'Omega',
+        Hersteller: 'Opel',
+        Typ: 'Omega',
         neupreis: '30000',
         verkaufspreis: '22000',
-        ps: '110',
+        PS: '110',
         fznr: 'O634',
         baujahr: '1997',
         km: '45000',
@@ -2225,11 +2225,11 @@ const tasks: Task[] = [
       {
         mnr: '4',
         H_NR: '2',
-        hersteller: 'VW',
-        typ: 'Golf',
+        Hersteller: 'VW',
+        Typ: 'Golf',
         neupreis: '25000',
         verkaufspreis: '21000',
-        ps: '90',
+        PS: '90',
         fznr: 'G789',
         baujahr: '1991',
         km: '11000',
@@ -2238,11 +2238,11 @@ const tasks: Task[] = [
       {
         mnr: '4',
         H_NR: '2',
-        hersteller: 'VW',
-        typ: 'Golf',
+        Hersteller: 'VW',
+        Typ: 'Golf',
         neupreis: '25000',
         verkaufspreis: '16000',
-        ps: '90',
+        PS: '90',
         fznr: 'G713',
         baujahr: '1991',
         km: '31000',
@@ -2251,11 +2251,11 @@ const tasks: Task[] = [
       {
         mnr: '5',
         H_NR: '2',
-        hersteller: 'VW',
-        typ: 'Golf',
+        Hersteller: 'VW',
+        Typ: 'Golf',
         neupreis: '28000',
         verkaufspreis: '19000',
-        ps: '105',
+        PS: '105',
         fznr: 'G762',
         baujahr: '1992',
         km: '28000',
@@ -2264,11 +2264,11 @@ const tasks: Task[] = [
       {
         mnr: '6',
         H_NR: '2',
-        hersteller: 'VW',
-        typ: 'Polo',
+        Hersteller: 'VW',
+        Typ: 'Polo',
         neupreis: '19000',
         verkaufspreis: '10000',
-        ps: '60',
+        PS: '60',
         fznr: 'K635',
         baujahr: '1996',
         km: '71000',
@@ -2284,8 +2284,8 @@ const tasks: Task[] = [
         ],
         columns: [
           'H_NR',
-          'HERSTELLER',
-          'TYP',
+          'Hersteller',
+          'Typ',
           'NEUPREIS',
           'PS'
         ],
@@ -2296,7 +2296,7 @@ const tasks: Task[] = [
           'H_NR'
         ],
         columns: [
-          'HERSTELLER'
+          'Hersteller'
         ],
         type: 'transitiv'
       },
@@ -2307,8 +2307,8 @@ const tasks: Task[] = [
         columns: [
           'MNR',
           'H_NR',
-          'HERSTELLER',
-          'TYP',
+          'Hersteller',
+          'Typ',
           'NEUPREIS',
           'VERKAUFSPREIS',
           'PS',
@@ -2330,8 +2330,8 @@ const tasks: Task[] = [
         columns: [
           'MNR',
           'H_NR',
-          'HERSTELLER',
-          'TYP',
+          'Hersteller',
+          'Typ',
           'NEUPREIS',
           'VERKAUFSPREIS',
           'PS',
@@ -2347,11 +2347,11 @@ const tasks: Task[] = [
           fznr: 'G789',
           mnr: '4',
           H_NR: '2',
-          hersteller: 'VW',
-          typ: 'Golf',
+          Hersteller: 'VW',
+          Typ: 'Golf',
           neupreis: '25000',
           verkaufspreis: '21000',
-          ps: '90',
+          PS: '90',
           baujahr: '1991',
           km: '11000',
           einkaufspreis: '16000'
@@ -2360,11 +2360,11 @@ const tasks: Task[] = [
           fznr: 'V459',
           mnr: '2',
           H_NR: '1',
-          hersteller: 'Opel',
-          typ: 'Vectra',
+          Hersteller: 'Opel',
+          Typ: 'Vectra',
           neupreis: '25000',
           verkaufspreis: '18000',
-          ps: '90',
+          PS: '90',
           baujahr: '1990',
           km: '15000',
           einkaufspreis: '17000'
@@ -2373,11 +2373,11 @@ const tasks: Task[] = [
           fznr: 'G762',
           mnr: '5',
           H_NR: '2',
-          hersteller: 'VW',
-          typ: 'Golf',
+          Hersteller: 'VW',
+          Typ: 'Golf',
           neupreis: '28000',
           verkaufspreis: '19000',
-          ps: '105',
+          PS: '105',
           baujahr: '1992',
           km: '28000',
           einkaufspreis: '17000'
@@ -2386,11 +2386,11 @@ const tasks: Task[] = [
           fznr: 'G713',
           mnr: '4',
           H_NR: '2',
-          hersteller: 'VW',
-          typ: 'Golf',
+          Hersteller: 'VW',
+          Typ: 'Golf',
           neupreis: '25000',
           verkaufspreis: '16000',
-          ps: '90',
+          PS: '90',
           baujahr: '1991',
           km: '31000',
           einkaufspreis: '13000'
@@ -2399,11 +2399,11 @@ const tasks: Task[] = [
           fznr: 'K635',
           mnr: '6',
           H_NR: '2',
-          hersteller: 'VW',
-          typ: 'Polo',
+          Hersteller: 'VW',
+          Typ: 'Polo',
           neupreis: '19000',
           verkaufspreis: '10000',
-          ps: '60',
+          PS: '60',
           baujahr: '1996',
           km: '71000',
           einkaufspreis: '8000'
@@ -2412,11 +2412,11 @@ const tasks: Task[] = [
           fznr: 'K674',
           mnr: '1',
           H_NR: '1',
-          hersteller: 'Opel',
-          typ: 'Kadett',
+          Hersteller: 'Opel',
+          Typ: 'Kadett',
           neupreis: '18000',
           verkaufspreis: '13000',
-          ps: '60',
+          PS: '60',
           baujahr: '1999',
           km: '10000',
           einkaufspreis: '12000'
@@ -2425,11 +2425,11 @@ const tasks: Task[] = [
           fznr: 'K634',
           mnr: '1',
           H_NR: '1',
-          hersteller: 'Opel',
-          typ: 'Kadett',
+          Hersteller: 'Opel',
+          Typ: 'Kadett',
           neupreis: '18000',
           verkaufspreis: '12000',
-          ps: '60',
+          PS: '60',
           baujahr: '1998',
           km: '34000',
           einkaufspreis: '9000'
@@ -2438,11 +2438,11 @@ const tasks: Task[] = [
           fznr: 'O634',
           mnr: '3',
           H_NR: '1',
-          hersteller: 'Opel',
-          typ: 'Omega',
+          Hersteller: 'Opel',
+          Typ: 'Omega',
           neupreis: '30000',
           verkaufspreis: '22000',
-          ps: '110',
+          PS: '110',
           baujahr: '1997',
           km: '45000',
           einkaufspreis: '15000'
@@ -2456,7 +2456,7 @@ const tasks: Task[] = [
         ],
         columns: [
           'H_NR',
-          'TYP',
+          'Typ',
           'NEUPREIS',
           'PS'
         ]
@@ -2466,7 +2466,7 @@ const tasks: Task[] = [
           'H_NR'
         ],
         columns: [
-          'HERSTELLER'
+          'Hersteller'
         ]
       },
       {
