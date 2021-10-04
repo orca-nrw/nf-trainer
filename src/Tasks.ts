@@ -1803,119 +1803,119 @@ const tasks: Task[] = [
   },
   {
     id: 7,
-    description: '<p>Betrachten Sie die folgende, in einem Krankenhaus gef&uuml;hrte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. En Patient kann mehrere Krankheiten haben.<br /><br />PNR = Patientennummer<br />SNR = Stationsnummer<br />ZNR = Zimmernummer</p><p>Die Anzahl der Betten soll von der SNR und der ZNR abh&auml;ngen.</p>',
+    description: 'Betrachten Sie die folgende, in einem Krankenhaus geführte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. \n\nEin Patient kann mehrere Krankheiten haben. \nDabei stehen die Präfixe S_ für Station, Z_ für Zimmer, P_ für Patient, A_ für Arzt und Pf_ für Pfleger. \n\nDie Anzahl der Betten soll von der SNR und der ZNR abhängen.',
     tableData: [
       {
-        snr: '1',
-        station: 'Medizin',
-        znr: '1',
-        anzahl_betten: '2',
-        pnr: '1',
-        name_patient: 'Maier',
-        v_name_patient: 'Hans',
-        krankheit: 'Blinddarm',
-        name_arzt: 'Mann',
-        v_name_arzt: 'Heinz',
-        name_pfleger: 'Brahms',
-        v_name_pfleger: 'Hilde'
+        S_NR: '1',
+        S_Name: 'Medizin',
+        Z_NR: '1',
+        Anz_Betten: '2',
+        P_NR: '1',
+        P_Name: 'Maier',
+        P_Vorname: 'Hans',
+        Krankheit: 'Blinddarm',
+        A_Name: 'Mann',
+        A_Vorname: 'Heinz',
+        Pf_Name: 'Brahms',
+        Pf_Vorname: 'Hilde'
       },
       {
-        snr: '1',
-        station: 'Medizin',
-        znr: '1',
-        anzahl_betten: '2',
-        pnr: '2',
-        name_patient: 'Schmid',
-        v_name_patient: 'Peter',
-        krankheit: 'Beinbruch',
-        name_arzt: 'Mann',
-        v_name_arzt: 'Heinz',
-        name_pfleger: 'Brahms',
-        v_name_pfleger: 'Hilde'
+        S_NR: '1',
+        S_Name: 'Medizin',
+        Z_NR: '1',
+        Anz_Betten: '2',
+        P_NR: '2',
+        P_Name: 'Schmid',
+        P_Vorname: 'Peter',
+        Krankheit: 'Beinbruch',
+        A_Name: 'Mann',
+        A_Vorname: 'Heinz',
+        Pf_Name: 'Brahms',
+        Pf_Vorname: 'Hilde'
       },
       {
-        snr: '1',
-        station: 'Medizin',
-        znr: '1',
-        anzahl_betten: '2',
-        pnr: '2',
-        name_patient: 'Schmid',
-        v_name_patient: 'Peter',
-        krankheit: 'Armbruch',
-        name_arzt: 'Mann',
-        v_name_arzt: 'Heinz',
-        name_pfleger: 'Brahms',
-        v_name_pfleger: 'Hilde'
+        S_NR: '1',
+        S_Name: 'Medizin',
+        Z_NR: '1',
+        Anz_Betten: '2',
+        P_NR: '2',
+        P_Name: 'Schmid',
+        P_Vorname: 'Peter',
+        Krankheit: 'Armbruch',
+        A_Name: 'Mann',
+        A_Vorname: 'Heinz',
+        Pf_Name: 'Brahms',
+        Pf_Vorname: 'Hilde'
       },
       {
-        snr: '1',
-        station: 'Medizin',
-        znr: '2',
-        anzahl_betten: '1',
-        pnr: '3',
-        name_patient: 'Josh',
-        v_name_patient: 'Hugo',
-        krankheit: 'Herzinfarkt',
-        name_arzt: 'Hase',
-        v_name_arzt: 'Willi',
-        name_pfleger: 'Brahms',
-        v_name_pfleger: 'Hilde'
+        S_NR: '1',
+        S_Name: 'Medizin',
+        Z_NR: '2',
+        Anz_Betten: '1',
+        P_NR: '3',
+        P_Name: 'Josh',
+        P_Vorname: 'Hugo',
+        Krankheit: 'Herzinfarkt',
+        A_Name: 'Hase',
+        A_Vorname: 'Willi',
+        Pf_Name: 'Brahms',
+        Pf_Vorname: 'Hilde'
       },
       {
-        snr: '2',
-        station: 'Augen',
-        znr: '1',
-        anzahl_betten: '2',
-        pnr: '4',
-        name_patient: 'Wein',
-        v_name_patient: 'Berta',
-        krankheit: 'Grauer Star',
-        name_arzt: 'Wilms',
-        v_name_arzt: 'Otto',
-        name_pfleger: 'Saga',
-        v_name_pfleger: 'Udo'
+        S_NR: '2',
+        S_Name: 'Augen',
+        Z_NR: '1',
+        Anz_Betten: '2',
+        P_NR: '4',
+        P_Name: 'Wein',
+        P_Vorname: 'Berta',
+        Krankheit: 'Grauer Star',
+        A_Name: 'Wilms',
+        A_Vorname: 'Otto',
+        Pf_Name: 'Saga',
+        Pf_Vorname: 'Udo'
       },
       {
-        snr: '2',
-        station: 'Augen',
-        znr: '1',
-        anzahl_betten: '2',
-        pnr: '5',
-        name_patient: 'Hein',
-        v_name_patient: 'Hanna',
-        krankheit: 'Netzhaut',
-        name_arzt: 'Wilms',
-        v_name_arzt: 'Otto',
-        name_pfleger: 'Saga',
-        v_name_pfleger: 'Udo'
+        S_NR: '2',
+        S_Name: 'Augen',
+        Z_NR: '1',
+        Anz_Betten: '2',
+        P_NR: '5',
+        P_Name: 'Hein',
+        P_Vorname: 'Hanna',
+        Krankheit: 'Netzhaut',
+        A_Name: 'Wilms',
+        A_Vorname: 'Otto',
+        Pf_Name: 'Saga',
+        Pf_Vorname: 'Udo'
       },
       {
-        snr: '2',
-        station: 'Augen',
-        znr: '2',
-        anzahl_betten: '1',
-        pnr: '6',
-        name_patient: 'Fisch',
-        v_name_patient: 'Olga',
-        krankheit: 'Grüner Star',
-        name_arzt: 'Wilms',
-        v_name_arzt: 'Otto',
-        name_pfleger: 'Meier',
-        v_name_pfleger: 'Anna'
+        S_NR: '2',
+        S_Name: 'Augen',
+        Z_NR: '2',
+        Anz_Betten: '1',
+        P_NR: '6',
+        P_Name: 'Fisch',
+        P_Vorname: 'Olga',
+        Krankheit: 'Grüner Star',
+        A_Name: 'Wilms',
+        A_Vorname: 'Otto',
+        Pf_Name: 'Meier',
+        Pf_Vorname: 'Anna'
       },
       {
-        snr: '2',
-        station: 'Augen',
-        znr: '2',
-        anzahl_betten: '1',
-        pnr: '6',
-        name_patient: 'Fisch',
-        v_name_patient: 'Olga',
-        krankheit: 'Puma',
-        name_arzt: 'Wilms',
-        v_name_arzt: 'Otto',
-        name_pfleger: 'Meier',
-        v_name_pfleger: 'Anna'
+        S_NR: '2',
+        S_Name: 'Augen',
+        Z_NR: '2',
+        Anz_Betten: '1',
+        P_NR: '6',
+        P_Name: 'Fisch',
+        P_Vorname: 'Olga',
+        Krankheit: 'Puma',
+        A_Name: 'Wilms',
+        A_Vorname: 'Otto',
+        Pf_Name: 'Meier',
+        Pf_Vorname: 'Anna'
       }
     ],
     hasViolatingColumns: false,
@@ -1923,245 +1923,245 @@ const tasks: Task[] = [
     functionalDependencies: [
       {
         primaryKeys: [
-          'SNR'
+          'S_NR'
         ],
         columns: [
-          'STATION'
+          'S_Name'
         ],
         type: 'transitiv'
       },
       {
         primaryKeys: [
-          'SNR',
-          'ZNR'
+          'S_NR',
+          'Z_NR'
         ],
         columns: [
-          'ANZAHL_BETTEN'
+          'Anz_Betten'
         ],
         type: 'transitiv'
       },
       {
         primaryKeys: [
-          'PNR'
+          'P_NR'
         ],
         columns: [
-          'NAME_PATIENT',
-          'V_NAME_PATIENT',
-          'SNR',
-          'ZNR',
-          'ANZAHL_BETTEN',
-          'STATION'
+          'P_Name',
+          'P_Vorname',
+          'S_NR',
+          'Z_NR',
+          'Anz_Betten',
+          'S_Name'
         ],
         type: 'partiell'
       },
       {
         primaryKeys: [
-          'PNR',
-          'KRANKHEIT'
+          'P_NR',
+          'Krankheit'
         ],
         columns: [
-          'NAME_ARZT',
-          'V_NAME_ARZT',
-          'V_NAME_PFLEGER',
-          'NAME_PFLEGER'
+          'A_Name',
+          'A_Vorname',
+          'Pf_Vorname',
+          'Pf_Name'
         ],
         type: 'voll'
       }
     ],
     primaryKeys: [
-      'PNR',
-      'KRANKHEIT'
+      'P_NR',
+      'Krankheit'
     ],
     secondNormalForm: [
       {
         primaryKeys: [
-          'PNR'
+          'P_NR'
         ],
         columns: [
-          'NAME_PATIENT',
-          'V_NAME_PATIENT',
-          'SNR',
-          'ZNR',
-          'ANZAHL_BETTEN',
-          'STATION'
+          'P_Name',
+          'P_Vorname',
+          'S_NR',
+          'Z_NR',
+          'Anz_Betten',
+          'S_Name'
         ]
       },
       {
         primaryKeys: [
-          'PNR',
-          'KRANKHEIT'
+          'P_NR',
+          'Krankheit'
         ],
         columns: [
-          'NAME_ARZT',
-          'V_NAME_ARZT',
-          'V_NAME_PFLEGER',
-          'NAME_PFLEGER'
+          'A_Name',
+          'A_Vorname',
+          'Pf_Vorname',
+          'Pf_Name'
         ]
       }
     ],
     secondFormTableData: [
       [
         {
-          pnr: '6',
-          name_patient: 'Fisch',
-          v_name_patient: 'Olga',
-          snr: '2',
-          znr: '2',
-          anzahl_betten: '1',
-          station: 'Augen'
+          P_NR: '6',
+          P_Name: 'Fisch',
+          P_Vorname: 'Olga',
+          S_NR: '2',
+          Z_NR: '2',
+          Anz_Betten: '1',
+          S_Name: 'Augen'
         },
         {
-          pnr: '3',
-          name_patient: 'Josh',
-          v_name_patient: 'Hugo',
-          snr: '1',
-          znr: '2',
-          anzahl_betten: '1',
-          station: 'Medizin'
+          P_NR: '3',
+          P_Name: 'Josh',
+          P_Vorname: 'Hugo',
+          S_NR: '1',
+          Z_NR: '2',
+          Anz_Betten: '1',
+          S_Name: 'Medizin'
         },
         {
-          pnr: '4',
-          name_patient: 'Wein',
-          v_name_patient: 'Berta',
-          snr: '2',
-          znr: '1',
-          anzahl_betten: '2',
-          station: 'Augen'
+          P_NR: '4',
+          P_Name: 'Wein',
+          P_Vorname: 'Berta',
+          S_NR: '2',
+          Z_NR: '1',
+          Anz_Betten: '2',
+          S_Name: 'Augen'
         },
         {
-          pnr: '1',
-          name_patient: 'Maier',
-          v_name_patient: 'Hans',
-          snr: '1',
-          znr: '1',
-          anzahl_betten: '2',
-          station: 'Medizin'
+          P_NR: '1',
+          P_Name: 'Maier',
+          P_Vorname: 'Hans',
+          S_NR: '1',
+          Z_NR: '1',
+          Anz_Betten: '2',
+          S_Name: 'Medizin'
         },
         {
-          pnr: '5',
-          name_patient: 'Hein',
-          v_name_patient: 'Hanna',
-          snr: '2',
-          znr: '1',
-          anzahl_betten: '2',
-          station: 'Augen'
+          P_NR: '5',
+          P_Name: 'Hein',
+          P_Vorname: 'Hanna',
+          S_NR: '2',
+          Z_NR: '1',
+          Anz_Betten: '2',
+          S_Name: 'Augen'
         },
         {
-          pnr: '2',
-          name_patient: 'Schmid',
-          v_name_patient: 'Peter',
-          snr: '1',
-          znr: '1',
-          anzahl_betten: '2',
-          station: 'Medizin'
+          P_NR: '2',
+          P_Name: 'Schmid',
+          P_Vorname: 'Peter',
+          S_NR: '1',
+          Z_NR: '1',
+          Anz_Betten: '2',
+          S_Name: 'Medizin'
         }
       ],
       [
         {
-          pnr: '1',
-          krankheit: 'Blinddarm',
-          name_arzt: 'Mann',
-          v_name_arzt: 'Heinz',
-          v_name_pfleger: 'Hilde',
-          name_pfleger: 'Brahms'
+          P_NR: '1',
+          Krankheit: 'Blinddarm',
+          A_Name: 'Mann',
+          A_Vorname: 'Heinz',
+          Pf_Vorname: 'Hilde',
+          Pf_Name: 'Brahms'
         },
         {
-          pnr: '3',
-          krankheit: 'Herzinfarkt',
-          name_arzt: 'Hase',
-          v_name_arzt: 'Willi',
-          v_name_pfleger: 'Hilde',
-          name_pfleger: 'Brahms'
+          P_NR: '3',
+          Krankheit: 'Herzinfarkt',
+          A_Name: 'Hase',
+          A_Vorname: 'Willi',
+          Pf_Vorname: 'Hilde',
+          Pf_Name: 'Brahms'
         },
         {
-          pnr: '5',
-          krankheit: 'Netzhaut',
-          name_arzt: 'Wilms',
-          v_name_arzt: 'Otto',
-          v_name_pfleger: 'Udo',
-          name_pfleger: 'Saga'
+          P_NR: '5',
+          Krankheit: 'Netzhaut',
+          A_Name: 'Wilms',
+          A_Vorname: 'Otto',
+          Pf_Vorname: 'Udo',
+          Pf_Name: 'Saga'
         },
         {
-          pnr: '4',
-          krankheit: 'Grauer Star',
-          name_arzt: 'Wilms',
-          v_name_arzt: 'Otto',
-          v_name_pfleger: 'Udo',
-          name_pfleger: 'Saga'
+          P_NR: '4',
+          Krankheit: 'Grauer Star',
+          A_Name: 'Wilms',
+          A_Vorname: 'Otto',
+          Pf_Vorname: 'Udo',
+          Pf_Name: 'Saga'
         },
         {
-          pnr: '2',
-          krankheit: 'Beinbruch',
-          name_arzt: 'Mann',
-          v_name_arzt: 'Heinz',
-          v_name_pfleger: 'Hilde',
-          name_pfleger: 'Brahms'
+          P_NR: '2',
+          Krankheit: 'Beinbruch',
+          A_Name: 'Mann',
+          A_Vorname: 'Heinz',
+          Pf_Vorname: 'Hilde',
+          Pf_Name: 'Brahms'
         },
         {
-          pnr: '6',
-          krankheit: 'Puma',
-          name_arzt: 'Wilms',
-          v_name_arzt: 'Otto',
-          v_name_pfleger: 'Anna',
-          name_pfleger: 'Meier'
+          P_NR: '6',
+          Krankheit: 'Puma',
+          A_Name: 'Wilms',
+          A_Vorname: 'Otto',
+          Pf_Vorname: 'Anna',
+          Pf_Name: 'Meier'
         },
         {
-          pnr: '6',
-          krankheit: 'Grüner Star',
-          name_arzt: 'Wilms',
-          v_name_arzt: 'Otto',
-          v_name_pfleger: 'Anna',
-          name_pfleger: 'Meier'
+          P_NR: '6',
+          Krankheit: 'Grüner Star',
+          A_Name: 'Wilms',
+          A_Vorname: 'Otto',
+          Pf_Vorname: 'Anna',
+          Pf_Name: 'Meier'
         },
         {
-          pnr: '2',
-          krankheit: 'Armbruch',
-          name_arzt: 'Mann',
-          v_name_arzt: 'Heinz',
-          v_name_pfleger: 'Hilde',
-          name_pfleger: 'Brahms'
+          P_NR: '2',
+          Krankheit: 'Armbruch',
+          A_Name: 'Mann',
+          A_Vorname: 'Heinz',
+          Pf_Vorname: 'Hilde',
+          Pf_Name: 'Brahms'
         }
       ]
     ],
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
-          'PNR'
+          'P_NR'
         ],
         columns: [
-          'NAME_PATIENT',
-          'V_NAME_PATIENT',
-          'SNR',
-          'ZNR'
+          'P_Name',
+          'P_Vorname',
+          'S_NR',
+          'Z_NR'
         ]
       },
       {
         primaryKeys: [
-          'SNR',
-          'ZNR'
+          'S_NR',
+          'Z_NR'
         ],
         columns: [
-          'ANZAHL_BETTEN'
+          'Anz_Betten'
         ]
       },
       {
         primaryKeys: [
-          'SNR'
+          'S_NR'
         ],
         columns: [
-          'STATION'
+          'S_Name'
         ]
       },
       {
         primaryKeys: [
-          'PNR',
-          'KRANKHEIT'
+          'P_NR',
+          'Krankheit'
         ],
         columns: [
-          'NAME_ARZT',
-          'V_NAME_ARZT',
-          'V_NAME_PFLEGER',
-          'NAME_PFLEGER'
+          'A_Name',
+          'A_Vorname',
+          'Pf_Vorname',
+          'Pf_Name'
         ]
       }
     ]
