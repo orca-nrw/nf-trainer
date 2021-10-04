@@ -2168,111 +2168,111 @@ const tasks: Task[] = [
   },
   {
     id: 8,
-    description: 'Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. Die Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. <br/><br/>Jedes Fahrzeug ist durch die FZNR identifiziert. Bei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. Sofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos.<br />MNR = Modell-Nr, HNr = Hersteller-Nr, FZNR = FahrzeugNr<br /><br />Nach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will, die Datenmodellierung scheint nicht gut durchdacht. Können Sie Frau Weber helfen?',
+    description: 'Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. \nDie Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. \n\nJedes Fahrzeug ist durch die Fahrzeug_NR identifiziert. \nBei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. \nSofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos. \n\nDer Präfix H_ steht hier für den Hersteller des Fahrzeugs. \n\nNach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will - die Datenmodellierung scheint nicht gut durchdacht! \nKönnen Sie Frau Weber helfen?',
     tableData: [
       {
-        mnr: '1',
+        Modell_NR: '1',
         H_NR: '1',
-        Hersteller: 'Opel',
+        H_Name: 'Opel',
         Typ: 'Kadett',
-        neupreis: '18000',
-        verkaufspreis: '13000',
+        Neupreis: '18000',
+        Verkaufspreis: '13000',
         PS: '60',
-        fznr: 'K674',
-        baujahr: '1999',
+        Fahrzeug_NR: 'K674',
+        Baujahr: '1999',
         km: '10000',
-        einkaufspreis: '12000'
+        Einkaufspreis: '12000'
       },
       {
-        mnr: '1',
+        Modell_NR: '1',
         H_NR: '1',
-        Hersteller: 'Opel',
+        H_Name: 'Opel',
         Typ: 'Kadett',
-        neupreis: '18000',
-        verkaufspreis: '12000',
+        Neupreis: '18000',
+        Verkaufspreis: '12000',
         PS: '60',
-        fznr: 'K634',
-        baujahr: '1998',
+        Fahrzeug_NR: 'K634',
+        Baujahr: '1998',
         km: '34000',
-        einkaufspreis: '9000'
+        Einkaufspreis: '9000'
       },
       {
-        mnr: '2',
+        Modell_NR: '2',
         H_NR: '1',
-        Hersteller: 'Opel',
+        H_Name: 'Opel',
         Typ: 'Vectra',
-        neupreis: '25000',
-        verkaufspreis: '18000',
+        Neupreis: '25000',
+        Verkaufspreis: '18000',
         PS: '90',
-        fznr: 'V459',
-        baujahr: '1990',
+        Fahrzeug_NR: 'V459',
+        Baujahr: '1990',
         km: '15000',
-        einkaufspreis: '17000'
+        Einkaufspreis: '17000'
       },
       {
-        mnr: '3',
+        Modell_NR: '3',
         H_NR: '1',
-        Hersteller: 'Opel',
+        H_Name: 'Opel',
         Typ: 'Omega',
-        neupreis: '30000',
-        verkaufspreis: '22000',
+        Neupreis: '30000',
+        Verkaufspreis: '22000',
         PS: '110',
-        fznr: 'O634',
-        baujahr: '1997',
+        Fahrzeug_NR: 'O634',
+        Baujahr: '1997',
         km: '45000',
-        einkaufspreis: '15000'
+        Einkaufspreis: '15000'
       },
       {
-        mnr: '4',
+        Modell_NR: '4',
         H_NR: '2',
-        Hersteller: 'VW',
+        H_Name: 'VW',
         Typ: 'Golf',
-        neupreis: '25000',
-        verkaufspreis: '21000',
+        Neupreis: '25000',
+        Verkaufspreis: '21000',
         PS: '90',
-        fznr: 'G789',
-        baujahr: '1991',
+        Fahrzeug_NR: 'G789',
+        Baujahr: '1991',
         km: '11000',
-        einkaufspreis: '16000'
+        Einkaufspreis: '16000'
       },
       {
-        mnr: '4',
+        Modell_NR: '4',
         H_NR: '2',
-        Hersteller: 'VW',
+        H_Name: 'VW',
         Typ: 'Golf',
-        neupreis: '25000',
-        verkaufspreis: '16000',
+        Neupreis: '25000',
+        Verkaufspreis: '16000',
         PS: '90',
-        fznr: 'G713',
-        baujahr: '1991',
+        Fahrzeug_NR: 'G713',
+        Baujahr: '1991',
         km: '31000',
-        einkaufspreis: '13000'
+        Einkaufspreis: '13000'
       },
       {
-        mnr: '5',
+        Modell_NR: '5',
         H_NR: '2',
-        Hersteller: 'VW',
+        H_Name: 'VW',
         Typ: 'Golf',
-        neupreis: '28000',
-        verkaufspreis: '19000',
+        Neupreis: '28000',
+        Verkaufspreis: '19000',
         PS: '105',
-        fznr: 'G762',
-        baujahr: '1992',
+        Fahrzeug_NR: 'G762',
+        Baujahr: '1992',
         km: '28000',
-        einkaufspreis: '17000'
+        Einkaufspreis: '17000'
       },
       {
-        mnr: '6',
+        Modell_NR: '6',
         H_NR: '2',
-        Hersteller: 'VW',
+        H_Name: 'VW',
         Typ: 'Polo',
-        neupreis: '19000',
-        verkaufspreis: '10000',
+        Neupreis: '19000',
+        Verkaufspreis: '10000',
         PS: '60',
-        fznr: 'K635',
-        baujahr: '1996',
+        Fahrzeug_NR: 'K635',
+        Baujahr: '1996',
         km: '71000',
-        einkaufspreis: '8000'
+        Einkaufspreis: '8000'
       }
     ],
     hasViolatingColumns: false,
@@ -2280,13 +2280,13 @@ const tasks: Task[] = [
     functionalDependencies: [
       {
         primaryKeys: [
-          'MNR'
+          'Modell_NR'
         ],
         columns: [
           'H_NR',
-          'Hersteller',
+          'H_Name',
           'Typ',
-          'NEUPREIS',
+          'Neupreis',
           'PS'
         ],
         type: 'transitiv'
@@ -2296,168 +2296,168 @@ const tasks: Task[] = [
           'H_NR'
         ],
         columns: [
-          'Hersteller'
+          'H_Name'
         ],
         type: 'transitiv'
       },
       {
         primaryKeys: [
-          'FZNR'
+          'Fahrzeug_NR'
         ],
         columns: [
-          'MNR',
+          'Modell_NR',
           'H_NR',
-          'Hersteller',
+          'H_Name',
           'Typ',
-          'NEUPREIS',
-          'VERKAUFSPREIS',
+          'Neupreis',
+          'Verkaufspreis',
           'PS',
-          'BAUJAHR',
+          'Baujahr',
           'KM',
-          'EINKAUFSPREIS'
+          'Einkaufspreis'
         ],
         type: 'voll'
       }
     ],
     primaryKeys: [
-      'FZNR'
+      'Fahrzeug_NR'
     ],
     secondNormalForm: [
       {
         primaryKeys: [
-          'FZNR'
+          'Fahrzeug_NR'
         ],
         columns: [
-          'MNR',
+          'Modell_NR',
           'H_NR',
-          'Hersteller',
+          'H_Name',
           'Typ',
-          'NEUPREIS',
-          'VERKAUFSPREIS',
+          'Neupreis',
+          'Verkaufspreis',
           'PS',
-          'BAUJAHR',
+          'Baujahr',
           'KM',
-          'EINKAUFSPREIS'
+          'Einkaufspreis'
         ]
       }
     ],
     secondFormTableData: [
       [
         {
-          fznr: 'G789',
-          mnr: '4',
+          Fahrzeug_NR: 'G789',
+          Modell_NR: '4',
           H_NR: '2',
-          Hersteller: 'VW',
+          H_Name: 'VW',
           Typ: 'Golf',
-          neupreis: '25000',
-          verkaufspreis: '21000',
+          Neupreis: '25000',
+          Verkaufspreis: '21000',
           PS: '90',
-          baujahr: '1991',
+          Baujahr: '1991',
           km: '11000',
-          einkaufspreis: '16000'
+          Einkaufspreis: '16000'
         },
         {
-          fznr: 'V459',
-          mnr: '2',
+          Fahrzeug_NR: 'V459',
+          Modell_NR: '2',
           H_NR: '1',
-          Hersteller: 'Opel',
+          H_Name: 'Opel',
           Typ: 'Vectra',
-          neupreis: '25000',
-          verkaufspreis: '18000',
+          Neupreis: '25000',
+          Verkaufspreis: '18000',
           PS: '90',
-          baujahr: '1990',
+          Baujahr: '1990',
           km: '15000',
-          einkaufspreis: '17000'
+          Einkaufspreis: '17000'
         },
         {
-          fznr: 'G762',
-          mnr: '5',
+          Fahrzeug_NR: 'G762',
+          Modell_NR: '5',
           H_NR: '2',
-          Hersteller: 'VW',
+          H_Name: 'VW',
           Typ: 'Golf',
-          neupreis: '28000',
-          verkaufspreis: '19000',
+          Neupreis: '28000',
+          Verkaufspreis: '19000',
           PS: '105',
-          baujahr: '1992',
+          Baujahr: '1992',
           km: '28000',
-          einkaufspreis: '17000'
+          Einkaufspreis: '17000'
         },
         {
-          fznr: 'G713',
-          mnr: '4',
+          Fahrzeug_NR: 'G713',
+          Modell_NR: '4',
           H_NR: '2',
-          Hersteller: 'VW',
+          H_Name: 'VW',
           Typ: 'Golf',
-          neupreis: '25000',
-          verkaufspreis: '16000',
+          Neupreis: '25000',
+          Verkaufspreis: '16000',
           PS: '90',
-          baujahr: '1991',
+          Baujahr: '1991',
           km: '31000',
-          einkaufspreis: '13000'
+          Einkaufspreis: '13000'
         },
         {
-          fznr: 'K635',
-          mnr: '6',
+          Fahrzeug_NR: 'K635',
+          Modell_NR: '6',
           H_NR: '2',
-          Hersteller: 'VW',
+          H_Name: 'VW',
           Typ: 'Polo',
-          neupreis: '19000',
-          verkaufspreis: '10000',
+          Neupreis: '19000',
+          Verkaufspreis: '10000',
           PS: '60',
-          baujahr: '1996',
+          Baujahr: '1996',
           km: '71000',
-          einkaufspreis: '8000'
+          Einkaufspreis: '8000'
         },
         {
-          fznr: 'K674',
-          mnr: '1',
+          Fahrzeug_NR: 'K674',
+          Modell_NR: '1',
           H_NR: '1',
-          Hersteller: 'Opel',
+          H_Name: 'Opel',
           Typ: 'Kadett',
-          neupreis: '18000',
-          verkaufspreis: '13000',
+          Neupreis: '18000',
+          Verkaufspreis: '13000',
           PS: '60',
-          baujahr: '1999',
+          Baujahr: '1999',
           km: '10000',
-          einkaufspreis: '12000'
+          Einkaufspreis: '12000'
         },
         {
-          fznr: 'K634',
-          mnr: '1',
+          Fahrzeug_NR: 'K634',
+          Modell_NR: '1',
           H_NR: '1',
-          Hersteller: 'Opel',
+          H_Name: 'Opel',
           Typ: 'Kadett',
-          neupreis: '18000',
-          verkaufspreis: '12000',
+          Neupreis: '18000',
+          Verkaufspreis: '12000',
           PS: '60',
-          baujahr: '1998',
+          Baujahr: '1998',
           km: '34000',
-          einkaufspreis: '9000'
+          Einkaufspreis: '9000'
         },
         {
-          fznr: 'O634',
-          mnr: '3',
+          Fahrzeug_NR: 'O634',
+          Modell_NR: '3',
           H_NR: '1',
-          Hersteller: 'Opel',
+          H_Name: 'Opel',
           Typ: 'Omega',
-          neupreis: '30000',
-          verkaufspreis: '22000',
+          Neupreis: '30000',
+          Verkaufspreis: '22000',
           PS: '110',
-          baujahr: '1997',
+          Baujahr: '1997',
           km: '45000',
-          einkaufspreis: '15000'
+          Einkaufspreis: '15000'
         }
       ]
     ],
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
-          'MNR'
+          'Modell_NR'
         ],
         columns: [
           'H_NR',
           'Typ',
-          'NEUPREIS',
+          'Neupreis',
           'PS'
         ]
       },
@@ -2466,18 +2466,18 @@ const tasks: Task[] = [
           'H_NR'
         ],
         columns: [
-          'Hersteller'
+          'H_Name'
         ]
       },
       {
         primaryKeys: [
-          'FZNR'
+          'Fahrzeug_NR'
         ],
         columns: [
-          'MNR',
-          'VERKAUFSPREIS',
-          'EINKAUFSPREIS',
-          'BAUJAHR',
+          'Modell_NR',
+          'Verkaufspreis',
+          'Einkaufspreis',
+          'Baujahr',
           'KM'
         ]
       }
