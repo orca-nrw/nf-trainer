@@ -52,9 +52,9 @@ export default function FunctionalDependencyTypes () {
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
-      <TrainerSubtaskDescription>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</TrainerSubtaskDescription>
+        <TrainerSubtaskDescription>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</TrainerSubtaskDescription>
         <FunctionalDependencyHandler functionalDependencies={functionalDependencies} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
-        <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <button className="px-4 py-2 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
         <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
         <SampleSolution >
           {task.functionalDependencies.map((dependency, index) => {
