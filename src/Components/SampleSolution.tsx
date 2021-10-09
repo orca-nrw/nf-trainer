@@ -8,7 +8,7 @@ export default function SampleSolution ({ children }: PropTypes) {
   return (
     <div className="flex justify-around">
       <details className="p-2 bg-yellow-300 rounded-lg cursor-pointer select-none inline-block">
-        <summary>Musterlösung einblenden</summary>
+        <summary className="font-semibold">Musterlösung einblenden</summary>
         <div className="cursor-default">
           {children}
         </div>

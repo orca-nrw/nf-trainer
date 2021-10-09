@@ -12,7 +12,7 @@ export default function HintContainer ({ functionalDependencies, primaryKeys }: 
   return (
     <div className="flex justify-around">
       <details className="p-2 bg-green-300 rounded-lg cursor-pointer select-none inline-block">
-        <summary>Freigeschaltete Hinweise</summary>
+        <summary className="font-semibold">Freigeschaltete Hinweise</summary>
         <div className="cursor-default">
 
           {functionalDependencies && (
