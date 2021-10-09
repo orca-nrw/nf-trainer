@@ -4,6 +4,8 @@ import AssociationResponseHandler from '../Components/AssociationResponseHandler
 import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
+import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import TableGrid from '../Components/TableGrid'
 import tasks from '../Tasks'
 
@@ -37,8 +39,8 @@ export default function ThirdNormalForm () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Dritte Normalform</h1>
-      <pre className="font-sans">{task.description}</pre>
+      <TrainerHeader>Dritte Normalform</TrainerHeader>
+      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <TableGrid gridData={task.secondFormTableData} />
       <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />

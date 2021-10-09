@@ -4,6 +4,8 @@ import CheckboxResponseHandler from '../Components/CheckboxResponseHandler'
 import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
+import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import Table from '../Components/Table'
 import tasks from '../Tasks'
 
@@ -44,8 +46,8 @@ export default function PrimaryKeys () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Primärschlüssel</h1>
-      <pre className="font-sans">{task.description}</pre>
+      <TrainerHeader>Primärschlüssel</TrainerHeader>
+      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Bestimmen Sie alle eindeutigen Schlüssel!</p>
@@ -53,7 +55,7 @@ export default function PrimaryKeys () {
           <h1 className="font-bold">Schlüssel</h1>
           <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
         </div>
-        <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <button className="px-4 py-2 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
         <HintContainer functionalDependencies={task.functionalDependencies} />
         <SampleSolution >
           <p>{primaryKeys.join(', ')}</p>

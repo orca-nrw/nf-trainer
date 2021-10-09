@@ -5,6 +5,8 @@ import Table from '../Components/Table'
 import AssociationResponseHandler from '../Components/AssociationResponseHandler'
 import SampleSolution from '../Components/SampleSolution'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
+import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 
 export default function FunctionalDependencies () {
   // Get task from url param
@@ -31,8 +33,8 @@ export default function FunctionalDependencies () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Funktionale Abhängigkeiten</h1>
-      <pre className="font-sans">{task.description}</pre>
+      <TrainerHeader>Funktionale Abhängigkeiten</TrainerHeader>
+      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
       <p className="text-center">Bestimmen Sie alle funktionalen Abhängigkeiten!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} responseHandler={handleResponse} />

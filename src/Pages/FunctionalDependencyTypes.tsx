@@ -4,6 +4,8 @@ import FunctionalDependencyHandler from '../Components/FunctionalDependencyHandl
 import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
+import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import Table from '../Components/Table'
 import tasks from '../Tasks'
 
@@ -45,8 +47,8 @@ export default function FunctionalDependencyTypes () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Typen der funktionalen Abhängigkeiten</h1>
-      <pre className="font-sans">{task.description}</pre>
+      <TrainerHeader>Typen der funktionalen Abhängigkeiten</TrainerHeader>
+      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>

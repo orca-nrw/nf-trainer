@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
 import CheckboxResponseHandler from '../Components/CheckboxResponseHandler'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
+import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import Table from '../Components/Table'
 import tasks from '../Tasks'
 
@@ -42,8 +44,8 @@ export default function ViolatingColumns () {
 
   return (
     <div className="space-y-4">
-      <h1 className="font-bold text-xl">Erste Normalform</h1>
-      <pre className="font-sans">{task.description}</pre>
+      <TrainerHeader>Erste Normalform</TrainerHeader>
+      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <p>Markieren Sie alle Spalten die die erste Normalform verletzen!</p>
