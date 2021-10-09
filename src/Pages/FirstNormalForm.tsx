@@ -4,6 +4,7 @@ import BooleanResponseHandler from '../Components/BooleanResponseHandler'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import Table from '../Components/Table'
 import tasks from '../Tasks'
@@ -34,9 +35,7 @@ export default function FirstNormalForm () {
       <TrainerHeader>Erste Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
-      <div className="flex flex-col items-center space-y-4">
-        <p>Befindet sich die Tabelle in der ersten Normalform?</p>
-      </div>
+      <TrainerSubtaskDescription>Befindet sich die Tabelle in der ersten Normalform?</TrainerSubtaskDescription>
       <BooleanResponseHandler responseHandler={handleResponse} />
       <SampleSolution >
         {task.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}

@@ -5,6 +5,7 @@ import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import TableGrid from '../Components/TableGrid'
 import tasks from '../Tasks'
@@ -42,7 +43,7 @@ export default function ThirdNormalForm () {
       <TrainerHeader>Dritte Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <TableGrid gridData={task.secondFormTableData} />
-      <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
+      <TrainerSubtaskDescription>Bringen Sie das Schema in die dritte Normalform!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
       <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >

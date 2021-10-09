@@ -5,6 +5,7 @@ import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
 import Table from '../Components/Table'
 import tasks from '../Tasks'
@@ -42,7 +43,7 @@ export default function SecondNormalForm () {
       <TrainerHeader>Zweite Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData} />
-      <p className="text-center">Bringen Sie das Schema in die zweite Normalform!</p>
+      <TrainerSubtaskDescription>Bringen Sie das Schema in die zweite Normalform!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
       <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >

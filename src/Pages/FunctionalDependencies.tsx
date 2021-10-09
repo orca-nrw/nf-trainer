@@ -7,6 +7,7 @@ import SampleSolution from '../Components/SampleSolution'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
 import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
+import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
 
 export default function FunctionalDependencies () {
   // Get task from url param
@@ -36,7 +37,7 @@ export default function FunctionalDependencies () {
       <TrainerHeader>Funktionale Abhängigkeiten</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
-      <p className="text-center">Bestimmen Sie alle funktionalen Abhängigkeiten!</p>
+      <TrainerSubtaskDescription>Bestimmen Sie alle funktionalen Abhängigkeiten!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} responseHandler={handleResponse} />
       <SampleSolution >
         {functionalDependencies.map((dependency, index) => {
