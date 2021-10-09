@@ -23,7 +23,7 @@ export default function FunctionalDependencyHandler ({ functionalDependencies, s
   return (
     <div className="flex flex-col space-y-4">
       {functionalDependencies.map((dependency, index) => {
-        const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+        const dependencyString = `${dependency.primaryKeys.join(', ')} ➔ ${dependency.columns.join(', ')}`
         return (
           <div className="text-right" key={index}>
             <label className="mr-4 font-semibold">{dependencyString}</label>

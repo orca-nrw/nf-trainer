@@ -38,7 +38,7 @@ export default function FunctionalDependencies () {
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} responseHandler={handleResponse} />
       <SampleSolution >
         {functionalDependencies.map((dependency, index) => {
-          const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+          const dependencyString = `${dependency.primaryKeys.join(', ')} ➔ ${dependency.columns.join(', ')}`
           return <p key={index}>{dependencyString}</p>
         })}
       </SampleSolution>

@@ -45,7 +45,7 @@ export default function SecondNormalForm () {
       <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >
           {task.secondNormalForm.map((dependency, index) => {
-            const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+            const dependencyString = `${dependency.primaryKeys.join(', ')} ➔ ${dependency.columns.join(', ')}`
             return <p key={index}>{dependencyString}</p>
           })}
       </SampleSolution>

@@ -19,7 +19,7 @@ export default function HintContainer ({ functionalDependencies, primaryKeys }: 
               <div>
                 <h1 className="font-semibold mt-4">Funktionale Anforderungen</h1>
                 {functionalDependencies?.map((dependency, index) => {
-                  const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
+                  const dependencyString = `${dependency.primaryKeys.join(', ')} ➔ ${dependency.columns.join(', ')}`
                   return <p key={index}>{dependencyString}</p>
                 })}
               </div>

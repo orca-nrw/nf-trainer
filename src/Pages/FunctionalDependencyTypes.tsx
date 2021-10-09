@@ -55,7 +55,7 @@ export default function FunctionalDependencyTypes () {
         <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
         <SampleSolution >
           {task.functionalDependencies.map((dependency, index) => {
-            const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')} : ${dependency.type}`
+            const dependencyString = `${dependency.primaryKeys.join(', ')} ➔ ${dependency.columns.join(', ')} : ${dependency.type}`
             return <p key={index}>{dependencyString}</p>
           })}
         </SampleSolution>
