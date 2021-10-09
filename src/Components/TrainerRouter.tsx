@@ -18,8 +18,8 @@ export default function TrainerRouter () {
         <Link className="no-underline text-black text-4xl font-semibold font-mono" to="/">NF-Trainer</Link>
       </div>
       <div className="bg-white p-4">
-      <Switch>
-        <Route exact path="/">
+        <Switch>
+          <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/tasks">
