@@ -11,7 +11,7 @@ interface PropTypes {
 export default function HintContainer ({ functionalDependencies, primaryKeys }: PropTypes) {
   return (
     <div className="flex justify-around">
-      <details className="p-2 bg-green-300 rounded-lg cursor-pointer select-none inline-block">
+      <details className="p-2 bg-th-orange rounded-lg cursor-pointer select-none inline-block text-white">
         <summary className="font-semibold">Freigeschaltete Hinweise</summary>
         <div className="cursor-default">
 

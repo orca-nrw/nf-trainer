@@ -17,7 +17,7 @@ export default function TrainerRouter () {
       <div className="bg-white p-4">
         <Link className="no-underline text-black text-4xl font-semibold font-mono" to="/">NF-Trainer</Link>
       </div>
-      <div className="bg-white p-4">
+      <div className="bg-white p-6">
         <Switch>
           <Route exact path="/">
             <Home />

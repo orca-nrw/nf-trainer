@@ -7,7 +7,7 @@ interface PropTypes {
 export default function SampleSolution ({ children }: PropTypes) {
   return (
     <div className="flex justify-around">
-      <details className="p-2 bg-yellow-300 rounded-lg cursor-pointer select-none inline-block">
+      <details className="p-2 bg-th-violet rounded-lg cursor-pointer select-none inline-block text-white">
         <summary className="font-semibold">Musterlösung einblenden</summary>
         <div className="cursor-default">
           {children}
