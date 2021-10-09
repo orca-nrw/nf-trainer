@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
 import AssociationResponseHandler from '../Components/AssociationResponseHandler'
+import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import TableGrid from '../Components/TableGrid'
@@ -41,6 +42,7 @@ export default function ThirdNormalForm () {
       <TableGrid gridData={task.secondFormTableData} />
       <p className="text-center">Bringen Sie das Schema in die dritte Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
+      <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >
           {task.thirdNormalFormSolutions.map((dependency, index) => {
             const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`

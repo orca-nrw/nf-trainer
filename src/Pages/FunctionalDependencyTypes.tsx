@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
 import FunctionalDependencyHandler from '../Components/FunctionalDependencyHandler'
+import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import Table from '../Components/Table'
@@ -51,6 +52,7 @@ export default function FunctionalDependencyTypes () {
         <p>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</p>
         <FunctionalDependencyHandler functionalDependencies={functionalDependencies} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
         <SampleSolution >
           {task.functionalDependencies.map((dependency, index) => {
             const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')} : ${dependency.type}`

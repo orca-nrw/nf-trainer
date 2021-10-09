@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
 import AssociationResponseHandler from '../Components/AssociationResponseHandler'
+import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
 import Table from '../Components/Table'
@@ -41,6 +42,7 @@ export default function SecondNormalForm () {
       <Table tableData={task.tableData} />
       <p className="text-center">Bringen Sie das Schema in die zweite Normalform!</p>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
+      <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >
           {task.secondNormalForm.map((dependency, index) => {
             const dependencyString = `${dependency.primaryKeys.join(', ')} -> ${dependency.columns.join(', ')}`
