@@ -19,7 +19,7 @@ export default function CheckboxResponseHandler ({ entryList, selectedEntries, s
     }
   }
 
-  const selectedColors = useAccent ? 'bg-red-500 hover:bg-red-600' : 'bg-purple-500 hover:bg-purple-600'
+  const selectedColors = useAccent ? 'bg-th-red hover:bg-red-600' : 'bg-th-orange hover:bg-orange-600'
   const selectedStyle = selectedColors + 'shadow-none text-white'
   const unselectedStyle = 'bg-gray-50 hover:bg-gray-200 text-gray-600'
 

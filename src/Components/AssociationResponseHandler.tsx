@@ -60,7 +60,7 @@ export default function AssociationResponseHandler ({ keys, associationsSolution
         <KeyAssociation keys={keys} association={userAssociations[2]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 2)} />
         <KeyAssociation keys={keys} association={userAssociations[3]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 3)} />
       </div>
-      <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+      <button className="px-4 py-2 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
     </>
   )
 }
