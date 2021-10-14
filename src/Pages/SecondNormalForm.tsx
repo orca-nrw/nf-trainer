@@ -43,7 +43,7 @@ export default function SecondNormalForm () {
       <TrainerHeader>Zweite Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData} />
-      <TrainerSubtaskDescription>Bringen Sie das Schema in die zweite Normalform!</TrainerSubtaskDescription>
+      <TrainerSubtaskDescription>Bringen Sie das Schema in die zweite Normalform, indem Sie auf die entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
       <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >

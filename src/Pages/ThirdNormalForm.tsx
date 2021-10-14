@@ -43,7 +43,7 @@ export default function ThirdNormalForm () {
       <TrainerHeader>Dritte Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <TableGrid gridData={task.secondFormTableData} />
-      <TrainerSubtaskDescription>Bringen Sie das Schema in die dritte Normalform!</TrainerSubtaskDescription>
+      <TrainerSubtaskDescription>Bringen Sie das Schema in die dritte Normalform, indem Sie auf die entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
       <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >

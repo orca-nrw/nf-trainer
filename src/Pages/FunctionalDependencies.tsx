@@ -37,7 +37,7 @@ export default function FunctionalDependencies () {
       <TrainerHeader>Funktionale Abhängigkeiten</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
-      <TrainerSubtaskDescription>Bestimmen Sie alle funktionalen Abhängigkeiten!</TrainerSubtaskDescription>
+      <TrainerSubtaskDescription>Bestimmen Sie alle funktionalen Abhängigkeiten, indem Sie auf die entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={functionalDependencies} responseHandler={handleResponse} />
       <SampleSolution >
         {functionalDependencies.map((dependency, index) => {
