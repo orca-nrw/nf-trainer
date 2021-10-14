@@ -49,8 +49,11 @@ export default function ViolatingColumns () {
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <Table tableData={task.tableData}/>
       <div className="flex flex-col items-center space-y-4">
-      <TrainerSubtaskDescription>Markieren Sie alle Spalten die die erste Normalform verletzen!</TrainerSubtaskDescription>
-        <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
+        <TrainerSubtaskDescription>Markieren Sie alle Spalten die die erste Normalform verletzen!</TrainerSubtaskDescription>
+        <div className="p-4 border shadow-md">
+        <h1 className="font-bold">Spalten</h1>
+          <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
+        </div>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
         <p className="text-l font-bold text-center">{message}</p>
       </div>
