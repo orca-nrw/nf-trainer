@@ -28,15 +28,22 @@ export default function KeyAssociation ({ keys, association, updateAssociation }
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4 border p-4 shadow-md">
-      <div>
-        <h1 className="font-bold">Primärschlüssel</h1>
-        <CheckboxResponseHandler entryList={keys} selectedEntries={association.primaryKeys} setSelectedEntries={updatePrimaryKeys} useAccent={true} />
+    <div className="border p-4 shadow-md">
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <h1 className="font-bold">Primärschlüssel</h1>
+          <CheckboxResponseHandler entryList={keys} selectedEntries={association.primaryKeys} setSelectedEntries={updatePrimaryKeys} useAccent={true} />
+        </div>
+        <div>
+          <h1 className="font-bold">Spalten</h1>
+          <CheckboxResponseHandler entryList={keys} selectedEntries={association.columns} setSelectedEntries={updateColumns} useAccent={false} />
+        </div>
       </div>
-      <div>
-        <h1 className="font-bold">Spalten</h1>
-        <CheckboxResponseHandler entryList={keys} selectedEntries={association.columns} setSelectedEntries={updateColumns} useAccent={false} />
-      </div>
+      <div className="mt-4 text-center">
+      { (association.primaryKeys.length > 0 || association.columns.length > 0) &&
+      `${association.primaryKeys.join(', ')} ➔ ${association.columns.join(', ')}`
+      }
     </div>
+  </div>
   )
 }
