@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
 import CheckboxResponseHandler from '../Components/CheckboxResponseHandler'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
+import SampleSolution from '../Components/SampleSolution'
 import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
 import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
@@ -55,6 +56,11 @@ export default function ViolatingColumns () {
           <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
         </div>
         <button className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <SampleSolution >
+          {
+            task.violatingColumns.join(', ')
+          }
+        </SampleSolution>
         <p className="text-l font-bold text-center">{message}</p>
       </div>
       <PrevNextNavigation prev={`/tasks/${id}/firstNormalForm`} next={`/tasks/${id}/functionalDependencies`} nextIsEnabled={isEnabled} />
