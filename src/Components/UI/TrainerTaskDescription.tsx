@@ -6,8 +6,8 @@ interface PropTypes {
 
 export default function TrainerTaskDescription ({ children }: PropTypes) {
   return (
-    <pre className="font-sans pt-8 pb-2">
+    <p className="font-sans pt-8 pb-2 whitespace-pre-line">
       {children}
-    </pre>
+    </p>
   )
 }
