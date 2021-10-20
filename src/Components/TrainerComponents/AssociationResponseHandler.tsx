@@ -54,7 +54,7 @@ export default function AssociationResponseHandler ({ keys, associationsSolution
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <KeyAssociation keys={keys} association={userAssociations[0]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 0)} />
         <KeyAssociation keys={keys} association={userAssociations[1]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 1)} />
         <KeyAssociation keys={keys} association={userAssociations[2]} updateAssociation={(updatedAssociation: Association) => updateAssociation(updatedAssociation, 2)} />
