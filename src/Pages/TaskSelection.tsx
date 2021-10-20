@@ -1,5 +1,5 @@
 import React from 'react'
-import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
+import TrainerHeader from '../Components/UI/TrainerHeader'
 import TaskGridElement from '../Components/TaskGridElement'
 import tasks from '../Tasks'
 

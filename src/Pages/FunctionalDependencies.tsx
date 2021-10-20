@@ -5,9 +5,9 @@ import Table from '../Components/Table'
 import AssociationResponseHandler from '../Components/AssociationResponseHandler'
 import SampleSolution from '../Components/SampleSolution'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
-import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
-import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
-import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
+import TrainerHeader from '../Components/UI/TrainerHeader'
+import TrainerTaskDescription from '../Components/UI/TrainerTaskDescription'
+import TrainerSubtaskDescription from '../Components/UI/TrainerSubtaskDescription'
 
 export default function FunctionalDependencies () {
   // Get task from url param

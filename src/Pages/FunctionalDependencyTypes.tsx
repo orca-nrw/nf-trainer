@@ -4,9 +4,9 @@ import FunctionalDependencyHandler from '../Components/FunctionalDependencyHandl
 import HintContainer from '../Components/HintContainer'
 import PrevNextNavigation from '../Components/PrevNextNavigation'
 import SampleSolution from '../Components/SampleSolution'
-import TrainerHeader from '../Components/Subcomponents/TrainerHeader'
-import TrainerSubtaskDescription from '../Components/Subcomponents/TrainerSubtaskDescription'
-import TrainerTaskDescription from '../Components/Subcomponents/TrainerTaskDescription'
+import TrainerHeader from '../Components/UI/TrainerHeader'
+import TrainerSubtaskDescription from '../Components/UI/TrainerSubtaskDescription'
+import TrainerTaskDescription from '../Components/UI/TrainerTaskDescription'
 import Table from '../Components/Table'
 import tasks from '../Tasks'
 
