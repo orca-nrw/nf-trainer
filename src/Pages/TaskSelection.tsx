@@ -7,7 +7,7 @@ export default function TaskSelection () {
   return (
     <div className="space-y-8 mb-8">
       <TrainerHeader>Task Selection</TrainerHeader>
-      <div className="grid grid-cols-4 gap-4 pt-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
         {tasks.map(task => {
           return <TaskGridElement key={task.id} task={task} />
         })}
