@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
-import FunctionalDependencyHandler from '../Components/FunctionalDependencyHandler'
-import HintContainer from '../Components/HintContainer'
-import PrevNextNavigation from '../Components/PrevNextNavigation'
-import SampleSolution from '../Components/SampleSolution'
+import FunctionalDependencyHandler from '../Components/TrainerComponents/FunctionalDependencyHandler'
+import HintContainer from '../Components/TrainerComponents/HintContainer'
+import PrevNextNavigation from '../Components/TrainerComponents/PrevNextNavigation'
+import SampleSolution from '../Components/TrainerComponents/SampleSolution'
 import TrainerHeader from '../Components/UI/TrainerHeader'
 import TrainerSubtaskDescription from '../Components/UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../Components/UI/TrainerTaskDescription'
-import Table from '../Components/Table'
+import Table from '../Components/TrainerComponents/Table'
 import tasks from '../Tasks'
 
 interface ParamTypes {

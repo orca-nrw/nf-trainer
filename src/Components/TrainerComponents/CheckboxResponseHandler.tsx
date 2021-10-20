@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import uniqueId from '../utils/uniqueId'
+import uniqueId from '../../utils/uniqueId'
 
 interface PropTypes {
   entryList: string[],

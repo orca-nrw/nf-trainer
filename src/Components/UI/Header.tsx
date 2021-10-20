@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import edbHeaderLogo from '../img/edb_header_logo.png'
-import eildHeaderLogo from '../img/eild_header_logo.png'
+import edbHeaderLogo from '../../img/edb_header_logo.png'
+import eildHeaderLogo from '../../img/eild_header_logo.png'
 
 export const Header = () => {
   return (

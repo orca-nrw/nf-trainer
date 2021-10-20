@@ -1,6 +1,6 @@
 import React from 'react'
 import TrainerHeader from '../Components/UI/TrainerHeader'
-import TaskGridElement from '../Components/TaskGridElement'
+import TaskGridElement from '../Components/TrainerComponents/TaskGridElement'
 import tasks from '../Tasks'
 
 export default function TaskSelection () {

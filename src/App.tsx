@@ -1,6 +1,6 @@
 import React from 'react'
-import { Footer } from './Components/Footer'
-import { Header } from './Components/Header'
+import { Footer } from './Components/UI/Footer'
+import { Header } from './Components/UI/Header'
 import TrainerRouter from './Components/TrainerRouter'
 
 export default function App () {
