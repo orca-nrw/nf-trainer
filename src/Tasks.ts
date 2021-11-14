@@ -16,6 +16,7 @@ interface Task {
     columns: string[]
   }[],
   secondFormTableData: Object[][],
+  alreadyThirdNormalForm: boolean,
   thirdNormalFormSolutions: {
     primaryKeys: string[],
     columns: string[]
@@ -174,6 +175,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: true,
     thirdNormalFormSolutions: [
       {
         primaryKeys: ['Veranstaltungsnummer'],
@@ -392,6 +394,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: ['P_Name'],
@@ -695,6 +698,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
@@ -959,6 +963,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
@@ -1341,6 +1346,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
@@ -1779,6 +1785,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: true,
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
@@ -2131,6 +2138,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: [
@@ -2458,6 +2466,7 @@ const tasks: Task[] = [
         }
       ]
     ],
+    alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: [

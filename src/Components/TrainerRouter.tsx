@@ -1,5 +1,6 @@
 import React from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
+import CheckThirdNormalForm from '../Pages/CheckThirdNormalForm'
 import Done from '../Pages/Done'
 import FirstNormalForm from '../Pages/FirstNormalForm'
 import FunctionalDependencies from '../Pages/FunctionalDependencies'
@@ -42,6 +43,9 @@ export default function TrainerRouter () {
           </Route>
           <Route path="/tasks/:id/secondNormalForm">
             <SecondNormalForm />
+          </Route>
+          <Route path="/tasks/:id/checkThirdNormalForm">
+            <CheckThirdNormalForm />
           </Route>
           <Route path="/tasks/:id/thirdNormalForm">
             <ThirdNormalForm />

@@ -53,7 +53,7 @@ export default function ThirdNormalForm () {
           })}
       </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
-      <PrevNextNavigation prev={`/tasks/${id}/secondNormalForm`} next={'/done'} nextIsEnabled={isEnabled} />
+      <PrevNextNavigation prev={`/tasks/${id}/checkThirdNormalForm`} next={'/done'} nextIsEnabled={isEnabled} />
     </div>
   )
 }
