@@ -37,7 +37,7 @@ export default function CheckThirdNormalForm () {
 
   return (
     <div className="space-y-4">
-      <TrainerHeader>Erste Normalform</TrainerHeader>
+      <TrainerHeader>Dritte Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
       <TableGrid gridData={task.secondFormTableData} />
       <TrainerSubtaskDescription>Befindet sich die Tabelle nun bereits in der dritten Normalform?</TrainerSubtaskDescription>
