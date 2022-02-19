@@ -1,20 +1,20 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
-import AssociationResponseHandler from '../Components/TrainerComponents/AssociationResponseHandler'
-import HintContainer from '../Components/TrainerComponents/HintContainer'
-import PrevNextNavigation from '../Components/TrainerComponents/PrevNextNavigation'
-import SampleSolution from '../Components/TrainerComponents/SampleSolution'
-import TrainerHeader from '../Components/UI/TrainerHeader'
-import TrainerSubtaskDescription from '../Components/UI/TrainerSubtaskDescription'
-import TrainerTaskDescription from '../Components/UI/TrainerTaskDescription'
-import Table from '../Components/TrainerComponents/Table'
-import tasks from '../Tasks'
+import AssociationResponseHandler from '../UI/AssociationResponseHandler'
+import HintContainer from '../UI/HintContainer'
+import PrevNextNavigation from '../UI/PrevNextNavigation'
+import SampleSolution from '../UI/SampleSolution'
+import TrainerHeader from '../UI/TrainerHeader'
+import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
+import TrainerTaskDescription from '../UI/TrainerTaskDescription'
+import TableGrid from '../UI/TableGrid'
+import tasks from '../../Tasks'
 
 interface ParamTypes {
   id: string
 }
 
-export default function SecondNormalForm () {
+export default function ThirdNormalForm () {
   // Get task from url param
   const { id } = useParams<ParamTypes>()
   const task = tasks.find(task => task.id === Number(id))
@@ -24,7 +24,7 @@ export default function SecondNormalForm () {
 
   // Task Variables
   const taskKeys = Object.keys(task.tableData[0])
-  const associations = task.secondNormalForm
+  const associations = task.thirdNormalFormSolutions
 
   const [message, setMessage] = useState('')
   const [isEnabled, setIsEnabled] = useState(false)
@@ -40,20 +40,20 @@ export default function SecondNormalForm () {
 
   return (
     <div className="space-y-4">
-      <TrainerHeader>Zweite Normalform</TrainerHeader>
+      <TrainerHeader>Dritte Normalform</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <Table tableData={task.tableData} />
-      <TrainerSubtaskDescription>Bringen Sie das Schema in die zweite Normalform, indem Sie auf die entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!</TrainerSubtaskDescription>
+      <TableGrid gridData={task.secondFormTableData} />
+      <TrainerSubtaskDescription>Bringen Sie das Schema in die dritte Normalform, indem Sie auf die entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!!</TrainerSubtaskDescription>
       <AssociationResponseHandler keys={taskKeys} associationsSolutions={associations} responseHandler={handleResponse} />
       <HintContainer functionalDependencies={task.functionalDependencies} primaryKeys={task.primaryKeys} />
       <SampleSolution >
-          {task.secondNormalForm.map((dependency, index) => {
+          {task.thirdNormalFormSolutions.map((dependency, index) => {
             const dependencyString = `${dependency.primaryKeys.join(', ')} ➔ ${dependency.columns.join(', ')}`
             return <p key={index}>{dependencyString}</p>
           })}
       </SampleSolution>
       <p className="text-l font-bold text-center">{message}</p>
-      <PrevNextNavigation prev={`/tasks/${id}/functionalDependencyTypes`} next={`/tasks/${id}/checkThirdNormalForm`} nextIsEnabled={isEnabled} />
+      <PrevNextNavigation prev={`/tasks/${id}/checkThirdNormalForm`} next={'/done'} nextIsEnabled={isEnabled} />
     </div>
   )
 }

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import tasks from '../Tasks'
+import tasks from '../../Tasks'
 import { Redirect, useParams } from 'react-router-dom'
-import Table from '../Components/TrainerComponents/Table'
-import AssociationResponseHandler from '../Components/TrainerComponents/AssociationResponseHandler'
-import SampleSolution from '../Components/TrainerComponents/SampleSolution'
-import PrevNextNavigation from '../Components/TrainerComponents/PrevNextNavigation'
-import TrainerHeader from '../Components/UI/TrainerHeader'
-import TrainerTaskDescription from '../Components/UI/TrainerTaskDescription'
-import TrainerSubtaskDescription from '../Components/UI/TrainerSubtaskDescription'
+import Table from '../UI/Table'
+import AssociationResponseHandler from '../UI/AssociationResponseHandler'
+import SampleSolution from '../UI/SampleSolution'
+import PrevNextNavigation from '../UI/PrevNextNavigation'
+import TrainerHeader from '../UI/TrainerHeader'
+import TrainerTaskDescription from '../UI/TrainerTaskDescription'
+import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 
 export default function FunctionalDependencies () {
   // Get task from url param

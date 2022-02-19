@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import { Redirect, useParams } from 'react-router'
-import CheckboxResponseHandler from '../Components/TrainerComponents/CheckboxResponseHandler'
-import HintContainer from '../Components/TrainerComponents/HintContainer'
-import PrevNextNavigation from '../Components/TrainerComponents/PrevNextNavigation'
-import SampleSolution from '../Components/TrainerComponents/SampleSolution'
-import TrainerHeader from '../Components/UI/TrainerHeader'
-import TrainerSubtaskDescription from '../Components/UI/TrainerSubtaskDescription'
-import TrainerTaskDescription from '../Components/UI/TrainerTaskDescription'
-import Table from '../Components/TrainerComponents/Table'
-import tasks from '../Tasks'
+import CheckboxResponseHandler from '../UI/CheckboxResponseHandler'
+import HintContainer from '../UI/HintContainer'
+import PrevNextNavigation from '../UI/PrevNextNavigation'
+import SampleSolution from '../UI/SampleSolution'
+import TrainerHeader from '../UI/TrainerHeader'
+import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
+import TrainerTaskDescription from '../UI/TrainerTaskDescription'
+import Table from '../UI/Table'
+import tasks from '../../Tasks'
 
 interface ParamTypes {
   id: string
