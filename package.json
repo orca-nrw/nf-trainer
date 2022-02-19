@@ -19,9 +19,7 @@
     "react-router-dom": "^5.2.1",
     "react-scripts": "4.0.3",
     "typescript": "^4.4.2",
-    "web-vitals": "^1.1.2"
-  },
-  "devDependencies": {
+    "web-vitals": "^1.1.2",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "autoprefixer": "^9.8.6",
