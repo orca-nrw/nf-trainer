@@ -9,7 +9,7 @@ export default function TaskGridElement ({ task }: PropTypes) {
         {task.title}
       </p>
       <Link to={`/tasks/${task.id}/firstNormalForm`}>
-        <button type="button" className="mt-4 px-4 py-1 bg-th-red hover:bg-red-600 text-white font-semibold rounded-md cursor-pointer">Begin</button>
+        <button type="button" className="mt-4 px-4 py-1 bg-th-red hover:bg-red-600 text-white font-semibold rounded-md cursor-pointer">Start</button>
       </Link>
     </div>
   )
