@@ -21,7 +21,7 @@ export default function CheckThirdNormalForm () {
 
   // Redirect to index if there is no task with the given id
   if (!task) return <Redirect to="/" />
-  const nextPage = task.alreadyThirdNormalForm ? `/tasks/${id}/done` : `/tasks/${id}/thirdNormalForm`
+  const nextPage = task.alreadyThirdNormalForm ? '/done' : `/tasks/${id}/thirdNormalForm`
 
   const [message, setMessage] = useState('')
   const [isEnabled, setIsEnabled] = useState(false)
