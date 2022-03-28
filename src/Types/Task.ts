@@ -5,6 +5,7 @@ export interface Task {
   tableData: Object[],
   hasViolatingColumns: boolean,
   violatingColumns: string[],
+  firstNormalFormTableData?: Object[],
   functionalDependencies: {
     primaryKeys: string[],
     columns: string[],
