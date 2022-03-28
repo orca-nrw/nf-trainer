@@ -18,6 +18,13 @@ export default function FunctionalDependencyTypes () {
   // Get task from url param
   const { id } = useParams<ParamTypes>()
   const task = tasks.find(task => task.id === Number(id))
+  const tableData = task?.hasViolatingColumns ? task?.firstNormalFormTableData : task?.tableData
+
+  // Throw error and redirect back if an error occurs
+  if (!tableData) {
+    console.error('No suitable tableData found!')
+    return <Redirect to="/" />
+  }
 
   // Redirect to index if there is no task with the given id
   if (!task) return <Redirect to="/" />
@@ -50,7 +57,7 @@ export default function FunctionalDependencyTypes () {
     <div className="space-y-4">
       <TrainerHeader>Typen der funktionalen Abhängigkeiten</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <Table tableData={task.tableData}/>
+      <Table tableData={tableData}/>
       <div className="flex flex-col items-center space-y-4">
         <TrainerSubtaskDescription>Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!</TrainerSubtaskDescription>
         <FunctionalDependencyHandler functionalDependencies={functionalDependencies} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
