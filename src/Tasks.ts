@@ -187,7 +187,7 @@ const tasks: Task[] = [
         Diagnose: 'Hautrötung; Abschürfung; Sodbrennen; Tennisarm',
         Therapie: 'Salbe; Pflaster; Tabletten; Spritze',
         KK_Adresse: 'GM',
-        Diagnose_Beschreibung: 'Haut ist rot, Teile der Haut sind abgeschürft, Patient hat Sodbrennen, Patient hat einen Tennisarm',
+        Diagnose_Beschreibung: 'Haut ist gerötet, Teile der Haut sind abgeschürft, Patient hat Sodbrennen, Patient hat einen Tennisarm',
         P_Tel: '02261/45556'
       },
       {
@@ -308,7 +308,7 @@ const tasks: Task[] = [
         Diagnose: 'Hautrötung',
         Therapie: 'Salbe',
         KK_Adresse: 'GM',
-        Diagnose_Beschreibung: 'Haut ist rot',
+        Diagnose_Beschreibung: 'Haut ist gerötet',
         P_Tel: '02261/45556'
       },
       {
@@ -460,7 +460,7 @@ const tasks: Task[] = [
         },
         {
           Diagnose: 'Hautrötung',
-          Diagnose_Beschreibung: 'Haut ist rot'
+          Diagnose_Beschreibung: 'Haut ist gerötet'
         }
       ]
     ],
