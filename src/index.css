@@ -8,6 +8,10 @@
   a {
     @apply text-th-violet underline;
   }
+
+  .modal-content {
+    max-height: 80vh;
+  }
 }
 
 @tailwind components;
