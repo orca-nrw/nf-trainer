@@ -10,7 +10,10 @@ export const Footer = () => {
       </h3>
 
       <div className="font-bold flex gap-4 text-white">
-        <a className="flex items-center no-underline text-white" href="https://wikis.gm.fh-koeln.de/">
+        <a
+          className="flex items-center no-underline text-white"
+          href="https://wikis.gm.fh-koeln.de/"
+        >
           <img className="inline w-6 h-6" src={wikiLogo} alt="Wiki Logo" />
           <span className="ml-1">Datenbank-Wiki</span>
         </a>

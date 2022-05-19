@@ -12,11 +12,16 @@ import TaskSelection from './Pages/TaskSelection'
 import ThirdNormalForm from './Pages/ThirdNormalForm'
 import ViolatingColumns from './Pages/ViolatingColumns'
 
-export default function TrainerRouter () {
+export default function TrainerRouter() {
   return (
     <>
       <div className="bg-white p-4">
-        <Link className="no-underline text-black text-4xl font-semibold font-mono" to="/">NF-Trainer</Link>
+        <Link
+          className="no-underline text-black text-4xl font-semibold font-mono"
+          to="/"
+        >
+          NF-Trainer
+        </Link>
       </div>
       <div className="bg-white p-6">
         <Switch>
