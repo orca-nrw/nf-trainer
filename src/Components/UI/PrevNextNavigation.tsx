@@ -21,9 +21,12 @@ export default function PrevNextNavigation({
       </Link>
       <Link to={nextIsEnabled ? next : '#'}>
         <button
-          className={`px-2 py-1 w-20 ${
-            nextIsEnabled ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-500'
-          } text-white text-lg rounded-md cursor-pointer`}
+          className={`px-2 py-1 w-20 text-white text-lg rounded-md  ${
+            nextIsEnabled
+              ? 'bg-blue-500 hover:bg-blue-600 cursor-pointer'
+              : 'bg-gray-500 cursor-default'
+          } `}
+          disabled={nextIsEnabled}
         >
           Weiter
         </button>
