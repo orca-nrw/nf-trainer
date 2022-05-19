@@ -71,7 +71,7 @@ export default function ViolatingColumns() {
           />
         </div>
         <button
-          className={`px-2 py-1 text-white text-lg rounded-md ${
+          className={`px-3 py-1.5 text-white text-lg font-semibold rounded-md ${
             canNavigate
               ? 'bg-gray-400'
               : 'bg-th-red hover:bg-red-600  cursor-pointer'

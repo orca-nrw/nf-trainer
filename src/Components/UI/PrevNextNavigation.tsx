@@ -15,13 +15,13 @@ export default function PrevNextNavigation({
   return (
     <div className="flex justify-between pt-4">
       <Link to={prev}>
-        <button className="px-2 py-1 w-20 bg-blue-500 hover:bg-blue-600 text-white text-lg rounded-md cursor-pointer">
+        <button className="px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-md cursor-pointer">
           Zurück
         </button>
       </Link>
       <Link to={nextIsEnabled ? next : '#'}>
         <button
-          className={`px-2 py-1 w-20 text-white text-lg rounded-md  ${
+          className={`px-3 py-1.5 text-white text-lg rounded-md font-semibold ${
             nextIsEnabled
               ? 'bg-blue-500 hover:bg-blue-600 cursor-pointer'
               : 'bg-gray-500 cursor-default'

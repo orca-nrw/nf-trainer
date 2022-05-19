@@ -56,6 +56,14 @@ export default function ThirdNormalForm() {
         responseHandler={handleResponse}
         disabled={canNavigate}
       />
+
+      {/* Feedback */}
+      {isCorrect !== undefined && (
+        <p className="text-l font-bold text-center">
+          {isCorrect ? 'Richtig!' : 'Leider falsch.'}
+        </p>
+      )}
+
       <HintContainer
         functionalDependencies={task.functionalDependencies}
         primaryKeys={task.primaryKeys}
@@ -71,13 +79,6 @@ export default function ThirdNormalForm() {
             return <p key={index}>{dependencyString}</p>
           })}
         </SampleSolution>
-      )}
-
-      {/* Feedback */}
-      {isCorrect !== undefined && (
-        <p className="text-l font-bold text-center">
-          {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-        </p>
       )}
 
       {/* Navigation */}

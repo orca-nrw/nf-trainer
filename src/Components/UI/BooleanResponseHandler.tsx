@@ -13,7 +13,7 @@ export default function BooleanResponseHandler({
     <div className="flex flex-col items-center">
       <form className="flex flex-row space-x-4">
         <button
-          className={`px-2 py-1 w-20 text-white text-lg rounded-md ${
+          className={`px-3 py-1.5 w-20 text-white text-lg font-semibold rounded-md ${
             disabled
               ? 'bg-gray-400'
               : 'bg-th-red hover:bg-red-600 cursor-pointer'
@@ -25,7 +25,7 @@ export default function BooleanResponseHandler({
           Ja
         </button>
         <button
-          className={`px-2 py-1 w-20 text-white text-lg rounded-md ${
+          className={`px-3 py-1.5 w-20 text-white text-lg font-semibold rounded-md ${
             disabled
               ? 'bg-gray-400'
               : 'bg-th-red hover:bg-red-600 cursor-pointer'

@@ -78,11 +78,19 @@ export default function FunctionalDependencyTypes() {
           disabled={canNavigate}
         />
         <button
-          className="px-4 py-2 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto"
+          className="px-3 py-1.5 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto"
           onClick={() => handleSubmit()}
         >
           Auswerten
         </button>
+
+        {/* Feedback */}
+        {isCorrect !== undefined && (
+          <p className="text-l font-bold text-center">
+            {isCorrect ? 'Richtig!' : 'Leider falsch.'}
+          </p>
+        )}
+
         <HintContainer
           functionalDependencies={task.functionalDependencies}
           primaryKeys={task.primaryKeys}
@@ -98,13 +106,6 @@ export default function FunctionalDependencyTypes() {
               return <p key={index}>{dependencyString}</p>
             })}
           </SampleSolution>
-        )}
-
-        {/* Feedback */}
-        {isCorrect !== undefined && (
-          <p className="text-l font-bold text-center">
-            {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-          </p>
         )}
       </div>
 

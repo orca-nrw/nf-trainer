@@ -81,7 +81,7 @@ export default function PrimaryKeys() {
           />
         </div>
         <button
-          className={`px-2 py-1 text-white text-lg rounded-md ${
+          className={`px-3 py-1.5 text-white text-lg font-semibold rounded-md ${
             canNavigate
               ? 'bg-gray-400'
               : 'bg-th-red hover:bg-red-600  cursor-pointer'
@@ -91,6 +91,14 @@ export default function PrimaryKeys() {
         >
           Auswerten
         </button>
+
+        {/* Feedback */}
+        {isCorrect !== undefined && (
+          <p className="text-l font-bold text-center">
+            {isCorrect ? 'Richtig!' : 'Leider falsch.'}
+          </p>
+        )}
+
         <HintContainer functionalDependencies={task.functionalDependencies} />
 
         {/* Solution container */}
@@ -98,13 +106,6 @@ export default function PrimaryKeys() {
           <SampleSolution onClick={() => setCanNavigate(true)}>
             <p>{primaryKeys.join(', ')}</p>
           </SampleSolution>
-        )}
-
-        {/* Feedback */}
-        {isCorrect !== undefined && (
-          <p className="text-l font-bold text-center">
-            {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-          </p>
         )}
       </div>
 

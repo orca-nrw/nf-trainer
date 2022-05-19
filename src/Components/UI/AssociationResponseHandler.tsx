@@ -99,7 +99,7 @@ export default function AssociationResponseHandler({
       </div>
       <div className="flex justify-center">
         <button
-          className={`px-2 py-1 text-white text-lg rounded-md ${
+          className={`px-3 py-1.5 text-white text-lg font-semibold rounded-md ${
             disabled
               ? 'bg-gray-400'
               : 'bg-th-red hover:bg-red-600  cursor-pointer'
