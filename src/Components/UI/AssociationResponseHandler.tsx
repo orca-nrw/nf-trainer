@@ -50,10 +50,9 @@ export default function AssociationResponseHandler({
   }
 
   function evaluateAssociations() {
-    for (const solution of associationsSolutions) {
-      if (!solutionIsFulfilled(solution)) return false
-    }
-    return true
+    return associationsSolutions.every((solution) =>
+      solutionIsFulfilled(solution)
+    )
   }
 
   function handleSubmit() {
