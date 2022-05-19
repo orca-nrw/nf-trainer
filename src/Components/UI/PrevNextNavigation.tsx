@@ -26,7 +26,7 @@ export default function PrevNextNavigation({
               ? 'bg-blue-500 hover:bg-blue-600 cursor-pointer'
               : 'bg-gray-500 cursor-default'
           } `}
-          disabled={nextIsEnabled}
+          disabled={!nextIsEnabled}
         >
           Weiter
         </button>
