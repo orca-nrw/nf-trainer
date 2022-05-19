@@ -14,11 +14,13 @@ interface ParamTypes {
   id: string
 }
 
-export default function PrimaryKeys () {
+export default function PrimaryKeys() {
   // Get task from url param
   const { id } = useParams<ParamTypes>()
-  const task = tasks.find(task => task.id === Number(id))
-  const tableData = task?.hasViolatingColumns ? task?.firstNormalFormTableData : task?.tableData
+  const task = tasks.find((task) => task.id === Number(id))
+  const tableData = task?.hasViolatingColumns
+    ? task?.firstNormalFormTableData
+    : task?.tableData
 
   // Throw error and redirect back if an error occurs
   if (!tableData) {
@@ -35,42 +37,83 @@ export default function PrimaryKeys () {
 
   // Component State
   const [selectedEntries, setSelectedEntries] = useState<string[]>([])
-  const [message, setMessage] = useState('')
-  const [isEnabled, setIsEnabled] = useState(false)
+  const [isCorrect, setIsCorrect] = useState<boolean | undefined>()
+  const [canNavigate, setCanNavigate] = useState(false)
 
-  function evaluateEntries () {
-    if (selectedEntries.length === primaryKeys.length && selectedEntries.every(entry => primaryKeys.includes(entry))) return true
+  function evaluateEntries() {
+    if (
+      selectedEntries.length === primaryKeys.length &&
+      selectedEntries.every((entry) => primaryKeys.includes(entry))
+    )
+      return true
     return false
   }
 
-  function handleSubmit () {
+  function handleSubmit() {
     if (evaluateEntries()) {
-      setMessage('Korrekt!')
-      setIsEnabled(true)
+      setIsCorrect(true)
+      setCanNavigate(true)
     } else {
-      setMessage('Leider falsch!')
+      setIsCorrect(false)
     }
   }
 
   return (
     <div className="space-y-4">
+      {/* Task description */}
       <TrainerHeader>Primärschlüssel</TrainerHeader>
       <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <Table tableData={tableData}/>
+      <Table tableData={tableData} />
       <div className="flex flex-col items-center space-y-4">
-      <TrainerSubtaskDescription>Bestimmen Sie alle eindeutigen Schlüssel!</TrainerSubtaskDescription>
+        <TrainerSubtaskDescription>
+          Bestimmen Sie alle eindeutigen Schlüssel!
+        </TrainerSubtaskDescription>
+
+        {/* Task-specific response handler */}
         <div className="p-4 border shadow-md">
           <h1 className="font-bold">Schlüssel</h1>
-          <CheckboxResponseHandler entryList={taskKeys} selectedEntries={selectedEntries} setSelectedEntries={setSelectedEntries} useAccent={true} />
+          <CheckboxResponseHandler
+            entryList={taskKeys}
+            selectedEntries={selectedEntries}
+            setSelectedEntries={setSelectedEntries}
+            useAccent={true}
+            disabled={canNavigate}
+          />
         </div>
-        <button className="px-4 py-2 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer block mx-auto" onClick={() => handleSubmit()}>Auswerten</button>
+        <button
+          className={`px-2 py-1 text-white text-lg rounded-md ${
+            canNavigate
+              ? 'bg-gray-400'
+              : 'bg-th-red hover:bg-red-600  cursor-pointer'
+          }`}
+          onClick={() => handleSubmit()}
+          disabled={canNavigate}
+        >
+          Auswerten
+        </button>
         <HintContainer functionalDependencies={task.functionalDependencies} />
-        <SampleSolution >
-          <p>{primaryKeys.join(', ')}</p>
-        </SampleSolution>
-        <p className="text-l font-bold text-center">{message}</p>
+
+        {/* Solution container */}
+        {isCorrect !== undefined && (
+          <SampleSolution onClick={() => setCanNavigate(true)}>
+            <p>{primaryKeys.join(', ')}</p>
+          </SampleSolution>
+        )}
+
+        {/* Feedback */}
+        {isCorrect !== undefined && (
+          <p className="text-l font-bold text-center">
+            {isCorrect ? 'Richtig!' : 'Leider falsch.'}
+          </p>
+        )}
       </div>
-      <PrevNextNavigation prev={`/tasks/${id}/functionalDependencies`} next={`/tasks/${id}/functionalDependencyTypes`} nextIsEnabled={isEnabled} />
+
+      {/* Navigation */}
+      <PrevNextNavigation
+        prev={`/tasks/${id}/functionalDependencies`}
+        next={`/tasks/${id}/functionalDependencyTypes`}
+        nextIsEnabled={canNavigate}
+      />
     </div>
   )
 }
