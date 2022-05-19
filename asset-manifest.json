@@ -1,21 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.9ffc4c88.chunk.css",
-    "main.js": "./static/js/main.72eb5fb4.chunk.js",
-    "main.js.map": "./static/js/main.72eb5fb4.chunk.js.map",
-    "runtime-main.js": "./static/js/runtime-main.275da5a2.js",
-    "runtime-main.js.map": "./static/js/runtime-main.275da5a2.js.map",
-    "static/js/2.55d727b0.chunk.js": "./static/js/2.55d727b0.chunk.js",
-    "static/js/2.55d727b0.chunk.js.map": "./static/js/2.55d727b0.chunk.js.map",
+    "main.css": "./static/css/main.02f8cede.css",
+    "main.js": "./static/js/main.c26e96f6.js",
+    "static/media/eild_header_logo.png": "./static/media/eild_header_logo.da7d7cdec10e2ed74af7.png",
     "index.html": "./index.html",
-    "static/css/main.9ffc4c88.chunk.css.map": "./static/css/main.9ffc4c88.chunk.css.map",
-    "static/js/2.55d727b0.chunk.js.LICENSE.txt": "./static/js/2.55d727b0.chunk.js.LICENSE.txt",
-    "static/media/eild_header_logo.da7d7cde.png": "./static/media/eild_header_logo.da7d7cde.png"
+    "main.02f8cede.css.map": "./static/css/main.02f8cede.css.map",
+    "main.c26e96f6.js.map": "./static/js/main.c26e96f6.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.275da5a2.js",
-    "static/js/2.55d727b0.chunk.js",
-    "static/css/main.9ffc4c88.chunk.css",
-    "static/js/main.72eb5fb4.chunk.js"
+    "static/css/main.02f8cede.css",
+    "static/js/main.c26e96f6.js"
   ]
 }
