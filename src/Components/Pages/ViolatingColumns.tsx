@@ -8,6 +8,7 @@ import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import Table from '../UI/Table'
 import tasks from '../../Tasks'
+import FeedbackElement from '../UI/FeedbackElement'
 
 interface ParamTypes {
   id: string
@@ -90,11 +91,9 @@ export default function ViolatingColumns() {
         )}
 
         {/* Feedback */}
-        {isCorrect !== undefined && (
-          <p className="text-l font-bold text-center">
-            {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-          </p>
-        )}
+      {isCorrect !== undefined && (
+        <FeedbackElement isCorrect={isCorrect} />
+      )}
       </div>
 
       {/* Navigation */}

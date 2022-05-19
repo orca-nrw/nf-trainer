@@ -9,6 +9,7 @@ import TrainerHeader from '../UI/TrainerHeader'
 import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import tasks from '../../Tasks'
+import FeedbackElement from '../UI/FeedbackElement'
 
 interface ParamTypes {
   id: string
@@ -55,9 +56,7 @@ export default function CheckThirdNormalForm() {
 
       {/* Feedback */}
       {isCorrect !== undefined && (
-        <p className="text-l font-bold text-center">
-          {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-        </p>
+        <FeedbackElement isCorrect={isCorrect} />
       )}
 
       <HintContainer

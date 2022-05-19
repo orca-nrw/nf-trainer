@@ -8,6 +8,7 @@ import PrevNextNavigation from '../UI/PrevNextNavigation'
 import TrainerHeader from '../UI/TrainerHeader'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
+import FeedbackElement from '../UI/FeedbackElement'
 
 export default function FunctionalDependencies() {
   // Get task from url param
@@ -62,9 +63,7 @@ export default function FunctionalDependencies() {
 
       {/* Feedback */}
       {isCorrect !== undefined && (
-        <p className="text-l font-bold text-center">
-          {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-        </p>
+        <FeedbackElement isCorrect={isCorrect} />
       )}
 
       {/* Solution container */}

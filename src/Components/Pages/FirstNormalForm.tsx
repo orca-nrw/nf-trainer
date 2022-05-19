@@ -8,6 +8,7 @@ import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import Table from '../UI/Table'
 import tasks from '../../Tasks'
+import FeedbackElement from '../UI/FeedbackElement'
 
 export default function FirstNormalForm() {
   // Get task from url param
@@ -51,9 +52,7 @@ export default function FirstNormalForm() {
 
       {/* Feedback */}
       {isCorrect !== undefined && (
-        <p className="text-l font-bold text-center">
-          {isCorrect ? 'Richtig!' : 'Leider falsch.'}
-        </p>
+        <FeedbackElement isCorrect={isCorrect} />
       )}
 
       {/* Solution container */}
