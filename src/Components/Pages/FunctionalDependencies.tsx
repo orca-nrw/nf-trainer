@@ -33,7 +33,7 @@ export default function FunctionalDependencies() {
   const [canNavigate, setCanNavigate] = useState(false)
 
   function handleResponse(response: boolean) {
-    if (response !== task?.hasViolatingColumns) {
+    if (response) {
       setIsCorrect(true)
       setCanNavigate(true)
     } else {
