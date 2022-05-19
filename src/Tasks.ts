@@ -4,7 +4,8 @@ const tasks: Task[] = [
   {
     id: 1,
     title: 'Skriptverkauf',
-    description: 'In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.',
+    description:
+      'In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.',
     tableData: [
       {
         Veranstaltungsnummer: 112,
@@ -13,7 +14,7 @@ const tasks: Task[] = [
         Name: 'Schulz',
         Skriptnummer: 2,
         Preis: 25,
-        Anzahl: 4
+        Anzahl: 4,
       },
       {
         Veranstaltungsnummer: 112,
@@ -22,7 +23,7 @@ const tasks: Task[] = [
         Name: 'Lange',
         Skriptnummer: 9,
         Preis: 44,
-        Anzahl: 5
+        Anzahl: 5,
       },
       {
         Veranstaltungsnummer: 112,
@@ -31,7 +32,7 @@ const tasks: Task[] = [
         Name: 'Meyer',
         Skriptnummer: 2,
         Preis: 25,
-        Anzahl: 4
+        Anzahl: 4,
       },
       {
         Veranstaltungsnummer: 202,
@@ -40,8 +41,8 @@ const tasks: Task[] = [
         Name: 'Schulz',
         Skriptnummer: 4,
         Preis: 22,
-        Anzahl: 9
-      }
+        Anzahl: 9,
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
@@ -49,133 +50,134 @@ const tasks: Task[] = [
       {
         primaryKeys: ['Veranstaltungsnummer'],
         columns: ['Veranstaltungsname'],
-        type: 'partiell'
+        type: 'partiell',
       },
       {
         primaryKeys: ['Personalnummer'],
         columns: ['Name'],
-        type: 'partiell'
+        type: 'partiell',
       },
       {
         primaryKeys: ['Skriptnummer'],
         columns: ['Preis'],
-        type: 'partiell'
+        type: 'partiell',
       },
       {
         primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
         columns: ['Anzahl'],
-        type: 'voll'
-      }
+        type: 'voll',
+      },
     ],
     primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
     secondNormalForm: [
       {
         primaryKeys: ['Veranstaltungsnummer'],
-        columns: ['Veranstaltungsname']
+        columns: ['Veranstaltungsname'],
       },
       {
         primaryKeys: ['Personalnummer'],
-        columns: ['Name']
+        columns: ['Name'],
       },
       {
         primaryKeys: ['Skriptnummer'],
-        columns: ['Preis']
+        columns: ['Preis'],
       },
       {
         primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
-        columns: ['Anzahl']
-      }
+        columns: ['Anzahl'],
+      },
     ],
     secondFormTableData: [
       [
         {
           Veranstaltungsnummer: 202,
-          Veranstaltungsname: 'Spanisch'
+          Veranstaltungsname: 'Spanisch',
         },
         {
           Veranstaltungsnummer: 112,
-          Veranstaltungsname: 'Englisch'
-        }
+          Veranstaltungsname: 'Englisch',
+        },
       ],
       [
         {
           Personalnummer: 11,
-          Name: 'Meyer'
+          Name: 'Meyer',
         },
         {
           Personalnummer: 198,
-          Name: 'Schulz'
+          Name: 'Schulz',
         },
         {
           Personalnummer: 237,
-          Name: 'Lange'
-        }
+          Name: 'Lange',
+        },
       ],
       [
         {
           Skriptnummer: 2,
-          Preis: 25
+          Preis: 25,
         },
         {
           Skriptnummer: 4,
-          Preis: 22
+          Preis: 22,
         },
         {
           Skriptnummer: 9,
-          Preis: 44
-        }
+          Preis: 44,
+        },
       ],
       [
         {
           Veranstaltungsnummer: 112,
           Personalnummer: 237,
           Skriptnummer: 9,
-          Anzahl: 5
+          Anzahl: 5,
         },
         {
           Veranstaltungsnummer: 112,
           Personalnummer: 198,
           Skriptnummer: 2,
-          Anzahl: 4
+          Anzahl: 4,
         },
         {
           Veranstaltungsnummer: 112,
           Personalnummer: 11,
           Skriptnummer: 2,
-          Anzahl: 4
+          Anzahl: 4,
         },
         {
           Veranstaltungsnummer: 202,
           Personalnummer: 198,
           Skriptnummer: 4,
-          Anzahl: 9
-        }
-      ]
+          Anzahl: 9,
+        },
+      ],
     ],
     alreadyThirdNormalForm: true,
     thirdNormalFormSolutions: [
       {
         primaryKeys: ['Veranstaltungsnummer'],
-        columns: ['Veranstaltungsname']
+        columns: ['Veranstaltungsname'],
       },
       {
         primaryKeys: ['Personalnummer'],
-        columns: ['Name']
+        columns: ['Name'],
       },
       {
         primaryKeys: ['Skriptnummer'],
-        columns: ['Preis']
+        columns: ['Preis'],
       },
       {
         primaryKeys: ['Veranstaltungsnummer', 'Personalnummer', 'Skriptnummer'],
-        columns: ['Anzahl']
-      }
-    ]
+        columns: ['Anzahl'],
+      },
+    ],
   },
   {
     id: 2,
     title: 'Patienten der Arztpraxis',
-    description: 'Betrachten Sie die folgende, in der Arztpraxis von Dr. Beschränkt geführte Tabelle, wobei KK für Krankenkasse und P für Patient steht. \nEin Patient gehört genau einer Krankenkasse an und hat an einem Behandlungstag zu einer Diagnose höchsten eine Therapie.',
+    description:
+      'Betrachten Sie die folgende, in der Arztpraxis von Dr. Beschränkt geführte Tabelle, wobei KK für Krankenkasse und P für Patient steht. \nEin Patient gehört genau einer Krankenkasse an und hat an einem Behandlungstag zu einer Diagnose höchsten eine Therapie.',
     tableData: [
       {
         KK_NR: 1467,
@@ -187,8 +189,9 @@ const tasks: Task[] = [
         Diagnose: 'Hautrötung; Abschürfung; Sodbrennen; Tennisarm',
         Therapie: 'Salbe; Pflaster; Tabletten; Spritze',
         KK_Adresse: 'GM',
-        Diagnose_Beschreibung: 'Haut ist gerötet, Teile der Haut sind abgeschürft, Patient hat Sodbrennen, Patient hat einen Tennisarm',
-        P_Tel: '02261/45556'
+        Diagnose_Beschreibung:
+          'Haut ist gerötet, Teile der Haut sind abgeschürft, Patient hat Sodbrennen, Patient hat einen Tennisarm',
+        P_Tel: '02261/45556',
       },
       {
         KK_NR: 1789,
@@ -201,7 +204,7 @@ const tasks: Task[] = [
         Therapie: 'Tabletten',
         KK_Adresse: 'Köln',
         Diagnose_Beschreibung: 'Patient hat Sodbrennen',
-        P_Tel: '02263/344785'
+        P_Tel: '02263/344785',
       },
       {
         KK_NR: 3456,
@@ -214,7 +217,7 @@ const tasks: Task[] = [
         Therapie: 'Pflaster',
         KK_Adresse: 'Köln',
         Diagnose_Beschreibung: 'Teile der Haut sind abgeschürft',
-        P_Tel: '02261/643678'
+        P_Tel: '02261/643678',
       },
       {
         KK_NR: 3456,
@@ -227,11 +230,16 @@ const tasks: Task[] = [
         Therapie: 'Spritze',
         KK_Adresse: 'Köln',
         Diagnose_Beschreibung: 'Patient hat einen Tennisarm',
-        P_Tel: '0221/5477428'
-      }
+        P_Tel: '0221/5477428',
+      },
     ],
     hasViolatingColumns: true,
-    violatingColumns: ['Behandlungstag', 'Diagnose_Beschreibung', 'Diagnose', 'Therapie'],
+    violatingColumns: [
+      'Behandlungstag',
+      'Diagnose_Beschreibung',
+      'Diagnose',
+      'Therapie',
+    ],
     firstNormalFormTableData: [
       {
         KK_NR: 1467,
@@ -244,7 +252,7 @@ const tasks: Task[] = [
         Therapie: 'Spritze',
         KK_Adresse: 'GM',
         Diagnose_Beschreibung: 'Patient hat einen Tennisarm',
-        P_Tel: '02261/45556'
+        P_Tel: '02261/45556',
       },
       {
         KK_NR: 1467,
@@ -257,7 +265,7 @@ const tasks: Task[] = [
         Therapie: 'Pflaster',
         KK_Adresse: 'GM',
         Diagnose_Beschreibung: 'Teile der Haut sind abgeschürft',
-        P_Tel: '02261/45556'
+        P_Tel: '02261/45556',
       },
       {
         KK_NR: 1467,
@@ -270,7 +278,7 @@ const tasks: Task[] = [
         Therapie: 'Tabletten',
         KK_Adresse: 'GM',
         Diagnose_Beschreibung: 'Patient hat Sodbrennen',
-        P_Tel: '02261/45556'
+        P_Tel: '02261/45556',
       },
       {
         KK_NR: 1789,
@@ -283,7 +291,7 @@ const tasks: Task[] = [
         Therapie: 'Tabletten',
         KK_Adresse: 'Köln',
         Diagnose_Beschreibung: 'Patient hat Sodbrennen',
-        P_Tel: '02263/344785'
+        P_Tel: '02263/344785',
       },
       {
         KK_NR: 3456,
@@ -296,7 +304,7 @@ const tasks: Task[] = [
         Therapie: 'Spritze',
         KK_Adresse: 'Köln',
         Diagnose_Beschreibung: 'Patient hat einen Tennisarm',
-        P_Tel: '0221/5477428'
+        P_Tel: '0221/5477428',
       },
       {
         KK_NR: 1467,
@@ -309,7 +317,7 @@ const tasks: Task[] = [
         Therapie: 'Salbe',
         KK_Adresse: 'GM',
         Diagnose_Beschreibung: 'Haut ist gerötet',
-        P_Tel: '02261/45556'
+        P_Tel: '02261/45556',
       },
       {
         KK_NR: 3456,
@@ -322,45 +330,59 @@ const tasks: Task[] = [
         Therapie: 'Pflaster',
         KK_Adresse: 'Köln',
         Diagnose_Beschreibung: 'Teile der Haut sind abgeschürft',
-        P_Tel: '02261/643678'
-      }
+        P_Tel: '02261/643678',
+      },
     ],
     functionalDependencies: [
       {
         primaryKeys: ['KK_NR'],
         columns: ['KK_Name', 'KK_Adresse'],
-        type: 'transitiv'
+        type: 'transitiv',
       },
       {
         primaryKeys: ['P_Name'],
-        columns: ['KK_NR', 'KK_Name', 'P_Adresse', 'P_Geb_Tag', 'KK_Adresse', 'P_Tel'],
-        type: 'partiell'
+        columns: [
+          'KK_NR',
+          'KK_Name',
+          'P_Adresse',
+          'P_Geb_Tag',
+          'KK_Adresse',
+          'P_Tel',
+        ],
+        type: 'partiell',
       },
       {
         primaryKeys: ['P_Name', 'Behandlungstag', 'Diagnose'],
         columns: ['Therapie'],
-        type: 'voll'
+        type: 'voll',
       },
       {
         primaryKeys: ['Diagnose'],
         columns: ['Diagnose_Beschreibung'],
-        type: 'partiell'
-      }
+        type: 'partiell',
+      },
     ],
     primaryKeys: ['P_Name', 'Behandlungstag', 'Diagnose'],
     secondNormalForm: [
       {
         primaryKeys: ['P_Name'],
-        columns: ['KK_NR', 'KK_Name', 'P_Adresse', 'P_Geb_Tag', 'KK_Adresse', 'P_Tel']
+        columns: [
+          'KK_NR',
+          'KK_Name',
+          'P_Adresse',
+          'P_Geb_Tag',
+          'KK_Adresse',
+          'P_Tel',
+        ],
       },
       {
         primaryKeys: ['P_Name', 'Behandlungstag', 'Diagnose'],
-        columns: ['Therapie']
+        columns: ['Therapie'],
       },
       {
         primaryKeys: ['Diagnose'],
-        columns: ['Diagnose_Beschreibung']
-      }
+        columns: ['Diagnose_Beschreibung'],
+      },
     ],
     secondFormTableData: [
       [
@@ -371,7 +393,7 @@ const tasks: Task[] = [
           P_Adresse: 'GM',
           P_Geb_Tag: '13.08.56',
           KK_Adresse: 'GM',
-          P_Tel: '02261/45556'
+          P_Tel: '02261/45556',
         },
         {
           P_Name: 'Meier, Ema',
@@ -380,7 +402,7 @@ const tasks: Task[] = [
           P_Adresse: 'Berg.-Gladb.',
           P_Geb_Tag: '12.11.67',
           KK_Adresse: 'Köln',
-          P_Tel: '02263/344785'
+          P_Tel: '02263/344785',
         },
         {
           P_Name: 'Bäcker, Arno',
@@ -389,7 +411,7 @@ const tasks: Task[] = [
           P_Adresse: 'GM',
           P_Geb_Tag: '30.04.80',
           KK_Adresse: 'Köln',
-          P_Tel: '02261/643678'
+          P_Tel: '02261/643678',
         },
         {
           P_Name: 'Schulz, Hugo',
@@ -398,96 +420,97 @@ const tasks: Task[] = [
           P_Adresse: 'Köln',
           P_Geb_Tag: '30.06.79',
           KK_Adresse: 'Köln',
-          P_Tel: '0221/5477428'
-        }
+          P_Tel: '0221/5477428',
+        },
       ],
       [
         {
           P_Name: 'Meier, Ema',
           Behandlungstag: '31.05.98',
           Diagnose: 'Sodbrennen',
-          Therapie: 'Tabletten'
+          Therapie: 'Tabletten',
         },
         {
           P_Name: 'Müller, Erwin',
           Behandlungstag: '31.03.99',
           Diagnose: 'Tennisarm',
-          Therapie: 'Spritze'
+          Therapie: 'Spritze',
         },
         {
           P_Name: 'Müller, Erwin',
           Behandlungstag: '04.04.98',
           Diagnose: 'Hautrötung',
-          Therapie: 'Salbe'
+          Therapie: 'Salbe',
         },
         {
           P_Name: 'Müller, Erwin',
           Behandlungstag: '04.04.98',
           Diagnose: 'Abschürfung',
-          Therapie: 'Pflaster'
+          Therapie: 'Pflaster',
         },
         {
           P_Name: 'Müller, Erwin',
           Behandlungstag: '04.04.98',
           Diagnose: 'Sodbrennen',
-          Therapie: 'Tabletten'
+          Therapie: 'Tabletten',
         },
         {
           P_Name: 'Bäcker, Arno',
           Behandlungstag: '12.09.99',
           Diagnose: 'Abschürfung',
-          Therapie: 'Pflaster'
+          Therapie: 'Pflaster',
         },
         {
           P_Name: 'Schulz, Hugo',
           Behandlungstag: '08.09.99',
           Diagnose: 'Tennisarm',
-          Therapie: 'Spritze'
-        }
+          Therapie: 'Spritze',
+        },
       ],
       [
         {
           Diagnose: 'Abschürfung',
-          Diagnose_Beschreibung: 'Teile der Haut sind abgeschürft'
+          Diagnose_Beschreibung: 'Teile der Haut sind abgeschürft',
         },
         {
           Diagnose: 'Tennisarm',
-          Diagnose_Beschreibung: 'Patient hat einen Tennisarm'
+          Diagnose_Beschreibung: 'Patient hat einen Tennisarm',
         },
         {
           Diagnose: 'Sodbrennen',
-          Diagnose_Beschreibung: 'Patient hat Sodbrennen'
+          Diagnose_Beschreibung: 'Patient hat Sodbrennen',
         },
         {
           Diagnose: 'Hautrötung',
-          Diagnose_Beschreibung: 'Haut ist gerötet'
-        }
-      ]
+          Diagnose_Beschreibung: 'Haut ist gerötet',
+        },
+      ],
     ],
     alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
         primaryKeys: ['P_Name'],
-        columns: ['P_Adresse', 'P_Geb_Tag', 'P_Tel', 'KK_NR']
+        columns: ['P_Adresse', 'P_Geb_Tag', 'P_Tel', 'KK_NR'],
       },
       {
         primaryKeys: ['KK_NR'],
-        columns: ['KK_Name', 'KK_Adresse']
+        columns: ['KK_Name', 'KK_Adresse'],
       },
       {
         primaryKeys: ['P_Name', 'Behandlungstag', 'Diagnose'],
-        columns: ['Therapie']
+        columns: ['Therapie'],
       },
       {
         primaryKeys: ['Diagnose'],
-        columns: ['Diagnose_Beschreibung']
-      }
-    ]
+        columns: ['Diagnose_Beschreibung'],
+      },
+    ],
   },
   {
     id: 3,
     title: 'Küchen-Großhändler',
-    description: 'Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst. \nDabei stehen die Präfixe K_ für Kunden, A_ für Artikel und H_ für Hersteller. \n\nAußerdem gilt: \nDie Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. \nEin Artikel wird immer nur von einem Hersteller geliefert.',
+    description:
+      'Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst. \nDabei stehen die Präfixe K_ für Kunden, A_ für Artikel und H_ für Hersteller. \n\nAußerdem gilt: \nDie Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. \nEin Artikel wird immer nur von einem Hersteller geliefert.',
     tableData: [
       {
         K_NR: '1003',
@@ -498,7 +521,7 @@ const tasks: Task[] = [
         H_NR: 'H01',
         H_Name: 'PBTopf',
         A_Preis: '10,70',
-        Bestellmenge: '100'
+        Bestellmenge: '100',
       },
       {
         K_NR: '1003',
@@ -509,7 +532,7 @@ const tasks: Task[] = [
         H_NR: 'H03',
         H_Name: 'Kochass',
         A_Preis: '21,80',
-        Bestellmenge: '80'
+        Bestellmenge: '80',
       },
       {
         K_NR: '1004',
@@ -520,7 +543,7 @@ const tasks: Task[] = [
         H_NR: 'H10',
         H_Name: 'IKEA',
         A_Preis: '16,20',
-        Bestellmenge: '150'
+        Bestellmenge: '150',
       },
       {
         K_NR: '1001',
@@ -531,7 +554,7 @@ const tasks: Task[] = [
         H_NR: 'H10',
         H_Name: 'IKEA',
         A_Preis: '16,20',
-        Bestellmenge: '90'
+        Bestellmenge: '90',
       },
       {
         K_NR: '1001',
@@ -542,7 +565,7 @@ const tasks: Task[] = [
         H_NR: 'H04',
         H_Name: 'Gourmet',
         A_Preis: '31,50',
-        Bestellmenge: '50'
+        Bestellmenge: '50',
       },
       {
         K_NR: '1002',
@@ -553,7 +576,7 @@ const tasks: Task[] = [
         H_NR: 'H03',
         H_Name: 'Kochass',
         A_Preis: '23,30',
-        Bestellmenge: '80'
+        Bestellmenge: '80',
       },
       {
         K_NR: '1003',
@@ -564,7 +587,7 @@ const tasks: Task[] = [
         H_NR: 'H01',
         H_Name: 'PBTopf',
         A_Preis: '14,50',
-        Bestellmenge: '50'
+        Bestellmenge: '50',
       },
       {
         K_NR: '1004',
@@ -575,111 +598,70 @@ const tasks: Task[] = [
         H_NR: 'H03',
         H_Name: 'Kochass',
         A_Preis: '23,30',
-        Bestellmenge: '100'
-      }
+        Bestellmenge: '100',
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
     functionalDependencies: [
       {
-        primaryKeys: [
-          'K_NR'
-        ],
-        columns: [
-          'K_Name',
-          'K_Adresse'
-        ],
-        type: 'partiell'
+        primaryKeys: ['K_NR'],
+        columns: ['K_Name', 'K_Adresse'],
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'A_NR'
-        ],
-        columns: [
-          'A_Bezeichnung',
-          'H_NR',
-          'H_Name',
-          'A_Preis'
-        ],
-        type: 'partiell'
+        primaryKeys: ['A_NR'],
+        columns: ['A_Bezeichnung', 'H_NR', 'H_Name', 'A_Preis'],
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'H_NR'
-        ],
-        columns: [
-          'H_Name'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['H_NR'],
+        columns: ['H_Name'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'K_NR',
-          'A_NR'
-        ],
-        columns: [
-          'Bestellmenge'
-        ],
-        type: 'voll'
-      }
+        primaryKeys: ['K_NR', 'A_NR'],
+        columns: ['Bestellmenge'],
+        type: 'voll',
+      },
     ],
-    primaryKeys: [
-      'K_NR',
-      'A_NR'
-    ],
+    primaryKeys: ['K_NR', 'A_NR'],
     secondNormalForm: [
       {
-        primaryKeys: [
-          'K_NR'
-        ],
-        columns: [
-          'K_Name',
-          'K_Adresse'
-        ]
+        primaryKeys: ['K_NR'],
+        columns: ['K_Name', 'K_Adresse'],
       },
       {
-        primaryKeys: [
-          'A_NR'
-        ],
-        columns: [
-          'A_Bezeichnung',
-          'H_NR',
-          'H_Name',
-          'A_Preis'
-        ]
+        primaryKeys: ['A_NR'],
+        columns: ['A_Bezeichnung', 'H_NR', 'H_Name', 'A_Preis'],
       },
       {
-        primaryKeys: [
-          'K_NR',
-          'A_NR'
-        ],
-        columns: [
-          'Bestellmenge'
-        ]
-      }
+        primaryKeys: ['K_NR', 'A_NR'],
+        columns: ['Bestellmenge'],
+      },
     ],
     secondFormTableData: [
       [
         {
           K_NR: '1002',
           K_Name: 'Müller',
-          K_Adresse: 'Lindlar'
+          K_Adresse: 'Lindlar',
         },
         {
           K_NR: '1001',
           K_Name: 'Schmidt',
-          K_Adresse: 'Gummersbach'
+          K_Adresse: 'Gummersbach',
         },
         {
           K_NR: '1003',
           K_Name: 'Lüdtke',
-          K_Adresse: 'Marienheide'
+          K_Adresse: 'Marienheide',
         },
         {
           K_NR: '1004',
           K_Name: 'Maier',
-          K_Adresse: 'Dortmund'
-        }
+          K_Adresse: 'Dortmund',
+        },
       ],
       [
         {
@@ -687,131 +669,112 @@ const tasks: Task[] = [
           A_Bezeichnung: 'Alu-Topf1',
           H_NR: 'H01',
           H_Name: 'PBTopf',
-          A_Preis: '10,70'
+          A_Preis: '10,70',
         },
         {
           A_NR: 'A09',
           A_Bezeichnung: 'Schüssel',
           H_NR: 'H03',
           H_Name: 'Kochass',
-          A_Preis: '23,30'
+          A_Preis: '23,30',
         },
         {
           A_NR: 'A14',
           A_Bezeichnung: 'Alu-Topf2',
           H_NR: 'H01',
           H_Name: 'PBTopf',
-          A_Preis: '14,50'
+          A_Preis: '14,50',
         },
         {
           A_NR: 'A36',
           A_Bezeichnung: 'Besteck',
           H_NR: 'H03',
           H_Name: 'Kochass',
-          A_Preis: '21,80'
+          A_Preis: '21,80',
         },
         {
           A_NR: 'A11',
           A_Bezeichnung: 'Stahl-Topf',
           H_NR: 'H10',
           H_Name: 'IKEA',
-          A_Preis: '16,20'
+          A_Preis: '16,20',
         },
         {
           A_NR: 'A17',
           A_Bezeichnung: 'Bratpfanne',
           H_NR: 'H04',
           H_Name: 'Gourmet',
-          A_Preis: '31,50'
-        }
+          A_Preis: '31,50',
+        },
       ],
       [
         {
           K_NR: '1003',
           A_NR: 'A36',
-          Bestellmenge: '80'
+          Bestellmenge: '80',
         },
         {
           K_NR: '1001',
           A_NR: 'A11',
-          Bestellmenge: '90'
+          Bestellmenge: '90',
         },
         {
           K_NR: '1003',
           A_NR: 'A13',
-          Bestellmenge: '100'
+          Bestellmenge: '100',
         },
         {
           K_NR: '1003',
           A_NR: 'A14',
-          Bestellmenge: '50'
+          Bestellmenge: '50',
         },
         {
           K_NR: '1001',
           A_NR: 'A17',
-          Bestellmenge: '50'
+          Bestellmenge: '50',
         },
         {
           K_NR: '1004',
           A_NR: 'A11',
-          Bestellmenge: '150'
+          Bestellmenge: '150',
         },
         {
           K_NR: '1004',
           A_NR: 'A09',
-          Bestellmenge: '100'
+          Bestellmenge: '100',
         },
         {
           K_NR: '1002',
           A_NR: 'A09',
-          Bestellmenge: '80'
-        }
-      ]
+          Bestellmenge: '80',
+        },
+      ],
     ],
     alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
-        primaryKeys: [
-          'K_NR'
-        ],
-        columns: [
-          'K_Name',
-          'K_Adresse'
-        ]
+        primaryKeys: ['K_NR'],
+        columns: ['K_Name', 'K_Adresse'],
       },
       {
-        primaryKeys: [
-          'K_NR',
-          'A_NR'
-        ],
-        columns: [
-          'Bestellmenge'
-        ]
+        primaryKeys: ['K_NR', 'A_NR'],
+        columns: ['Bestellmenge'],
       },
       {
-        primaryKeys: [
-          'H_NR'
-        ],
-        columns: [
-          'H_Name'
-        ]
+        primaryKeys: ['H_NR'],
+        columns: ['H_Name'],
       },
       {
-        primaryKeys: [
-          'A_NR'
-        ],
-        columns: [
-          'A_Bezeichnung',
-          'H_NR',
-          'A_Preis'
-        ]
-      }
-    ]
+        primaryKeys: ['A_NR'],
+        columns: ['A_Bezeichnung', 'H_NR', 'A_Preis'],
+      },
+    ],
   },
   {
     id: 4,
     title: 'Autohändler',
-    description: 'Ein Autohändler speichert die von ihm angebotenen Fahrzeuge in einer redundanten Tabelle. \n\nDabei gilt: \nAdresse und das Land beziehen sich auf den Hersteller. \nDie Adresse wird nur als zusammenhängendes Textfeld gespeichert. \nDie ID bezieht sich auf ein konkretes Fahrzeug bzw. Motorrad. \nDer Typ und die Anzahl der Räder hängen vom Modell und vom Hersteller ab.',
+    description:
+      'Ein Autohändler speichert die von ihm angebotenen Fahrzeuge in einer redundanten Tabelle. \n\nDabei gilt: \nAdresse und das Land beziehen sich auf den Hersteller. \nDie Adresse wird nur als zusammenhängendes Textfeld gespeichert. \nDie ID bezieht sich auf ein konkretes Fahrzeug bzw. Motorrad. \nDer Typ und die Anzahl der Räder hängen vom Modell und vom Hersteller ab.',
     tableData: [
       {
         ID: '4718',
@@ -822,7 +785,7 @@ const tasks: Task[] = [
         PS: '6',
         Adresse: 'La Strada 2, 1223 Rom',
         Land: 'Italien',
-        Klimaanlage: 'Nein'
+        Klimaanlage: 'Nein',
       },
       {
         ID: '4714',
@@ -833,7 +796,7 @@ const tasks: Task[] = [
         PS: '80',
         Adresse: 'Koniciva 3, Yokahama',
         Land: 'Japan',
-        Klimaanlage: 'Nein'
+        Klimaanlage: 'Nein',
       },
       {
         ID: '4717',
@@ -844,7 +807,7 @@ const tasks: Task[] = [
         PS: '92',
         Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
         Land: 'Deutschland',
-        Klimaanlage: 'Ja'
+        Klimaanlage: 'Ja',
       },
       {
         ID: '4711',
@@ -855,7 +818,7 @@ const tasks: Task[] = [
         PS: '45',
         Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
         Land: 'Deutschland',
-        Klimaanlage: 'Ja'
+        Klimaanlage: 'Ja',
       },
       {
         ID: '4712',
@@ -866,7 +829,7 @@ const tasks: Task[] = [
         PS: '220',
         Adresse: 'Musterstr,27, 2222 Hamburg',
         Land: 'Deutschland',
-        Klimaanlage: 'Nein'
+        Klimaanlage: 'Nein',
       },
       {
         ID: '4715',
@@ -877,7 +840,7 @@ const tasks: Task[] = [
         PS: '65',
         Adresse: 'Fritzweg 26, 54478 Köln',
         Land: 'Deutschland',
-        Klimaanlage: 'Ja'
+        Klimaanlage: 'Ja',
       },
       {
         ID: '4716',
@@ -888,37 +851,24 @@ const tasks: Task[] = [
         PS: '72',
         Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
         Land: 'Deutschland',
-        Klimaanlage: 'Nein'
-      }
+        Klimaanlage: 'Nein',
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
     functionalDependencies: [
       {
-        primaryKeys: [
-          'Hersteller'
-        ],
-        columns: [
-          'Adresse',
-          'Land'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['Hersteller'],
+        columns: ['Adresse', 'Land'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'Hersteller',
-          'Modell'
-        ],
-        columns: [
-          'Typ',
-          'Anz_Raeder'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['Hersteller', 'Modell'],
+        columns: ['Typ', 'Anz_Raeder'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'ID'
-        ],
+        primaryKeys: ['ID'],
         columns: [
           'Hersteller',
           'Modell',
@@ -927,19 +877,15 @@ const tasks: Task[] = [
           'PS',
           'Adresse',
           'Land',
-          'Klimaanlage'
+          'Klimaanlage',
         ],
-        type: 'voll'
-      }
+        type: 'voll',
+      },
     ],
-    primaryKeys: [
-      'ID'
-    ],
+    primaryKeys: ['ID'],
     secondNormalForm: [
       {
-        primaryKeys: [
-          'ID'
-        ],
+        primaryKeys: ['ID'],
         columns: [
           'Hersteller',
           'Modell',
@@ -948,9 +894,9 @@ const tasks: Task[] = [
           'PS',
           'Adresse',
           'Land',
-          'Klimaanlage'
-        ]
-      }
+          'Klimaanlage',
+        ],
+      },
     ],
     secondFormTableData: [
       [
@@ -963,7 +909,7 @@ const tasks: Task[] = [
           PS: '92',
           Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
           Land: 'Deutschland',
-          Klimaanlage: 'Ja'
+          Klimaanlage: 'Ja',
         },
         {
           ID: '4718',
@@ -974,7 +920,7 @@ const tasks: Task[] = [
           PS: '6',
           Adresse: 'La Strada 2, 1223 Rom',
           Land: 'Italien',
-          Klimaanlage: 'Nein'
+          Klimaanlage: 'Nein',
         },
         {
           ID: '4715',
@@ -985,7 +931,7 @@ const tasks: Task[] = [
           PS: '65',
           Adresse: 'Fritzweg 26, 54478 Köln',
           Land: 'Deutschland',
-          Klimaanlage: 'Ja'
+          Klimaanlage: 'Ja',
         },
         {
           ID: '4711',
@@ -996,7 +942,7 @@ const tasks: Task[] = [
           PS: '45',
           Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
           Land: 'Deutschland',
-          Klimaanlage: 'Ja'
+          Klimaanlage: 'Ja',
         },
         {
           ID: '4716',
@@ -1007,7 +953,7 @@ const tasks: Task[] = [
           PS: '72',
           Adresse: 'Volkswagenstr, 10; 34444 Wolfsburg',
           Land: 'Deutschland',
-          Klimaanlage: 'Nein'
+          Klimaanlage: 'Nein',
         },
         {
           ID: '4712',
@@ -1018,7 +964,7 @@ const tasks: Task[] = [
           PS: '220',
           Adresse: 'Musterstr,27, 2222 Hamburg',
           Land: 'Deutschland',
-          Klimaanlage: 'Nein'
+          Klimaanlage: 'Nein',
         },
         {
           ID: '4714',
@@ -1029,48 +975,31 @@ const tasks: Task[] = [
           PS: '80',
           Adresse: 'Koniciva 3, Yokahama',
           Land: 'Japan',
-          Klimaanlage: 'Nein'
-        }
-      ]
+          Klimaanlage: 'Nein',
+        },
+      ],
     ],
     alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
-        primaryKeys: [
-          'ID'
-        ],
-        columns: [
-          'Hersteller',
-          'Modell',
-          'PS',
-          'Klimaanlage'
-        ]
+        primaryKeys: ['ID'],
+        columns: ['Hersteller', 'Modell', 'PS', 'Klimaanlage'],
       },
       {
-        primaryKeys: [
-          'Hersteller'
-        ],
-        columns: [
-          'Adresse',
-          'Land'
-        ]
+        primaryKeys: ['Hersteller'],
+        columns: ['Adresse', 'Land'],
       },
       {
-        primaryKeys: [
-          'Hersteller',
-          'Modell'
-        ],
-        columns: [
-          'Typ',
-          'Anz_Raeder'
-        ]
-      }
-    ]
+        primaryKeys: ['Hersteller', 'Modell'],
+        columns: ['Typ', 'Anz_Raeder'],
+      },
+    ],
   },
   {
     id: 5,
     title: 'Prüfungsamt',
-    description: 'Betrachten Sie die folgende, im Prüfungsamt geführte Tabelle. \n\nDabei stehen die Präfixe P_ für Prüfer, S_ für Studierender und Fak_ für Fakultät. \nAußerdem ist die Fakultätsnummer einer Prüfung zugeordnet, nicht dem Studierenden.',
+    description:
+      'Betrachten Sie die folgende, im Prüfungsamt geführte Tabelle. \n\nDabei stehen die Präfixe P_ für Prüfer, S_ für Studierender und Fak_ für Fakultät. \nAußerdem ist die Fakultätsnummer einer Prüfung zugeordnet, nicht dem Studierenden.',
     tableData: [
       {
         P_NR: '1',
@@ -1083,7 +1012,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '2.7',
-        Datum_Pruefung: '11.07.2008'
+        Datum_Pruefung: '11.07.2008',
       },
       {
         P_NR: '1',
@@ -1096,7 +1025,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '3',
-        Datum_Pruefung: '11.07.2008'
+        Datum_Pruefung: '11.07.2008',
       },
       {
         P_NR: '2',
@@ -1109,7 +1038,7 @@ const tasks: Task[] = [
         Fak_Name: 'Elektrotechnik',
         Dekan: 'Bongrads',
         Note: '3',
-        Datum_Pruefung: '15.07.2008'
+        Datum_Pruefung: '15.07.2008',
       },
       {
         P_NR: '2',
@@ -1122,7 +1051,7 @@ const tasks: Task[] = [
         Fak_Name: 'Elektrotechnik',
         Dekan: 'Bongrads',
         Note: '4',
-        Datum_Pruefung: '15.07.2008'
+        Datum_Pruefung: '15.07.2008',
       },
       {
         P_NR: '3',
@@ -1135,7 +1064,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '2.7',
-        Datum_Pruefung: '12.07.2008'
+        Datum_Pruefung: '12.07.2008',
       },
       {
         P_NR: '5',
@@ -1148,7 +1077,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '3',
-        Datum_Pruefung: '12.10.2008'
+        Datum_Pruefung: '12.10.2008',
       },
       {
         P_NR: '3',
@@ -1161,7 +1090,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '2.3',
-        Datum_Pruefung: '12.07.2008'
+        Datum_Pruefung: '12.07.2008',
       },
       {
         P_NR: '3',
@@ -1174,7 +1103,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '2.3',
-        Datum_Pruefung: '12.07.2008'
+        Datum_Pruefung: '12.07.2008',
       },
       {
         P_NR: '4',
@@ -1187,7 +1116,7 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '5',
-        Datum_Pruefung: '12.07.2008'
+        Datum_Pruefung: '12.07.2008',
       },
       {
         P_NR: '4',
@@ -1200,93 +1129,61 @@ const tasks: Task[] = [
         Fak_Name: 'Informatik',
         Dekan: 'Stahl',
         Note: '5',
-        Datum_Pruefung: '12.07.2008'
-      }
+        Datum_Pruefung: '12.07.2008',
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
     functionalDependencies: [
       {
-        primaryKeys: [
-          'P_NR'
-        ],
+        primaryKeys: ['P_NR'],
         columns: [
           'P_Name',
           'Fach',
           'Fak_NR',
           'Fak_Name',
           'Dekan',
-          'Datum_Pruefung'
+          'Datum_Pruefung',
         ],
-        type: 'partiell'
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'Mat_NR'
-        ],
-        columns: [
-          'S_Name',
-          'S_Geb_Tag'
-        ],
-        type: 'partiell'
+        primaryKeys: ['Mat_NR'],
+        columns: ['S_Name', 'S_Geb_Tag'],
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'P_NR',
-          'Mat_NR'
-        ],
-        columns: [
-          'Note'
-        ],
-        type: 'voll'
+        primaryKeys: ['P_NR', 'Mat_NR'],
+        columns: ['Note'],
+        type: 'voll',
       },
       {
-        primaryKeys: [
-          'Fak_NR'
-        ],
-        columns: [
-          'Dekan',
-          'Fak_Name'
-        ],
-        type: 'transitiv'
-      }
+        primaryKeys: ['Fak_NR'],
+        columns: ['Dekan', 'Fak_Name'],
+        type: 'transitiv',
+      },
     ],
-    primaryKeys: [
-      'P_NR',
-      'Mat_NR'
-    ],
+    primaryKeys: ['P_NR', 'Mat_NR'],
     secondNormalForm: [
       {
-        primaryKeys: [
-          'P_NR'
-        ],
+        primaryKeys: ['P_NR'],
         columns: [
           'P_Name',
           'Fach',
           'Fak_NR',
           'Fak_Name',
           'Dekan',
-          'Datum_Pruefung'
-        ]
+          'Datum_Pruefung',
+        ],
       },
       {
-        primaryKeys: [
-          'Mat_NR'
-        ],
-        columns: [
-          'S_Name',
-          'S_Geb_Tag'
-        ]
+        primaryKeys: ['Mat_NR'],
+        columns: ['S_Name', 'S_Geb_Tag'],
       },
       {
-        primaryKeys: [
-          'P_NR',
-          'Mat_NR'
-        ],
-        columns: [
-          'Note'
-        ]
-      }
+        primaryKeys: ['P_NR', 'Mat_NR'],
+        columns: ['Note'],
+      },
     ],
     secondFormTableData: [
       [
@@ -1297,7 +1194,7 @@ const tasks: Task[] = [
           Fak_NR: '20',
           Fak_Name: 'Informatik',
           Dekan: 'Stahl',
-          Datum_Pruefung: '12.07.2008'
+          Datum_Pruefung: '12.07.2008',
         },
         {
           P_NR: '2',
@@ -1306,7 +1203,7 @@ const tasks: Task[] = [
           Fak_NR: '18',
           Fak_Name: 'Elektrotechnik',
           Dekan: 'Bongrads',
-          Datum_Pruefung: '15.07.2008'
+          Datum_Pruefung: '15.07.2008',
         },
         {
           P_NR: '1',
@@ -1315,7 +1212,7 @@ const tasks: Task[] = [
           Fak_NR: '20',
           Fak_Name: 'Informatik',
           Dekan: 'Stahl',
-          Datum_Pruefung: '11.07.2008'
+          Datum_Pruefung: '11.07.2008',
         },
         {
           P_NR: '5',
@@ -1324,7 +1221,7 @@ const tasks: Task[] = [
           Fak_NR: '20',
           Fak_Name: 'Informatik',
           Dekan: 'Stahl',
-          Datum_Pruefung: '12.10.2008'
+          Datum_Pruefung: '12.10.2008',
         },
         {
           P_NR: '3',
@@ -1333,135 +1230,114 @@ const tasks: Task[] = [
           Fak_NR: '20',
           Fak_Name: 'Informatik',
           Dekan: 'Stahl',
-          Datum_Pruefung: '12.07.2008'
-        }
+          Datum_Pruefung: '12.07.2008',
+        },
       ],
       [
         {
           Mat_NR: '230799',
           S_Name: 'Maier',
-          S_Geb_Tag: '04.04.79'
+          S_Geb_Tag: '04.04.79',
         },
         {
           Mat_NR: '237682',
           S_Name: 'Josch',
-          S_Geb_Tag: '08.09.70'
+          S_Geb_Tag: '08.09.70',
         },
         {
           Mat_NR: '237681',
           S_Name: 'Wein',
-          S_Geb_Tag: '01.04.80'
+          S_Geb_Tag: '01.04.80',
         },
         {
           Mat_NR: '203491',
           S_Name: 'Hein',
-          S_Geb_Tag: '04.05.81'
+          S_Geb_Tag: '04.05.81',
         },
         {
           Mat_NR: '230800',
           S_Name: 'Schmidt',
-          S_Geb_Tag: '04.05.79'
-        }
+          S_Geb_Tag: '04.05.79',
+        },
       ],
       [
         {
           P_NR: '4',
           Mat_NR: '203491',
-          Note: '5'
+          Note: '5',
         },
         {
           P_NR: '3',
           Mat_NR: '203491',
-          Note: '2.3'
+          Note: '2.3',
         },
         {
           P_NR: '2',
           Mat_NR: '237681',
-          Note: '3'
+          Note: '3',
         },
         {
           P_NR: '3',
           Mat_NR: '203491',
-          Note: '2.7'
+          Note: '2.7',
         },
         {
           P_NR: '4',
           Mat_NR: '230799',
-          Note: '5'
+          Note: '5',
         },
         {
           P_NR: '1',
           Mat_NR: '230800',
-          Note: '2.7'
+          Note: '2.7',
         },
         {
           P_NR: '5',
           Mat_NR: '230799',
-          Note: '3'
+          Note: '3',
         },
         {
           P_NR: '2',
           Mat_NR: '237682',
-          Note: '4'
+          Note: '4',
         },
         {
           P_NR: '3',
           Mat_NR: '230799',
-          Note: '2.3'
+          Note: '2.3',
         },
         {
           P_NR: '1',
           Mat_NR: '230799',
-          Note: '3'
-        }
-      ]
+          Note: '3',
+        },
+      ],
     ],
     alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
-        primaryKeys: [
-          'P_NR'
-        ],
-        columns: [
-          'P_Name',
-          'Fach',
-          'Fak_NR',
-          'Datum_Pruefung'
-        ]
+        primaryKeys: ['P_NR'],
+        columns: ['P_Name', 'Fach', 'Fak_NR', 'Datum_Pruefung'],
       },
       {
-        primaryKeys: [
-          'P_NR',
-          'Mat_NR'
-        ],
-        columns: [
-          'Note'
-        ]
+        primaryKeys: ['P_NR', 'Mat_NR'],
+        columns: ['Note'],
       },
       {
-        primaryKeys: [
-          'Mat_NR'
-        ],
-        columns: [
-          'S_Name',
-          'S_Geb_Tag'
-        ]
+        primaryKeys: ['Mat_NR'],
+        columns: ['S_Name', 'S_Geb_Tag'],
       },
       {
-        primaryKeys: [
-          'Fak_NR'
-        ],
-        columns: [
-          'Dekan',
-          'Fak_Name'
-        ]
-      }
-    ]
+        primaryKeys: ['Fak_NR'],
+        columns: ['Dekan', 'Fak_Name'],
+      },
+    ],
   },
   {
     id: 6,
     title: 'Lebensmittelprüfung',
-    description: 'Der Lebensmittelprüfer Dr. Gesund hat für den Gehalt von Lebensmitteln an Vitaminen und Mineralstoffen folgende Relation entwickelt, wobei gilt: \n\nLebensmittel_ID: Eindeutige Nummer für das Lebensmittel. \nSTOFF: Name des Inhaltsstoffs \nMENGE: Gehalt an dem Inhaltsstoff in 100g des Lebensmittels. \nEINHEIT: Einheit für Mengenangaben des Inhaltsstoffs. \n\tDies hängt vom jeweiligen Stoff ab, im Beispiel wird z.B. Vitamin A in mcg angegeben, die anderen Stoffe in mg. \n\tDie Einheit hängt nicht vom Lebensmittel ab. \nEMPFOHLEN: Täglich empfohlene Menge eines Stoffes für einen Menschen \n\nDie Tabelle erscheint zu groß. Können Sie Dr. Gesund helfen, seine redundaten Daten zu verringern?',
+    description:
+      'Der Lebensmittelprüfer Dr. Gesund hat für den Gehalt von Lebensmitteln an Vitaminen und Mineralstoffen folgende Relation entwickelt, wobei gilt: \n\nLebensmittel_ID: Eindeutige Nummer für das Lebensmittel. \nSTOFF: Name des Inhaltsstoffs \nMENGE: Gehalt an dem Inhaltsstoff in 100g des Lebensmittels. \nEINHEIT: Einheit für Mengenangaben des Inhaltsstoffs. \n\tDies hängt vom jeweiligen Stoff ab, im Beispiel wird z.B. Vitamin A in mcg angegeben, die anderen Stoffe in mg. \n\tDie Einheit hängt nicht vom Lebensmittel ab. \nEMPFOHLEN: Täglich empfohlene Menge eines Stoffes für einen Menschen \n\nDie Tabelle erscheint zu groß. Können Sie Dr. Gesund helfen, seine redundaten Daten zu verringern?',
     tableData: [
       {
         Lebensmittel_ID: '1',
@@ -1469,7 +1345,7 @@ const tasks: Task[] = [
         Stoff: 'Calcium',
         Menge: '16',
         Einheit: 'mg',
-        Empfohlen: '1000'
+        Empfohlen: '1000',
       },
       {
         Lebensmittel_ID: '1',
@@ -1477,7 +1353,7 @@ const tasks: Task[] = [
         Stoff: 'Kalium',
         Menge: '173',
         Einheit: 'mg',
-        Empfohlen: '2000'
+        Empfohlen: '2000',
       },
       {
         Lebensmittel_ID: '1',
@@ -1485,7 +1361,7 @@ const tasks: Task[] = [
         Stoff: 'Magnesium',
         Menge: '17',
         Einheit: 'mg',
-        Empfohlen: '350'
+        Empfohlen: '350',
       },
       {
         Lebensmittel_ID: '1',
@@ -1493,7 +1369,7 @@ const tasks: Task[] = [
         Stoff: 'Vitamin C',
         Menge: '19',
         Einheit: 'mg',
-        Empfohlen: '100'
+        Empfohlen: '100',
       },
       {
         Lebensmittel_ID: '2',
@@ -1501,7 +1377,7 @@ const tasks: Task[] = [
         Stoff: 'Calcium',
         Menge: '7',
         Einheit: 'mg',
-        Empfohlen: '1000'
+        Empfohlen: '1000',
       },
       {
         Lebensmittel_ID: '2',
@@ -1509,7 +1385,7 @@ const tasks: Task[] = [
         Stoff: 'Kalium',
         Menge: '144',
         Einheit: 'mg',
-        Empfohlen: '2000'
+        Empfohlen: '2000',
       },
       {
         Lebensmittel_ID: '2',
@@ -1517,7 +1393,7 @@ const tasks: Task[] = [
         Stoff: 'Magnesium',
         Menge: '6',
         Einheit: 'mg',
-        Empfohlen: '350'
+        Empfohlen: '350',
       },
       {
         Lebensmittel_ID: '2',
@@ -1525,7 +1401,7 @@ const tasks: Task[] = [
         Stoff: 'Vitamin A',
         Menge: '10',
         Einheit: 'mcg',
-        Empfohlen: '800'
+        Empfohlen: '800',
       },
       {
         Lebensmittel_ID: '2',
@@ -1533,7 +1409,7 @@ const tasks: Task[] = [
         Stoff: 'Vitamin C',
         Menge: '12',
         Einheit: 'mg',
-        Empfohlen: '100'
+        Empfohlen: '100',
       },
       {
         Lebensmittel_ID: '3',
@@ -1541,7 +1417,7 @@ const tasks: Task[] = [
         Stoff: 'Calcium',
         Menge: '9',
         Einheit: 'mg',
-        Empfohlen: '1000'
+        Empfohlen: '1000',
       },
       {
         Lebensmittel_ID: '3',
@@ -1549,7 +1425,7 @@ const tasks: Task[] = [
         Stoff: 'Kalium',
         Menge: '393',
         Einheit: 'mg',
-        Empfohlen: '2000'
+        Empfohlen: '2000',
       },
       {
         Lebensmittel_ID: '3',
@@ -1557,7 +1433,7 @@ const tasks: Task[] = [
         Stoff: 'Magnesium',
         Menge: '36',
         Einheit: 'mg',
-        Empfohlen: '350'
+        Empfohlen: '350',
       },
       {
         Lebensmittel_ID: '3',
@@ -1565,7 +1441,7 @@ const tasks: Task[] = [
         Stoff: 'Vitamin C',
         Menge: '12',
         Einheit: 'mg',
-        Empfohlen: '100'
+        Empfohlen: '100',
       },
       {
         Lebensmittel_ID: '4',
@@ -1573,7 +1449,7 @@ const tasks: Task[] = [
         Stoff: 'Calcium',
         Menge: '10',
         Einheit: 'mg',
-        Empfohlen: '1000'
+        Empfohlen: '1000',
       },
       {
         Lebensmittel_ID: '4',
@@ -1581,7 +1457,7 @@ const tasks: Task[] = [
         Stoff: 'Kalium',
         Menge: '126',
         Einheit: 'mg',
-        Empfohlen: '2000'
+        Empfohlen: '2000',
       },
       {
         Lebensmittel_ID: '4',
@@ -1589,7 +1465,7 @@ const tasks: Task[] = [
         Stoff: 'Magnesium',
         Menge: '8',
         Einheit: 'mg',
-        Empfohlen: '350'
+        Empfohlen: '350',
       },
       {
         Lebensmittel_ID: '4',
@@ -1597,7 +1473,7 @@ const tasks: Task[] = [
         Stoff: 'Vitamin C',
         Menge: '5',
         Einheit: 'mg',
-        Empfohlen: '100'
+        Empfohlen: '100',
       },
       {
         Lebensmittel_ID: '5',
@@ -1605,7 +1481,7 @@ const tasks: Task[] = [
         Stoff: 'Calcium',
         Menge: '26',
         Einheit: 'mg',
-        Empfohlen: '1000'
+        Empfohlen: '1000',
       },
       {
         Lebensmittel_ID: '5',
@@ -1613,7 +1489,7 @@ const tasks: Task[] = [
         Stoff: 'Kalium',
         Menge: '147',
         Einheit: 'mg',
-        Empfohlen: '2000'
+        Empfohlen: '2000',
       },
       {
         Lebensmittel_ID: '5',
@@ -1621,7 +1497,7 @@ const tasks: Task[] = [
         Stoff: 'Magnesium',
         Menge: '15',
         Einheit: 'mg',
-        Empfohlen: '350'
+        Empfohlen: '350',
       },
       {
         Lebensmittel_ID: '5',
@@ -1629,266 +1505,222 @@ const tasks: Task[] = [
         Stoff: 'Vitamin C',
         Menge: '64',
         Einheit: 'mg',
-        Empfohlen: '100'
-      }
+        Empfohlen: '100',
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
     functionalDependencies: [
       {
-        primaryKeys: [
-          'Lebensmittel_ID'
-        ],
-        columns: [
-          'Lebensmittel_Name'
-        ],
-        type: 'partiell'
+        primaryKeys: ['Lebensmittel_ID'],
+        columns: ['Lebensmittel_Name'],
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'Stoff'
-        ],
-        columns: [
-          'Empfohlen',
-          'Einheit'
-        ],
-        type: 'partiell'
+        primaryKeys: ['Stoff'],
+        columns: ['Empfohlen', 'Einheit'],
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'Lebensmittel_ID',
-          'Stoff'
-        ],
-        columns: [
-          'Menge'
-        ],
-        type: 'voll'
-      }
+        primaryKeys: ['Lebensmittel_ID', 'Stoff'],
+        columns: ['Menge'],
+        type: 'voll',
+      },
     ],
-    primaryKeys: [
-      'Lebensmittel_ID',
-      'Stoff'
-    ],
+    primaryKeys: ['Lebensmittel_ID', 'Stoff'],
     secondNormalForm: [
       {
-        primaryKeys: [
-          'Lebensmittel_ID'
-        ],
-        columns: [
-          'Lebensmittel_Name'
-        ]
+        primaryKeys: ['Lebensmittel_ID'],
+        columns: ['Lebensmittel_Name'],
       },
       {
-        primaryKeys: [
-          'Stoff'
-        ],
-        columns: [
-          'Empfohlen',
-          'Einheit'
-        ]
+        primaryKeys: ['Stoff'],
+        columns: ['Empfohlen', 'Einheit'],
       },
       {
-        primaryKeys: [
-          'Lebensmittel_ID',
-          'Stoff'
-        ],
-        columns: [
-          'Menge'
-        ]
-      }
+        primaryKeys: ['Lebensmittel_ID', 'Stoff'],
+        columns: ['Menge'],
+      },
     ],
     secondFormTableData: [
       [
         {
           Lebensmittel_ID: '1',
-          Lebensmittel_Name: 'Ananas'
+          Lebensmittel_Name: 'Ananas',
         },
         {
           Lebensmittel_ID: '2',
-          Lebensmittel_Name: 'Apfel'
+          Lebensmittel_Name: 'Apfel',
         },
         {
           Lebensmittel_ID: '3',
-          Lebensmittel_Name: 'Banane'
+          Lebensmittel_Name: 'Banane',
         },
         {
           Lebensmittel_ID: '4',
-          Lebensmittel_Name: 'Birne'
+          Lebensmittel_Name: 'Birne',
         },
         {
           Lebensmittel_ID: '5',
-          Lebensmittel_Name: 'Erdbeeren'
-        }
+          Lebensmittel_Name: 'Erdbeeren',
+        },
       ],
       [
         {
           Stoff: 'Kalium',
           Empfohlen: '2000',
-          Einheit: 'mg'
+          Einheit: 'mg',
         },
         {
           Stoff: 'Vitamin C',
           Empfohlen: '100',
-          Einheit: 'mg'
+          Einheit: 'mg',
         },
         {
           Stoff: 'Vitamin A',
           Empfohlen: '800',
-          Einheit: 'mcg'
+          Einheit: 'mcg',
         },
         {
           Stoff: 'Calcium',
           Empfohlen: '1000',
-          Einheit: 'mg'
+          Einheit: 'mg',
         },
         {
           Stoff: 'Magnesium',
           Empfohlen: '350',
-          Einheit: 'mg'
-        }
+          Einheit: 'mg',
+        },
       ],
       [
         {
           Lebensmittel_ID: '4',
           Stoff: 'Calcium',
-          Menge: '10'
+          Menge: '10',
         },
         {
           Lebensmittel_ID: '1',
           Stoff: 'Vitamin C',
-          Menge: '19'
+          Menge: '19',
         },
         {
           Lebensmittel_ID: '3',
           Stoff: 'Calcium',
-          Menge: '9'
+          Menge: '9',
         },
         {
           Lebensmittel_ID: '2',
           Stoff: 'Vitamin A',
-          Menge: '10'
+          Menge: '10',
         },
         {
           Lebensmittel_ID: '5',
           Stoff: 'Magnesium',
-          Menge: '15'
+          Menge: '15',
         },
         {
           Lebensmittel_ID: '5',
           Stoff: 'Kalium',
-          Menge: '147'
+          Menge: '147',
         },
         {
           Lebensmittel_ID: '3',
           Stoff: 'Vitamin C',
-          Menge: '12'
+          Menge: '12',
         },
         {
           Lebensmittel_ID: '5',
           Stoff: 'Vitamin C',
-          Menge: '64'
+          Menge: '64',
         },
         {
           Lebensmittel_ID: '5',
           Stoff: 'Calcium',
-          Menge: '26'
+          Menge: '26',
         },
         {
           Lebensmittel_ID: '4',
           Stoff: 'Kalium',
-          Menge: '126'
+          Menge: '126',
         },
         {
           Lebensmittel_ID: '4',
           Stoff: 'Magnesium',
-          Menge: '8'
+          Menge: '8',
         },
         {
           Lebensmittel_ID: '2',
           Stoff: 'Magnesium',
-          Menge: '6'
+          Menge: '6',
         },
         {
           Lebensmittel_ID: '3',
           Stoff: 'Magnesium',
-          Menge: '36'
+          Menge: '36',
         },
         {
           Lebensmittel_ID: '1',
           Stoff: 'Kalium',
-          Menge: '173'
+          Menge: '173',
         },
         {
           Lebensmittel_ID: '2',
           Stoff: 'Kalium',
-          Menge: '144'
+          Menge: '144',
         },
         {
           Lebensmittel_ID: '1',
           Stoff: 'Magnesium',
-          Menge: '17'
+          Menge: '17',
         },
         {
           Lebensmittel_ID: '2',
           Stoff: 'Vitamin C',
-          Menge: '12'
+          Menge: '12',
         },
         {
           Lebensmittel_ID: '2',
           Stoff: 'Calcium',
-          Menge: '7'
+          Menge: '7',
         },
         {
           Lebensmittel_ID: '3',
           Stoff: 'Kalium',
-          Menge: '393'
+          Menge: '393',
         },
         {
           Lebensmittel_ID: '1',
           Stoff: 'Calcium',
-          Menge: '16'
+          Menge: '16',
         },
         {
           Lebensmittel_ID: '4',
           Stoff: 'Vitamin C',
-          Menge: '5'
-        }
-      ]
+          Menge: '5',
+        },
+      ],
     ],
     alreadyThirdNormalForm: true,
     thirdNormalFormSolutions: [
       {
-        primaryKeys: [
-          'Lebensmittel_ID'
-        ],
-        columns: [
-          'Lebensmittel_Name'
-        ]
+        primaryKeys: ['Lebensmittel_ID'],
+        columns: ['Lebensmittel_Name'],
       },
       {
-        primaryKeys: [
-          'Stoff'
-        ],
-        columns: [
-          'Empfohlen',
-          'Einheit'
-        ]
+        primaryKeys: ['Stoff'],
+        columns: ['Empfohlen', 'Einheit'],
       },
       {
-        primaryKeys: [
-          'Lebensmittel_ID',
-          'Stoff'
-        ],
-        columns: [
-          'Menge'
-        ]
-      }
-    ]
+        primaryKeys: ['Lebensmittel_ID', 'Stoff'],
+        columns: ['Menge'],
+      },
+    ],
   },
   {
     id: 7,
     title: 'Zimmer im Krankenhaus',
-    description: 'Betrachten Sie die folgende, in einem Krankenhaus geführte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. \n\nEin Patient kann mehrere Krankheiten haben. \nDabei stehen die Präfixe S_ für Station, Z_ für Zimmer, P_ für Patient, A_ für Arzt und Pf_ für Pfleger. \n\nDie Anzahl der Betten soll von der SNR und der ZNR abhängen.',
+    description:
+      'Betrachten Sie die folgende, in einem Krankenhaus geführte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. \n\nEin Patient kann mehrere Krankheiten haben. \nDabei stehen die Präfixe S_ für Station, Z_ für Zimmer, P_ für Patient, A_ für Arzt und Pf_ für Pfleger. \n\nDie Anzahl der Betten soll von der SNR und der ZNR abhängen.',
     tableData: [
       {
         S_NR: '1',
@@ -1902,7 +1734,7 @@ const tasks: Task[] = [
         A_Name: 'Mann',
         A_Vorname: 'Heinz',
         Pf_Name: 'Brahms',
-        Pf_Vorname: 'Hilde'
+        Pf_Vorname: 'Hilde',
       },
       {
         S_NR: '1',
@@ -1916,7 +1748,7 @@ const tasks: Task[] = [
         A_Name: 'Mann',
         A_Vorname: 'Heinz',
         Pf_Name: 'Brahms',
-        Pf_Vorname: 'Hilde'
+        Pf_Vorname: 'Hilde',
       },
       {
         S_NR: '1',
@@ -1930,7 +1762,7 @@ const tasks: Task[] = [
         A_Name: 'Mann',
         A_Vorname: 'Heinz',
         Pf_Name: 'Brahms',
-        Pf_Vorname: 'Hilde'
+        Pf_Vorname: 'Hilde',
       },
       {
         S_NR: '1',
@@ -1944,7 +1776,7 @@ const tasks: Task[] = [
         A_Name: 'Hase',
         A_Vorname: 'Willi',
         Pf_Name: 'Brahms',
-        Pf_Vorname: 'Hilde'
+        Pf_Vorname: 'Hilde',
       },
       {
         S_NR: '2',
@@ -1958,7 +1790,7 @@ const tasks: Task[] = [
         A_Name: 'Wilms',
         A_Vorname: 'Otto',
         Pf_Name: 'Saga',
-        Pf_Vorname: 'Udo'
+        Pf_Vorname: 'Udo',
       },
       {
         S_NR: '2',
@@ -1972,7 +1804,7 @@ const tasks: Task[] = [
         A_Name: 'Wilms',
         A_Vorname: 'Otto',
         Pf_Name: 'Saga',
-        Pf_Vorname: 'Udo'
+        Pf_Vorname: 'Udo',
       },
       {
         S_NR: '2',
@@ -1986,7 +1818,7 @@ const tasks: Task[] = [
         A_Name: 'Wilms',
         A_Vorname: 'Otto',
         Pf_Name: 'Meier',
-        Pf_Vorname: 'Anna'
+        Pf_Vorname: 'Anna',
       },
       {
         S_NR: '2',
@@ -2000,89 +1832,57 @@ const tasks: Task[] = [
         A_Name: 'Wilms',
         A_Vorname: 'Otto',
         Pf_Name: 'Meier',
-        Pf_Vorname: 'Anna'
-      }
+        Pf_Vorname: 'Anna',
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
     functionalDependencies: [
       {
-        primaryKeys: [
-          'S_NR'
-        ],
-        columns: [
-          'S_Name'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['S_NR'],
+        columns: ['S_Name'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'S_NR',
-          'Z_NR'
-        ],
-        columns: [
-          'Anz_Betten'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['S_NR', 'Z_NR'],
+        columns: ['Anz_Betten'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'P_NR'
-        ],
+        primaryKeys: ['P_NR'],
         columns: [
           'P_Name',
           'P_Vorname',
           'S_NR',
           'Z_NR',
           'Anz_Betten',
-          'S_Name'
+          'S_Name',
         ],
-        type: 'partiell'
+        type: 'partiell',
       },
       {
-        primaryKeys: [
-          'P_NR',
-          'Krankheit'
-        ],
-        columns: [
-          'A_Name',
-          'A_Vorname',
-          'Pf_Vorname',
-          'Pf_Name'
-        ],
-        type: 'voll'
-      }
+        primaryKeys: ['P_NR', 'Krankheit'],
+        columns: ['A_Name', 'A_Vorname', 'Pf_Vorname', 'Pf_Name'],
+        type: 'voll',
+      },
     ],
-    primaryKeys: [
-      'P_NR',
-      'Krankheit'
-    ],
+    primaryKeys: ['P_NR', 'Krankheit'],
     secondNormalForm: [
       {
-        primaryKeys: [
-          'P_NR'
-        ],
+        primaryKeys: ['P_NR'],
         columns: [
           'P_Name',
           'P_Vorname',
           'S_NR',
           'Z_NR',
           'Anz_Betten',
-          'S_Name'
-        ]
+          'S_Name',
+        ],
       },
       {
-        primaryKeys: [
-          'P_NR',
-          'Krankheit'
-        ],
-        columns: [
-          'A_Name',
-          'A_Vorname',
-          'Pf_Vorname',
-          'Pf_Name'
-        ]
-      }
+        primaryKeys: ['P_NR', 'Krankheit'],
+        columns: ['A_Name', 'A_Vorname', 'Pf_Vorname', 'Pf_Name'],
+      },
     ],
     secondFormTableData: [
       [
@@ -2093,7 +1893,7 @@ const tasks: Task[] = [
           S_NR: '2',
           Z_NR: '2',
           Anz_Betten: '1',
-          S_Name: 'Augen'
+          S_Name: 'Augen',
         },
         {
           P_NR: '3',
@@ -2102,7 +1902,7 @@ const tasks: Task[] = [
           S_NR: '1',
           Z_NR: '2',
           Anz_Betten: '1',
-          S_Name: 'Medizin'
+          S_Name: 'Medizin',
         },
         {
           P_NR: '4',
@@ -2111,7 +1911,7 @@ const tasks: Task[] = [
           S_NR: '2',
           Z_NR: '1',
           Anz_Betten: '2',
-          S_Name: 'Augen'
+          S_Name: 'Augen',
         },
         {
           P_NR: '1',
@@ -2120,7 +1920,7 @@ const tasks: Task[] = [
           S_NR: '1',
           Z_NR: '1',
           Anz_Betten: '2',
-          S_Name: 'Medizin'
+          S_Name: 'Medizin',
         },
         {
           P_NR: '5',
@@ -2129,7 +1929,7 @@ const tasks: Task[] = [
           S_NR: '2',
           Z_NR: '1',
           Anz_Betten: '2',
-          S_Name: 'Augen'
+          S_Name: 'Augen',
         },
         {
           P_NR: '2',
@@ -2138,8 +1938,8 @@ const tasks: Task[] = [
           S_NR: '1',
           Z_NR: '1',
           Anz_Betten: '2',
-          S_Name: 'Medizin'
-        }
+          S_Name: 'Medizin',
+        },
       ],
       [
         {
@@ -2148,7 +1948,7 @@ const tasks: Task[] = [
           A_Name: 'Mann',
           A_Vorname: 'Heinz',
           Pf_Vorname: 'Hilde',
-          Pf_Name: 'Brahms'
+          Pf_Name: 'Brahms',
         },
         {
           P_NR: '3',
@@ -2156,7 +1956,7 @@ const tasks: Task[] = [
           A_Name: 'Hase',
           A_Vorname: 'Willi',
           Pf_Vorname: 'Hilde',
-          Pf_Name: 'Brahms'
+          Pf_Name: 'Brahms',
         },
         {
           P_NR: '5',
@@ -2164,7 +1964,7 @@ const tasks: Task[] = [
           A_Name: 'Wilms',
           A_Vorname: 'Otto',
           Pf_Vorname: 'Udo',
-          Pf_Name: 'Saga'
+          Pf_Name: 'Saga',
         },
         {
           P_NR: '4',
@@ -2172,7 +1972,7 @@ const tasks: Task[] = [
           A_Name: 'Wilms',
           A_Vorname: 'Otto',
           Pf_Vorname: 'Udo',
-          Pf_Name: 'Saga'
+          Pf_Name: 'Saga',
         },
         {
           P_NR: '2',
@@ -2180,7 +1980,7 @@ const tasks: Task[] = [
           A_Name: 'Mann',
           A_Vorname: 'Heinz',
           Pf_Vorname: 'Hilde',
-          Pf_Name: 'Brahms'
+          Pf_Name: 'Brahms',
         },
         {
           P_NR: '6',
@@ -2188,7 +1988,7 @@ const tasks: Task[] = [
           A_Name: 'Wilms',
           A_Vorname: 'Otto',
           Pf_Vorname: 'Anna',
-          Pf_Name: 'Meier'
+          Pf_Name: 'Meier',
         },
         {
           P_NR: '6',
@@ -2196,7 +1996,7 @@ const tasks: Task[] = [
           A_Name: 'Wilms',
           A_Vorname: 'Otto',
           Pf_Vorname: 'Anna',
-          Pf_Name: 'Meier'
+          Pf_Name: 'Meier',
         },
         {
           P_NR: '2',
@@ -2204,58 +2004,35 @@ const tasks: Task[] = [
           A_Name: 'Mann',
           A_Vorname: 'Heinz',
           Pf_Vorname: 'Hilde',
-          Pf_Name: 'Brahms'
-        }
-      ]
+          Pf_Name: 'Brahms',
+        },
+      ],
     ],
     alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
-        primaryKeys: [
-          'P_NR'
-        ],
-        columns: [
-          'P_Name',
-          'P_Vorname',
-          'S_NR',
-          'Z_NR'
-        ]
+        primaryKeys: ['P_NR'],
+        columns: ['P_Name', 'P_Vorname', 'S_NR', 'Z_NR'],
       },
       {
-        primaryKeys: [
-          'S_NR',
-          'Z_NR'
-        ],
-        columns: [
-          'Anz_Betten'
-        ]
+        primaryKeys: ['S_NR', 'Z_NR'],
+        columns: ['Anz_Betten'],
       },
       {
-        primaryKeys: [
-          'S_NR'
-        ],
-        columns: [
-          'S_Name'
-        ]
+        primaryKeys: ['S_NR'],
+        columns: ['S_Name'],
       },
       {
-        primaryKeys: [
-          'P_NR',
-          'Krankheit'
-        ],
-        columns: [
-          'A_Name',
-          'A_Vorname',
-          'Pf_Vorname',
-          'Pf_Name'
-        ]
-      }
-    ]
+        primaryKeys: ['P_NR', 'Krankheit'],
+        columns: ['A_Name', 'A_Vorname', 'Pf_Vorname', 'Pf_Name'],
+      },
+    ],
   },
   {
     id: 8,
     title: 'Autohändler 2',
-    description: 'Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. \nDie Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. \n\nJedes Fahrzeug ist durch die Fahrzeug_NR identifiziert. \nBei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. \nSofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos. \n\nDer Präfix H_ steht hier für den Hersteller des Fahrzeugs. \n\nNach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will - die Datenmodellierung scheint nicht gut durchdacht! \nKönnen Sie Frau Weber helfen?',
+    description:
+      'Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. \nDie Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. \n\nJedes Fahrzeug ist durch die Fahrzeug_NR identifiziert. \nBei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. \nSofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos. \n\nDer Präfix H_ steht hier für den Hersteller des Fahrzeugs. \n\nNach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will - die Datenmodellierung scheint nicht gut durchdacht! \nKönnen Sie Frau Weber helfen?',
     tableData: [
       {
         Modell_NR: '1',
@@ -2268,7 +2045,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'K674',
         Baujahr: '1999',
         km: '10000',
-        Einkaufspreis: '12000'
+        Einkaufspreis: '12000',
       },
       {
         Modell_NR: '1',
@@ -2281,7 +2058,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'K634',
         Baujahr: '1998',
         km: '34000',
-        Einkaufspreis: '9000'
+        Einkaufspreis: '9000',
       },
       {
         Modell_NR: '2',
@@ -2294,7 +2071,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'V459',
         Baujahr: '1990',
         km: '15000',
-        Einkaufspreis: '17000'
+        Einkaufspreis: '17000',
       },
       {
         Modell_NR: '3',
@@ -2307,7 +2084,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'O634',
         Baujahr: '1997',
         km: '45000',
-        Einkaufspreis: '15000'
+        Einkaufspreis: '15000',
       },
       {
         Modell_NR: '4',
@@ -2320,7 +2097,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'G789',
         Baujahr: '1991',
         km: '11000',
-        Einkaufspreis: '16000'
+        Einkaufspreis: '16000',
       },
       {
         Modell_NR: '4',
@@ -2333,7 +2110,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'G713',
         Baujahr: '1991',
         km: '31000',
-        Einkaufspreis: '13000'
+        Einkaufspreis: '13000',
       },
       {
         Modell_NR: '5',
@@ -2346,7 +2123,7 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'G762',
         Baujahr: '1992',
         km: '28000',
-        Einkaufspreis: '17000'
+        Einkaufspreis: '17000',
       },
       {
         Modell_NR: '6',
@@ -2359,38 +2136,24 @@ const tasks: Task[] = [
         Fahrzeug_NR: 'K635',
         Baujahr: '1996',
         km: '71000',
-        Einkaufspreis: '8000'
-      }
+        Einkaufspreis: '8000',
+      },
     ],
     hasViolatingColumns: false,
     violatingColumns: [],
     functionalDependencies: [
       {
-        primaryKeys: [
-          'Modell_NR'
-        ],
-        columns: [
-          'H_NR',
-          'H_Name',
-          'Typ',
-          'Neupreis',
-          'PS'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['Modell_NR'],
+        columns: ['H_NR', 'H_Name', 'Typ', 'Neupreis', 'PS'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'H_NR'
-        ],
-        columns: [
-          'H_Name'
-        ],
-        type: 'transitiv'
+        primaryKeys: ['H_NR'],
+        columns: ['H_Name'],
+        type: 'transitiv',
       },
       {
-        primaryKeys: [
-          'Fahrzeug_NR'
-        ],
+        primaryKeys: ['Fahrzeug_NR'],
         columns: [
           'Modell_NR',
           'H_NR',
@@ -2401,19 +2164,15 @@ const tasks: Task[] = [
           'PS',
           'Baujahr',
           'KM',
-          'Einkaufspreis'
+          'Einkaufspreis',
         ],
-        type: 'voll'
-      }
+        type: 'voll',
+      },
     ],
-    primaryKeys: [
-      'Fahrzeug_NR'
-    ],
+    primaryKeys: ['Fahrzeug_NR'],
     secondNormalForm: [
       {
-        primaryKeys: [
-          'Fahrzeug_NR'
-        ],
+        primaryKeys: ['Fahrzeug_NR'],
         columns: [
           'Modell_NR',
           'H_NR',
@@ -2424,9 +2183,9 @@ const tasks: Task[] = [
           'PS',
           'Baujahr',
           'KM',
-          'Einkaufspreis'
-        ]
-      }
+          'Einkaufspreis',
+        ],
+      },
     ],
     secondFormTableData: [
       [
@@ -2441,7 +2200,7 @@ const tasks: Task[] = [
           PS: '90',
           Baujahr: '1991',
           km: '11000',
-          Einkaufspreis: '16000'
+          Einkaufspreis: '16000',
         },
         {
           Fahrzeug_NR: 'V459',
@@ -2454,7 +2213,7 @@ const tasks: Task[] = [
           PS: '90',
           Baujahr: '1990',
           km: '15000',
-          Einkaufspreis: '17000'
+          Einkaufspreis: '17000',
         },
         {
           Fahrzeug_NR: 'G762',
@@ -2467,7 +2226,7 @@ const tasks: Task[] = [
           PS: '105',
           Baujahr: '1992',
           km: '28000',
-          Einkaufspreis: '17000'
+          Einkaufspreis: '17000',
         },
         {
           Fahrzeug_NR: 'G713',
@@ -2480,7 +2239,7 @@ const tasks: Task[] = [
           PS: '90',
           Baujahr: '1991',
           km: '31000',
-          Einkaufspreis: '13000'
+          Einkaufspreis: '13000',
         },
         {
           Fahrzeug_NR: 'K635',
@@ -2493,7 +2252,7 @@ const tasks: Task[] = [
           PS: '60',
           Baujahr: '1996',
           km: '71000',
-          Einkaufspreis: '8000'
+          Einkaufspreis: '8000',
         },
         {
           Fahrzeug_NR: 'K674',
@@ -2506,7 +2265,7 @@ const tasks: Task[] = [
           PS: '60',
           Baujahr: '1999',
           km: '10000',
-          Einkaufspreis: '12000'
+          Einkaufspreis: '12000',
         },
         {
           Fahrzeug_NR: 'K634',
@@ -2519,7 +2278,7 @@ const tasks: Task[] = [
           PS: '60',
           Baujahr: '1998',
           km: '34000',
-          Einkaufspreis: '9000'
+          Einkaufspreis: '9000',
         },
         {
           Fahrzeug_NR: 'O634',
@@ -2532,45 +2291,32 @@ const tasks: Task[] = [
           PS: '110',
           Baujahr: '1997',
           km: '45000',
-          Einkaufspreis: '15000'
-        }
-      ]
+          Einkaufspreis: '15000',
+        },
+      ],
     ],
     alreadyThirdNormalForm: false,
     thirdNormalFormSolutions: [
       {
-        primaryKeys: [
-          'Modell_NR'
-        ],
-        columns: [
-          'H_NR',
-          'Typ',
-          'Neupreis',
-          'PS'
-        ]
+        primaryKeys: ['Modell_NR'],
+        columns: ['H_NR', 'Typ', 'Neupreis', 'PS'],
       },
       {
-        primaryKeys: [
-          'H_NR'
-        ],
-        columns: [
-          'H_Name'
-        ]
+        primaryKeys: ['H_NR'],
+        columns: ['H_Name'],
       },
       {
-        primaryKeys: [
-          'Fahrzeug_NR'
-        ],
+        primaryKeys: ['Fahrzeug_NR'],
         columns: [
           'Modell_NR',
           'Verkaufspreis',
           'Einkaufspreis',
           'Baujahr',
-          'KM'
-        ]
-      }
-    ]
-  }
+          'KM',
+        ],
+      },
+    ],
+  },
 ]
 
 export default tasks

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ExplanationsModalButton () {
+export default function ExplanationsModalButton() {
   const [isVisible, setIsVisible] = useState(false)
 
   return (

@@ -2,28 +2,34 @@ import React from 'react'
 import CheckboxResponseHandler from './CheckboxResponseHandler'
 
 interface Association {
-  primaryKeys: string[],
+  primaryKeys: string[]
   columns: string[]
 }
 
 interface PropTypes {
-  keys: string[],
-  association: Association,
+  keys: string[]
+  association: Association
   updateAssociation: (x: Association) => void
+  disabled: boolean
 }
 
-export default function KeyAssociation ({ keys, association, updateAssociation }: PropTypes) {
-  function updatePrimaryKeys (updatedPrimaryKeys: string[]) {
+export default function KeyAssociation({
+  keys,
+  association,
+  updateAssociation,
+  disabled,
+}: PropTypes) {
+  function updatePrimaryKeys(updatedPrimaryKeys: string[]) {
     updateAssociation({
       primaryKeys: updatedPrimaryKeys,
-      columns: association.columns
+      columns: association.columns,
     })
   }
 
-  function updateColumns (updatedColumns: string[]) {
+  function updateColumns(updatedColumns: string[]) {
     updateAssociation({
       primaryKeys: association.primaryKeys,
-      columns: updatedColumns
+      columns: updatedColumns,
     })
   }
 
@@ -32,18 +38,32 @@ export default function KeyAssociation ({ keys, association, updateAssociation }
       <div className="grid grid-cols-2 gap-4">
         <div>
           <h1 className="font-bold">Primärschlüssel</h1>
-          <CheckboxResponseHandler entryList={keys} selectedEntries={association.primaryKeys} setSelectedEntries={updatePrimaryKeys} useAccent={true} />
+          <CheckboxResponseHandler
+            entryList={keys}
+            selectedEntries={association.primaryKeys}
+            setSelectedEntries={updatePrimaryKeys}
+            useAccent={true}
+            disabled={disabled}
+          />
         </div>
         <div>
           <h1 className="font-bold">Spalten</h1>
-          <CheckboxResponseHandler entryList={keys} selectedEntries={association.columns} setSelectedEntries={updateColumns} useAccent={false} />
+          <CheckboxResponseHandler
+            entryList={keys}
+            selectedEntries={association.columns}
+            setSelectedEntries={updateColumns}
+            useAccent={false}
+            disabled={disabled}
+          />
         </div>
       </div>
       <div className="mt-4 text-center">
-      { (association.primaryKeys.length > 0 || association.columns.length > 0) &&
-      `${association.primaryKeys.join(', ')} ➔ ${association.columns.join(', ')}`
-      }
+        {(association.primaryKeys.length > 0 ||
+          association.columns.length > 0) &&
+          `${association.primaryKeys.join(', ')} ➔ ${association.columns.join(
+            ', '
+          )}`}
+      </div>
     </div>
-  </div>
   )
 }
