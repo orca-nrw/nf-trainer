@@ -18,6 +18,20 @@ Alternativ lässt sich diese Version aus dem `gh-pages`-Branch als .zip-Datei he
 
 Als letzte Alternative kann die Anwendung auch aus dem Sourcecode generiert werden. Das entsprechende Build-Skript aus der Package.json lässt sich mit `npm run build` ausführen. Der generierte Ordner ist dann identisch zu dem, der auch im `gh-pages`-Branch liegt.
 
+## Aufgabenübersicht
+Die Tabelle enthält eine Übersicht aller im 3NF-Trainer enthaltenen Aufgaben mit der Information, welche Normalformen jeweils trainiert werden.
+
+| Aufgabe | Thema                    | 1NF               | 2NF               | 3NF                    |
+|---------|--------------------------|-------------------|-------------------|------------------------|
+|  1      | Skriptverkauf            | bereits in 1NF    | noch nicht in 2NF | mit 2NF bereits in 3NF |
+| 2       | Patienten der Arztpraxis | noch nicht in 1NF | noch nicht in 2NF | noch nicht in 3NF      |
+| 3       | Küchen-Großhändler       | bereits in 1NF    | noch nicht in 2NF | noch nicht in 3NF      |
+|  4      | Autohändler              | bereits in 1NF    | noch nicht in 2NF | noch nicht in 3NF      |
+|  5      | Prüfungsamt              | bereits in 1NF    | noch nicht in 2NF | noch nicht in 3NF      |
+| 6       | Lebensmittelprüfung      | bereits in 1NF    | noch nicht in 2NF | mit 2NF bereits in 3NF |
+| 7       | Zimmer im Krankenhaus    | bereits in 1NF    | noch nicht in 2NF | noch nicht in 3NF      |
+| 8       | Autohändler 2            | bereits in 1NF    | noch nicht in 2NF | noch nicht in 3NF      |
+
 ## Lizenz
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
