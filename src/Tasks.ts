@@ -177,7 +177,7 @@ const tasks: Task[] = [
     id: 2,
     title: 'Patienten der Arztpraxis',
     description:
-      'Betrachten Sie die folgende, in der Arztpraxis von Dr. Beschränkt geführte Tabelle, wobei KK für Krankenkasse und P für Patient steht. \nEin Patient gehört genau einer Krankenkasse an und hat an einem Behandlungstag zu einer Diagnose höchsten eine Therapie.',
+      'Betrachten Sie die folgende, in der Arztpraxis von Dr. Beschränkt geführte Tabelle, wobei KK für Krankenkasse und P für Patient steht. \nEin Patient gehört genau einer Krankenkasse an und hat an einem Behandlungstag zu einer Diagnose höchstens eine Therapie.',
     tableData: [
       {
         KK_NR: 1467,
