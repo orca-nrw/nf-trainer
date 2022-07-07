@@ -1,0 +1,263 @@
+{
+  "id": 3,
+  "title": "Küchen-Großhändler",
+  "description": "Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst. \nDabei stehen die Präfixe K_ für Kunden, A_ für Artikel und H_ für Hersteller. \n\nAußerdem gilt: \nDie Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. \nEin Artikel wird immer nur von einem Hersteller geliefert.",
+  "tableData": [
+    {
+      "K_NR": "1003",
+      "K_Name": "Lüdtke",
+      "K_Adresse": "Marienheide",
+      "A_NR": "A13",
+      "A_Bezeichnung": "Alu-Topf1",
+      "H_NR": "H01",
+      "H_Name": "PBTopf",
+      "A_Preis": "10,70",
+      "Bestellmenge": "100"
+    },
+    {
+      "K_NR": "1003",
+      "K_Name": "Lüdtke",
+      "K_Adresse": "Marienheide",
+      "A_NR": "A36",
+      "A_Bezeichnung": "Besteck",
+      "H_NR": "H03",
+      "H_Name": "Kochass",
+      "A_Preis": "21,80",
+      "Bestellmenge": "80"
+    },
+    {
+      "K_NR": "1004",
+      "K_Name": "Maier",
+      "K_Adresse": "Dortmund",
+      "A_NR": "A11",
+      "A_Bezeichnung": "Stahl-Topf",
+      "H_NR": "H10",
+      "H_Name": "IKEA",
+      "A_Preis": "16,20",
+      "Bestellmenge": "150"
+    },
+    {
+      "K_NR": "1001",
+      "K_Name": "Schmidt",
+      "K_Adresse": "Gummersbach",
+      "A_NR": "A11",
+      "A_Bezeichnung": "Stahl-Topf",
+      "H_NR": "H10",
+      "H_Name": "IKEA",
+      "A_Preis": "16,20",
+      "Bestellmenge": "90"
+    },
+    {
+      "K_NR": "1001",
+      "K_Name": "Schmidt",
+      "K_Adresse": "Gummersbach",
+      "A_NR": "A17",
+      "A_Bezeichnung": "Bratpfanne",
+      "H_NR": "H04",
+      "H_Name": "Gourmet",
+      "A_Preis": "31,50",
+      "Bestellmenge": "50"
+    },
+    {
+      "K_NR": "1002",
+      "K_Name": "Müller",
+      "K_Adresse": "Lindlar",
+      "A_NR": "A09",
+      "A_Bezeichnung": "Schüssel",
+      "H_NR": "H03",
+      "H_Name": "Kochass",
+      "A_Preis": "23,30",
+      "Bestellmenge": "80"
+    },
+    {
+      "K_NR": "1003",
+      "K_Name": "Lüdtke",
+      "K_Adresse": "Marienheide",
+      "A_NR": "A14",
+      "A_Bezeichnung": "Alu-Topf2",
+      "H_NR": "H01",
+      "H_Name": "PBTopf",
+      "A_Preis": "14,50",
+      "Bestellmenge": "50"
+    },
+    {
+      "K_NR": "1004",
+      "K_Name": "Maier",
+      "K_Adresse": "Dortmund",
+      "A_NR": "A09",
+      "A_Bezeichnung": "Schüssel",
+      "H_NR": "H03",
+      "H_Name": "Kochass",
+      "A_Preis": "23,30",
+      "Bestellmenge": "100"
+    }
+  ],
+  "hasViolatingColumns": false,
+  "violatingColumns": [],
+  "functionalDependencies": [
+    {
+      "primaryKeys": ["K_NR"],
+      "columns": ["K_Name", "K_Adresse"],
+      "type": "partiell"
+    },
+    {
+      "primaryKeys": ["A_NR"],
+      "columns": ["A_Bezeichnung", "H_NR", "H_Name", "A_Preis"],
+      "type": "partiell"
+    },
+    {
+      "primaryKeys": ["H_NR"],
+      "columns": ["H_Name"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["K_NR", "A_NR"],
+      "columns": ["Bestellmenge"],
+      "type": "voll"
+    }
+  ],
+  "primaryKeys": ["K_NR", "A_NR"],
+  "secondNormalForm": [
+    {
+      "primaryKeys": ["K_NR"],
+      "columns": ["K_Name", "K_Adresse"]
+    },
+    {
+      "primaryKeys": ["A_NR"],
+      "columns": ["A_Bezeichnung", "H_NR", "H_Name", "A_Preis"]
+    },
+    {
+      "primaryKeys": ["K_NR", "A_NR"],
+      "columns": ["Bestellmenge"]
+    }
+  ],
+  "secondFormTableData": [
+    [
+      {
+        "K_NR": "1002",
+        "K_Name": "Müller",
+        "K_Adresse": "Lindlar"
+      },
+      {
+        "K_NR": "1001",
+        "K_Name": "Schmidt",
+        "K_Adresse": "Gummersbach"
+      },
+      {
+        "K_NR": "1003",
+        "K_Name": "Lüdtke",
+        "K_Adresse": "Marienheide"
+      },
+      {
+        "K_NR": "1004",
+        "K_Name": "Maier",
+        "K_Adresse": "Dortmund"
+      }
+    ],
+    [
+      {
+        "A_NR": "A13",
+        "A_Bezeichnung": "Alu-Topf1",
+        "H_NR": "H01",
+        "H_Name": "PBTopf",
+        "A_Preis": "10,70"
+      },
+      {
+        "A_NR": "A09",
+        "A_Bezeichnung": "Schüssel",
+        "H_NR": "H03",
+        "H_Name": "Kochass",
+        "A_Preis": "23,30"
+      },
+      {
+        "A_NR": "A14",
+        "A_Bezeichnung": "Alu-Topf2",
+        "H_NR": "H01",
+        "H_Name": "PBTopf",
+        "A_Preis": "14,50"
+      },
+      {
+        "A_NR": "A36",
+        "A_Bezeichnung": "Besteck",
+        "H_NR": "H03",
+        "H_Name": "Kochass",
+        "A_Preis": "21,80"
+      },
+      {
+        "A_NR": "A11",
+        "A_Bezeichnung": "Stahl-Topf",
+        "H_NR": "H10",
+        "H_Name": "IKEA",
+        "A_Preis": "16,20"
+      },
+      {
+        "A_NR": "A17",
+        "A_Bezeichnung": "Bratpfanne",
+        "H_NR": "H04",
+        "H_Name": "Gourmet",
+        "A_Preis": "31,50"
+      }
+    ],
+    [
+      {
+        "K_NR": "1003",
+        "A_NR": "A36",
+        "Bestellmenge": "80"
+      },
+      {
+        "K_NR": "1001",
+        "A_NR": "A11",
+        "Bestellmenge": "90"
+      },
+      {
+        "K_NR": "1003",
+        "A_NR": "A13",
+        "Bestellmenge": "100"
+      },
+      {
+        "K_NR": "1003",
+        "A_NR": "A14",
+        "Bestellmenge": "50"
+      },
+      {
+        "K_NR": "1001",
+        "A_NR": "A17",
+        "Bestellmenge": "50"
+      },
+      {
+        "K_NR": "1004",
+        "A_NR": "A11",
+        "Bestellmenge": "150"
+      },
+      {
+        "K_NR": "1004",
+        "A_NR": "A09",
+        "Bestellmenge": "100"
+      },
+      {
+        "K_NR": "1002",
+        "A_NR": "A09",
+        "Bestellmenge": "80"
+      }
+    ]
+  ],
+  "alreadyThirdNormalForm": false,
+  "thirdNormalFormSolutions": [
+    {
+      "primaryKeys": ["K_NR"],
+      "columns": ["K_Name", "K_Adresse"]
+    },
+    {
+      "primaryKeys": ["K_NR", "A_NR"],
+      "columns": ["Bestellmenge"]
+    },
+    {
+      "primaryKeys": ["H_NR"],
+      "columns": ["H_Name"]
+    },
+    {
+      "primaryKeys": ["A_NR"],
+      "columns": ["A_Bezeichnung", "H_NR", "A_Preis"]
+    }
+  ]
+}

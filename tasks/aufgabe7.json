@@ -1,0 +1,304 @@
+{
+  "id": 7,
+  "title": "Zimmer im Krankenhaus",
+  "description": "Betrachten Sie die folgende, in einem Krankenhaus geführte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. \n\nEin Patient kann mehrere Krankheiten haben. \nDabei stehen die Präfixe S_ für Station, Z_ für Zimmer, P_ für Patient, A_ für Arzt und Pf_ für Pfleger. \n\nDie Anzahl der Betten soll von der SNR und der ZNR abhängen.",
+  "tableData": [
+    {
+      "S_NR": "1",
+      "S_Name": "Medizin",
+      "Z_NR": "1",
+      "Anz_Betten": "2",
+      "P_NR": "1",
+      "P_Name": "Maier",
+      "P_Vorname": "Hans",
+      "Krankheit": "Blinddarm",
+      "A_Name": "Mann",
+      "A_Vorname": "Heinz",
+      "Pf_Name": "Brahms",
+      "Pf_Vorname": "Hilde"
+    },
+    {
+      "S_NR": "1",
+      "S_Name": "Medizin",
+      "Z_NR": "1",
+      "Anz_Betten": "2",
+      "P_NR": "2",
+      "P_Name": "Schmid",
+      "P_Vorname": "Peter",
+      "Krankheit": "Beinbruch",
+      "A_Name": "Mann",
+      "A_Vorname": "Heinz",
+      "Pf_Name": "Brahms",
+      "Pf_Vorname": "Hilde"
+    },
+    {
+      "S_NR": "1",
+      "S_Name": "Medizin",
+      "Z_NR": "1",
+      "Anz_Betten": "2",
+      "P_NR": "2",
+      "P_Name": "Schmid",
+      "P_Vorname": "Peter",
+      "Krankheit": "Armbruch",
+      "A_Name": "Mann",
+      "A_Vorname": "Heinz",
+      "Pf_Name": "Brahms",
+      "Pf_Vorname": "Hilde"
+    },
+    {
+      "S_NR": "1",
+      "S_Name": "Medizin",
+      "Z_NR": "2",
+      "Anz_Betten": "1",
+      "P_NR": "3",
+      "P_Name": "Josh",
+      "P_Vorname": "Hugo",
+      "Krankheit": "Herzinfarkt",
+      "A_Name": "Hase",
+      "A_Vorname": "Willi",
+      "Pf_Name": "Brahms",
+      "Pf_Vorname": "Hilde"
+    },
+    {
+      "S_NR": "2",
+      "S_Name": "Augen",
+      "Z_NR": "1",
+      "Anz_Betten": "2",
+      "P_NR": "4",
+      "P_Name": "Wein",
+      "P_Vorname": "Berta",
+      "Krankheit": "Grauer Star",
+      "A_Name": "Wilms",
+      "A_Vorname": "Otto",
+      "Pf_Name": "Saga",
+      "Pf_Vorname": "Udo"
+    },
+    {
+      "S_NR": "2",
+      "S_Name": "Augen",
+      "Z_NR": "1",
+      "Anz_Betten": "2",
+      "P_NR": "5",
+      "P_Name": "Hein",
+      "P_Vorname": "Hanna",
+      "Krankheit": "Netzhaut",
+      "A_Name": "Wilms",
+      "A_Vorname": "Otto",
+      "Pf_Name": "Saga",
+      "Pf_Vorname": "Udo"
+    },
+    {
+      "S_NR": "2",
+      "S_Name": "Augen",
+      "Z_NR": "2",
+      "Anz_Betten": "1",
+      "P_NR": "6",
+      "P_Name": "Fisch",
+      "P_Vorname": "Olga",
+      "Krankheit": "Grüner Star",
+      "A_Name": "Wilms",
+      "A_Vorname": "Otto",
+      "Pf_Name": "Meier",
+      "Pf_Vorname": "Anna"
+    },
+    {
+      "S_NR": "2",
+      "S_Name": "Augen",
+      "Z_NR": "2",
+      "Anz_Betten": "1",
+      "P_NR": "6",
+      "P_Name": "Fisch",
+      "P_Vorname": "Olga",
+      "Krankheit": "Puma",
+      "A_Name": "Wilms",
+      "A_Vorname": "Otto",
+      "Pf_Name": "Meier",
+      "Pf_Vorname": "Anna"
+    }
+  ],
+  "hasViolatingColumns": false,
+  "violatingColumns": [],
+  "functionalDependencies": [
+    {
+      "primaryKeys": ["S_NR"],
+      "columns": ["S_Name"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["S_NR", "Z_NR"],
+      "columns": ["Anz_Betten"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["P_NR"],
+      "columns": [
+        "P_Name",
+        "P_Vorname",
+        "S_NR",
+        "Z_NR",
+        "Anz_Betten",
+        "S_Name"
+      ],
+      "type": "partiell"
+    },
+    {
+      "primaryKeys": ["P_NR", "Krankheit"],
+      "columns": ["A_Name", "A_Vorname", "Pf_Vorname", "Pf_Name"],
+      "type": "voll"
+    }
+  ],
+  "primaryKeys": ["P_NR", "Krankheit"],
+  "secondNormalForm": [
+    {
+      "primaryKeys": ["P_NR"],
+      "columns": ["P_Name", "P_Vorname", "S_NR", "Z_NR", "Anz_Betten", "S_Name"]
+    },
+    {
+      "primaryKeys": ["P_NR", "Krankheit"],
+      "columns": ["A_Name", "A_Vorname", "Pf_Vorname", "Pf_Name"]
+    }
+  ],
+  "secondFormTableData": [
+    [
+      {
+        "P_NR": "6",
+        "P_Name": "Fisch",
+        "P_Vorname": "Olga",
+        "S_NR": "2",
+        "Z_NR": "2",
+        "Anz_Betten": "1",
+        "S_Name": "Augen"
+      },
+      {
+        "P_NR": "3",
+        "P_Name": "Josh",
+        "P_Vorname": "Hugo",
+        "S_NR": "1",
+        "Z_NR": "2",
+        "Anz_Betten": "1",
+        "S_Name": "Medizin"
+      },
+      {
+        "P_NR": "4",
+        "P_Name": "Wein",
+        "P_Vorname": "Berta",
+        "S_NR": "2",
+        "Z_NR": "1",
+        "Anz_Betten": "2",
+        "S_Name": "Augen"
+      },
+      {
+        "P_NR": "1",
+        "P_Name": "Maier",
+        "P_Vorname": "Hans",
+        "S_NR": "1",
+        "Z_NR": "1",
+        "Anz_Betten": "2",
+        "S_Name": "Medizin"
+      },
+      {
+        "P_NR": "5",
+        "P_Name": "Hein",
+        "P_Vorname": "Hanna",
+        "S_NR": "2",
+        "Z_NR": "1",
+        "Anz_Betten": "2",
+        "S_Name": "Augen"
+      },
+      {
+        "P_NR": "2",
+        "P_Name": "Schmid",
+        "P_Vorname": "Peter",
+        "S_NR": "1",
+        "Z_NR": "1",
+        "Anz_Betten": "2",
+        "S_Name": "Medizin"
+      }
+    ],
+    [
+      {
+        "P_NR": "1",
+        "Krankheit": "Blinddarm",
+        "A_Name": "Mann",
+        "A_Vorname": "Heinz",
+        "Pf_Vorname": "Hilde",
+        "Pf_Name": "Brahms"
+      },
+      {
+        "P_NR": "3",
+        "Krankheit": "Herzinfarkt",
+        "A_Name": "Hase",
+        "A_Vorname": "Willi",
+        "Pf_Vorname": "Hilde",
+        "Pf_Name": "Brahms"
+      },
+      {
+        "P_NR": "5",
+        "Krankheit": "Netzhaut",
+        "A_Name": "Wilms",
+        "A_Vorname": "Otto",
+        "Pf_Vorname": "Udo",
+        "Pf_Name": "Saga"
+      },
+      {
+        "P_NR": "4",
+        "Krankheit": "Grauer Star",
+        "A_Name": "Wilms",
+        "A_Vorname": "Otto",
+        "Pf_Vorname": "Udo",
+        "Pf_Name": "Saga"
+      },
+      {
+        "P_NR": "2",
+        "Krankheit": "Beinbruch",
+        "A_Name": "Mann",
+        "A_Vorname": "Heinz",
+        "Pf_Vorname": "Hilde",
+        "Pf_Name": "Brahms"
+      },
+      {
+        "P_NR": "6",
+        "Krankheit": "Puma",
+        "A_Name": "Wilms",
+        "A_Vorname": "Otto",
+        "Pf_Vorname": "Anna",
+        "Pf_Name": "Meier"
+      },
+      {
+        "P_NR": "6",
+        "Krankheit": "Grüner Star",
+        "A_Name": "Wilms",
+        "A_Vorname": "Otto",
+        "Pf_Vorname": "Anna",
+        "Pf_Name": "Meier"
+      },
+      {
+        "P_NR": "2",
+        "Krankheit": "Armbruch",
+        "A_Name": "Mann",
+        "A_Vorname": "Heinz",
+        "Pf_Vorname": "Hilde",
+        "Pf_Name": "Brahms"
+      }
+    ]
+  ],
+  "alreadyThirdNormalForm": false,
+  "thirdNormalFormSolutions": [
+    {
+      "primaryKeys": ["P_NR"],
+      "columns": ["P_Name", "P_Vorname", "S_NR", "Z_NR"]
+    },
+    {
+      "primaryKeys": ["S_NR", "Z_NR"],
+      "columns": ["Anz_Betten"]
+    },
+    {
+      "primaryKeys": ["S_NR"],
+      "columns": ["S_Name"]
+    },
+    {
+      "primaryKeys": ["P_NR", "Krankheit"],
+      "columns": ["A_Name", "A_Vorname", "Pf_Vorname", "Pf_Name"]
+    }
+  ]
+}

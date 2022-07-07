@@ -1,0 +1,36 @@
+{
+  "selectedTasks": [
+    {
+      "title": "Skriptverkauf",
+      "fileName": "aufgabe1"
+    },
+    {
+      "title": "Patienten der Arztpraxis",
+      "fileName": "aufgabe2"
+    },
+    {
+      "title": "Küchen-Großhändler",
+      "fileName": "aufgabe3"
+    },
+    {
+      "title": "Autohändler",
+      "fileName": "aufgabe4"
+    },
+    {
+      "title": "Prüfungsamt",
+      "fileName": "aufgabe5"
+    },
+    {
+      "title": "Lebensmittelprüfung",
+      "fileName": "aufgabe6"
+    },
+    {
+      "title": "Zimmer im Krankenhaus",
+      "fileName": "aufgabe7"
+    },
+    {
+      "title": "Autohändler 2",
+      "fileName": "aufgabe8"
+    }
+  ]
+}
