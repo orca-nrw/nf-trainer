@@ -1,0 +1,288 @@
+{
+  "id": 8,
+  "title": "Autohändler 2",
+  "description": "Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. \nDie Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. \n\nJedes Fahrzeug ist durch die Fahrzeug_NR identifiziert. \nBei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. \nSofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos. \n\nDer Präfix H_ steht hier für den Hersteller des Fahrzeugs. \n\nNach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will - die Datenmodellierung scheint nicht gut durchdacht! \nKönnen Sie Frau Weber helfen?",
+  "tableData": [
+    {
+      "Modell_NR": "1",
+      "H_NR": "1",
+      "H_Name": "Opel",
+      "Typ": "Kadett",
+      "Neupreis": "18000",
+      "Verkaufspreis": "13000",
+      "PS": "60",
+      "Fahrzeug_NR": "K674",
+      "Baujahr": "1999",
+      "km": "10000",
+      "Einkaufspreis": "12000"
+    },
+    {
+      "Modell_NR": "1",
+      "H_NR": "1",
+      "H_Name": "Opel",
+      "Typ": "Kadett",
+      "Neupreis": "18000",
+      "Verkaufspreis": "12000",
+      "PS": "60",
+      "Fahrzeug_NR": "K634",
+      "Baujahr": "1998",
+      "km": "34000",
+      "Einkaufspreis": "9000"
+    },
+    {
+      "Modell_NR": "2",
+      "H_NR": "1",
+      "H_Name": "Opel",
+      "Typ": "Vectra",
+      "Neupreis": "25000",
+      "Verkaufspreis": "18000",
+      "PS": "90",
+      "Fahrzeug_NR": "V459",
+      "Baujahr": "1990",
+      "km": "15000",
+      "Einkaufspreis": "17000"
+    },
+    {
+      "Modell_NR": "3",
+      "H_NR": "1",
+      "H_Name": "Opel",
+      "Typ": "Omega",
+      "Neupreis": "30000",
+      "Verkaufspreis": "22000",
+      "PS": "110",
+      "Fahrzeug_NR": "O634",
+      "Baujahr": "1997",
+      "km": "45000",
+      "Einkaufspreis": "15000"
+    },
+    {
+      "Modell_NR": "4",
+      "H_NR": "2",
+      "H_Name": "VW",
+      "Typ": "Golf",
+      "Neupreis": "25000",
+      "Verkaufspreis": "21000",
+      "PS": "90",
+      "Fahrzeug_NR": "G789",
+      "Baujahr": "1991",
+      "km": "11000",
+      "Einkaufspreis": "16000"
+    },
+    {
+      "Modell_NR": "4",
+      "H_NR": "2",
+      "H_Name": "VW",
+      "Typ": "Golf",
+      "Neupreis": "25000",
+      "Verkaufspreis": "16000",
+      "PS": "90",
+      "Fahrzeug_NR": "G713",
+      "Baujahr": "1991",
+      "km": "31000",
+      "Einkaufspreis": "13000"
+    },
+    {
+      "Modell_NR": "5",
+      "H_NR": "2",
+      "H_Name": "VW",
+      "Typ": "Golf",
+      "Neupreis": "28000",
+      "Verkaufspreis": "19000",
+      "PS": "105",
+      "Fahrzeug_NR": "G762",
+      "Baujahr": "1992",
+      "km": "28000",
+      "Einkaufspreis": "17000"
+    },
+    {
+      "Modell_NR": "6",
+      "H_NR": "2",
+      "H_Name": "VW",
+      "Typ": "Polo",
+      "Neupreis": "19000",
+      "Verkaufspreis": "10000",
+      "PS": "60",
+      "Fahrzeug_NR": "K635",
+      "Baujahr": "1996",
+      "km": "71000",
+      "Einkaufspreis": "8000"
+    }
+  ],
+  "hasViolatingColumns": false,
+  "violatingColumns": [],
+  "functionalDependencies": [
+    {
+      "primaryKeys": ["Modell_NR"],
+      "columns": ["H_NR", "H_Name", "Typ", "Neupreis", "PS"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["H_NR"],
+      "columns": ["H_Name"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["Fahrzeug_NR"],
+      "columns": [
+        "Modell_NR",
+        "H_NR",
+        "H_Name",
+        "Typ",
+        "Neupreis",
+        "Verkaufspreis",
+        "PS",
+        "Baujahr",
+        "KM",
+        "Einkaufspreis"
+      ],
+      "type": "voll"
+    }
+  ],
+  "primaryKeys": ["Fahrzeug_NR"],
+  "secondNormalForm": [
+    {
+      "primaryKeys": ["Fahrzeug_NR"],
+      "columns": [
+        "Modell_NR",
+        "H_NR",
+        "H_Name",
+        "Typ",
+        "Neupreis",
+        "Verkaufspreis",
+        "PS",
+        "Baujahr",
+        "KM",
+        "Einkaufspreis"
+      ]
+    }
+  ],
+  "secondFormTableData": [
+    [
+      {
+        "Fahrzeug_NR": "G789",
+        "Modell_NR": "4",
+        "H_NR": "2",
+        "H_Name": "VW",
+        "Typ": "Golf",
+        "Neupreis": "25000",
+        "Verkaufspreis": "21000",
+        "PS": "90",
+        "Baujahr": "1991",
+        "km": "11000",
+        "Einkaufspreis": "16000"
+      },
+      {
+        "Fahrzeug_NR": "V459",
+        "Modell_NR": "2",
+        "H_NR": "1",
+        "H_Name": "Opel",
+        "Typ": "Vectra",
+        "Neupreis": "25000",
+        "Verkaufspreis": "18000",
+        "PS": "90",
+        "Baujahr": "1990",
+        "km": "15000",
+        "Einkaufspreis": "17000"
+      },
+      {
+        "Fahrzeug_NR": "G762",
+        "Modell_NR": "5",
+        "H_NR": "2",
+        "H_Name": "VW",
+        "Typ": "Golf",
+        "Neupreis": "28000",
+        "Verkaufspreis": "19000",
+        "PS": "105",
+        "Baujahr": "1992",
+        "km": "28000",
+        "Einkaufspreis": "17000"
+      },
+      {
+        "Fahrzeug_NR": "G713",
+        "Modell_NR": "4",
+        "H_NR": "2",
+        "H_Name": "VW",
+        "Typ": "Golf",
+        "Neupreis": "25000",
+        "Verkaufspreis": "16000",
+        "PS": "90",
+        "Baujahr": "1991",
+        "km": "31000",
+        "Einkaufspreis": "13000"
+      },
+      {
+        "Fahrzeug_NR": "K635",
+        "Modell_NR": "6",
+        "H_NR": "2",
+        "H_Name": "VW",
+        "Typ": "Polo",
+        "Neupreis": "19000",
+        "Verkaufspreis": "10000",
+        "PS": "60",
+        "Baujahr": "1996",
+        "km": "71000",
+        "Einkaufspreis": "8000"
+      },
+      {
+        "Fahrzeug_NR": "K674",
+        "Modell_NR": "1",
+        "H_NR": "1",
+        "H_Name": "Opel",
+        "Typ": "Kadett",
+        "Neupreis": "18000",
+        "Verkaufspreis": "13000",
+        "PS": "60",
+        "Baujahr": "1999",
+        "km": "10000",
+        "Einkaufspreis": "12000"
+      },
+      {
+        "Fahrzeug_NR": "K634",
+        "Modell_NR": "1",
+        "H_NR": "1",
+        "H_Name": "Opel",
+        "Typ": "Kadett",
+        "Neupreis": "18000",
+        "Verkaufspreis": "12000",
+        "PS": "60",
+        "Baujahr": "1998",
+        "km": "34000",
+        "Einkaufspreis": "9000"
+      },
+      {
+        "Fahrzeug_NR": "O634",
+        "Modell_NR": "3",
+        "H_NR": "1",
+        "H_Name": "Opel",
+        "Typ": "Omega",
+        "Neupreis": "30000",
+        "Verkaufspreis": "22000",
+        "PS": "110",
+        "Baujahr": "1997",
+        "km": "45000",
+        "Einkaufspreis": "15000"
+      }
+    ]
+  ],
+  "alreadyThirdNormalForm": false,
+  "thirdNormalFormSolutions": [
+    {
+      "primaryKeys": ["Modell_NR"],
+      "columns": ["H_NR", "Typ", "Neupreis", "PS"]
+    },
+    {
+      "primaryKeys": ["H_NR"],
+      "columns": ["H_Name"]
+    },
+    {
+      "primaryKeys": ["Fahrzeug_NR"],
+      "columns": [
+        "Modell_NR",
+        "Verkaufspreis",
+        "Einkaufspreis",
+        "Baujahr",
+        "KM"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "id": 4,
+  "title": "Autohändler",
+  "description": "Ein Autohändler speichert die von ihm angebotenen Fahrzeuge in einer redundanten Tabelle. \n\nDabei gilt: \nAdresse und das Land beziehen sich auf den Hersteller. \nDie Adresse wird nur als zusammenhängendes Textfeld gespeichert. \nDie ID bezieht sich auf ein konkretes Fahrzeug bzw. Motorrad. \nDer Typ und die Anzahl der Räder hängen vom Modell und vom Hersteller ab.",
+  "tableData": [
+    {
+      "ID": "4718",
+      "Hersteller": "Vespa",
+      "Modell": "II",
+      "Typ": "Motorrad",
+      "Anz_Raeder": "2",
+      "PS": "6",
+      "Adresse": "La Strada 2, 1223 Rom",
+      "Land": "Italien",
+      "Klimaanlage": "Nein"
+    },
+    {
+      "ID": "4714",
+      "Hersteller": "Suzuki",
+      "Modell": "GX",
+      "Typ": "Motorrad",
+      "Anz_Raeder": "2",
+      "PS": "80",
+      "Adresse": "Koniciva 3, Yokahama",
+      "Land": "Japan",
+      "Klimaanlage": "Nein"
+    },
+    {
+      "ID": "4717",
+      "Hersteller": "VW",
+      "Modell": "Golf",
+      "Typ": "PKW",
+      "Anz_Raeder": "4",
+      "PS": "92",
+      "Adresse": "Volkswagenstr, 10; 34444 Wolfsburg",
+      "Land": "Deutschland",
+      "Klimaanlage": "Ja"
+    },
+    {
+      "ID": "4711",
+      "Hersteller": "VW",
+      "Modell": "Käfer",
+      "Typ": "PKW",
+      "Anz_Raeder": "4",
+      "PS": "45",
+      "Adresse": "Volkswagenstr, 10; 34444 Wolfsburg",
+      "Land": "Deutschland",
+      "Klimaanlage": "Ja"
+    },
+    {
+      "ID": "4712",
+      "Hersteller": "Hanomag",
+      "Modell": "II",
+      "Typ": "LKW",
+      "Anz_Raeder": "4",
+      "PS": "220",
+      "Adresse": "Musterstr,27, 2222 Hamburg",
+      "Land": "Deutschland",
+      "Klimaanlage": "Nein"
+    },
+    {
+      "ID": "4715",
+      "Hersteller": "Ford",
+      "Modell": "Focus",
+      "Typ": "PKW",
+      "Anz_Raeder": "4",
+      "PS": "65",
+      "Adresse": "Fritzweg 26, 54478 Köln",
+      "Land": "Deutschland",
+      "Klimaanlage": "Ja"
+    },
+    {
+      "ID": "4716",
+      "Hersteller": "VW",
+      "Modell": "Golf",
+      "Typ": "PKW",
+      "Anz_Raeder": "4",
+      "PS": "72",
+      "Adresse": "Volkswagenstr, 10; 34444 Wolfsburg",
+      "Land": "Deutschland",
+      "Klimaanlage": "Nein"
+    }
+  ],
+  "hasViolatingColumns": false,
+  "violatingColumns": [],
+  "functionalDependencies": [
+    {
+      "primaryKeys": ["Hersteller"],
+      "columns": ["Adresse", "Land"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["Hersteller", "Modell"],
+      "columns": ["Typ", "Anz_Raeder"],
+      "type": "transitiv"
+    },
+    {
+      "primaryKeys": ["ID"],
+      "columns": [
+        "Hersteller",
+        "Modell",
+        "Typ",
+        "Anz_Raeder",
+        "PS",
+        "Adresse",
+        "Land",
+        "Klimaanlage"
+      ],
+      "type": "voll"
+    }
+  ],
+  "primaryKeys": ["ID"],
+  "secondNormalForm": [
+    {
+      "primaryKeys": ["ID"],
+      "columns": [
+        "Hersteller",
+        "Modell",
+        "Typ",
+        "Anz_Raeder",
+        "PS",
+        "Adresse",
+        "Land",
+        "Klimaanlage"
+      ]
+    }
+  ],
+  "secondFormTableData": [
+    [
+      {
+        "ID": "4717",
+        "Hersteller": "VW",
+        "Modell": "Golf",
+        "Typ": "PKW",
+        "Anz_Raeder": "4",
+        "PS": "92",
+        "Adresse": "Volkswagenstr, 10; 34444 Wolfsburg",
+        "Land": "Deutschland",
+        "Klimaanlage": "Ja"
+      },
+      {
+        "ID": "4718",
+        "Hersteller": "Vespa",
+        "Modell": "II",
+        "Typ": "Motorrad",
+        "Anz_Raeder": "2",
+        "PS": "6",
+        "Adresse": "La Strada 2, 1223 Rom",
+        "Land": "Italien",
+        "Klimaanlage": "Nein"
+      },
+      {
+        "ID": "4715",
+        "Hersteller": "Ford",
+        "Modell": "Focus",
+        "Typ": "PKW",
+        "Anz_Raeder": "4",
+        "PS": "65",
+        "Adresse": "Fritzweg 26, 54478 Köln",
+        "Land": "Deutschland",
+        "Klimaanlage": "Ja"
+      },
+      {
+        "ID": "4711",
+        "Hersteller": "VW",
+        "Modell": "Käfer",
+        "Typ": "PKW",
+        "Anz_Raeder": "4",
+        "PS": "45",
+        "Adresse": "Volkswagenstr, 10; 34444 Wolfsburg",
+        "Land": "Deutschland",
+        "Klimaanlage": "Ja"
+      },
+      {
+        "ID": "4716",
+        "Hersteller": "VW",
+        "Modell": "Golf",
+        "Typ": "PKW",
+        "Anz_Raeder": "4",
+        "PS": "72",
+        "Adresse": "Volkswagenstr, 10; 34444 Wolfsburg",
+        "Land": "Deutschland",
+        "Klimaanlage": "Nein"
+      },
+      {
+        "ID": "4712",
+        "Hersteller": "Hanomag",
+        "Modell": "II",
+        "Typ": "LKW",
+        "Anz_Raeder": "4",
+        "PS": "220",
+        "Adresse": "Musterstr,27, 2222 Hamburg",
+        "Land": "Deutschland",
+        "Klimaanlage": "Nein"
+      },
+      {
+        "ID": "4714",
+        "Hersteller": "Suzuki",
+        "Modell": "GX",
+        "Typ": "Motorrad",
+        "Anz_Raeder": "2",
+        "PS": "80",
+        "Adresse": "Koniciva 3, Yokahama",
+        "Land": "Japan",
+        "Klimaanlage": "Nein"
+      }
+    ]
+  ],
+  "alreadyThirdNormalForm": false,
+  "thirdNormalFormSolutions": [
+    {
+      "primaryKeys": ["ID"],
+      "columns": ["Hersteller", "Modell", "PS", "Klimaanlage"]
+    },
+    {
+      "primaryKeys": ["Hersteller"],
+      "columns": ["Adresse", "Land"]
+    },
+    {
+      "primaryKeys": ["Hersteller", "Modell"],
+      "columns": ["Typ", "Anz_Raeder"]
+    }
+  ]
+}
