@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "./static/css/main.26feb10d.css",
-    "main.js": "./static/js/main.b14fecd2.js",
+    "main.js": "./static/js/main.d2ac6d80.js",
     "static/media/eild_header_logo.png": "./static/media/eild_header_logo.da7d7cdec10e2ed74af7.png",
     "index.html": "./index.html",
     "main.26feb10d.css.map": "./static/css/main.26feb10d.css.map",
-    "main.b14fecd2.js.map": "./static/js/main.b14fecd2.js.map"
+    "main.d2ac6d80.js.map": "./static/js/main.d2ac6d80.js.map"
   },
   "entrypoints": [
     "static/css/main.26feb10d.css",
-    "static/js/main.b14fecd2.js"
+    "static/js/main.d2ac6d80.js"
   ]
 }
