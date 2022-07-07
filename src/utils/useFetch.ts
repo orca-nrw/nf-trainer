@@ -5,7 +5,8 @@ export function useFetch<T>(url: string) {
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   useEffect(() => {
-    if (!url) return
+    // Return if taskname is empty
+    if (url === './tasks/.json') return
 
     setIsLoading(true)
     fetch(url)
