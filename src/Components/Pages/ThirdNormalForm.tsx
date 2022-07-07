@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Redirect, useParams } from 'react-router'
+import React, { useEffect, useState } from 'react'
 import AssociationResponseHandler from '../UI/AssociationResponseHandler'
 import HintContainer from '../UI/HintContainer'
 import PrevNextNavigation from '../UI/PrevNextNavigation'
@@ -8,24 +7,28 @@ import TrainerHeader from '../UI/TrainerHeader'
 import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import TableGrid from '../UI/TableGrid'
-import tasks from '../../Tasks'
 import FeedbackElement from '../UI/FeedbackElement'
+import { Task } from '../../Types/Task'
+import { useNavigate } from 'react-router-dom'
 
-interface ParamTypes {
-  id: string
+interface Props {
+  selectedTask: Task | undefined
+  isLoading: boolean
 }
 
-export default function ThirdNormalForm() {
-  // Get task from url param
-  const { id } = useParams<ParamTypes>()
-  const task = tasks.find((task) => task.id === Number(id))
+export default function ThirdNormalForm({ selectedTask, isLoading }: Props) {
+  const navigate = useNavigate()
 
-  // Redirect to index if there is no task with the given id
-  if (!task) return <Redirect to="/" />
+  useEffect(() => {
+    // Navigate back to selection if the task is neither selected nor loading
+    if (!isLoading && !selectedTask) {
+      navigate('/trainer/')
+    }
+  }, [isLoading, selectedTask])
 
-  // Task Variables
-  const taskKeys = Object.keys(task.tableData[0])
-  const associations = task.thirdNormalFormSolutions
+  // // Task Variables
+  // const taskKeys = Object.keys(task.tableData[0])
+  // const associations = task.thirdNormalFormSolutions
 
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>()
   const [canNavigate, setCanNavigate] = useState(false)
@@ -40,52 +43,57 @@ export default function ThirdNormalForm() {
   }
 
   return (
-    <div className="space-y-4">
-      {/* Task description */}
-      <TrainerHeader>Dritte Normalform</TrainerHeader>
-      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <TableGrid gridData={task.secondFormTableData} />
-      <TrainerSubtaskDescription>
-        Bringen Sie das Schema in die dritte Normalform, indem Sie auf die
-        entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!!
-      </TrainerSubtaskDescription>
+    <>
+      {isLoading || !selectedTask ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="space-y-4">
+          {/* Task description */}
+          <TrainerHeader>Dritte Normalform</TrainerHeader>
+          <TrainerTaskDescription>{selectedTask.description}</TrainerTaskDescription>
+          <TableGrid gridData={selectedTask.secondFormTableData} />
+          <TrainerSubtaskDescription>
+            Bringen Sie das Schema in die dritte Normalform, indem Sie auf die
+            entsprechenden Spalten (Primärschlüssel und abhängige Spalten)
+            klicken!!
+          </TrainerSubtaskDescription>
 
-      {/* Task-specific response handler */}
-      <AssociationResponseHandler
-        keys={taskKeys}
-        associationsSolutions={associations}
-        responseHandler={handleResponse}
-        disabled={canNavigate}
-      />
+          {/* Task-specific response handler */}
+          <AssociationResponseHandler
+            keys={Object.keys(selectedTask.tableData[0])}
+            associationsSolutions={selectedTask.thirdNormalFormSolutions}
+            responseHandler={handleResponse}
+            disabled={canNavigate}
+          />
 
-      {/* Feedback */}
-      {isCorrect !== undefined && (
-        <FeedbackElement isCorrect={isCorrect} />
+          {/* Feedback */}
+          {isCorrect !== undefined && <FeedbackElement isCorrect={isCorrect} />}
+
+          <HintContainer
+            functionalDependencies={selectedTask.functionalDependencies}
+            primaryKeys={selectedTask.primaryKeys}
+          />
+
+          {/* Solution container */}
+          {isCorrect !== undefined && (
+            <SampleSolution onClick={() => setCanNavigate(true)}>
+              {selectedTask.thirdNormalFormSolutions.map((dependency, index) => {
+                const dependencyString = `${dependency.primaryKeys.join(
+                  ', '
+                )} ➔ ${dependency.columns.join(', ')}`
+                return <p key={index}>{dependencyString}</p>
+              })}
+            </SampleSolution>
+          )}
+
+          {/* Navigation */}
+          <PrevNextNavigation
+            prev={`./checkThirdNormalForm`}
+            next={'/done'}
+            nextIsEnabled={canNavigate}
+          />
+        </div>
       )}
-
-      <HintContainer
-        functionalDependencies={task.functionalDependencies}
-        primaryKeys={task.primaryKeys}
-      />
-
-      {/* Solution container */}
-      {isCorrect !== undefined && (
-        <SampleSolution onClick={() => setCanNavigate(true)}>
-          {task.thirdNormalFormSolutions.map((dependency, index) => {
-            const dependencyString = `${dependency.primaryKeys.join(
-              ', '
-            )} ➔ ${dependency.columns.join(', ')}`
-            return <p key={index}>{dependencyString}</p>
-          })}
-        </SampleSolution>
-      )}
-
-      {/* Navigation */}
-      <PrevNextNavigation
-        prev={`/tasks/${id}/checkThirdNormalForm`}
-        next={'/done'}
-        nextIsEnabled={canNavigate}
-      />
-    </div>
+    </>
   )
 }

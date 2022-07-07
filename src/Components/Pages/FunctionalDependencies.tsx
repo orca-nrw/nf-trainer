@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import tasks from '../../Tasks'
-import { Redirect, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import Table from '../UI/Table'
 import AssociationResponseHandler from '../UI/AssociationResponseHandler'
 import SampleSolution from '../UI/SampleSolution'
@@ -9,26 +7,26 @@ import TrainerHeader from '../UI/TrainerHeader'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import FeedbackElement from '../UI/FeedbackElement'
+import { Task } from '../../Types/Task'
+import { useNavigate } from 'react-router-dom'
 
-export default function FunctionalDependencies() {
-  // Get task from url param
-  const { id } = useParams<ParamTypes>()
-  const task = tasks.find((task) => task.id === Number(id))
-  const tableData = task?.hasViolatingColumns
-    ? task?.firstNormalFormTableData
-    : task?.tableData
+interface Props {
+  selectedTask: Task | undefined
+  isLoading: boolean
+}
 
-  // Throw error and redirect back if an error occurs
-  if (!tableData) {
-    console.error('No suitable tableData found!')
-    return <Redirect to="/" />
-  }
+export default function FunctionalDependencies({
+  selectedTask,
+  isLoading,
+}: Props) {
+  const navigate = useNavigate()
 
-  // Redirect to index if there is no task with the given id
-  if (!task) return <Redirect to="/" />
-
-  const taskKeys = Object.keys(task.tableData[0])
-  const functionalDependencies = task.functionalDependencies
+  useEffect(() => {
+    // Navigate back to selection if the task is neither selected nor loading
+    if (!isLoading && !selectedTask) {
+      navigate('/trainer/')
+    }
+  }, [isLoading, selectedTask])
 
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>()
   const [canNavigate, setCanNavigate] = useState(false)
@@ -43,51 +41,62 @@ export default function FunctionalDependencies() {
   }
 
   return (
-    <div className="space-y-4">
-      {/* Task description */}
-      <TrainerHeader>Funktionale Abhängigkeiten</TrainerHeader>
-      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <Table tableData={tableData} />
-      <TrainerSubtaskDescription>
-        Bestimmen Sie alle funktionalen Abhängigkeiten, indem Sie auf die
-        entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!
-      </TrainerSubtaskDescription>
+    <>
+      {isLoading || !selectedTask ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="space-y-4">
+          {/* Task description */}
+          <TrainerHeader>Funktionale Abhängigkeiten</TrainerHeader>
+          <TrainerTaskDescription>
+            {selectedTask.description}
+          </TrainerTaskDescription>
+          <Table
+            tableData={
+              // Use regular tabledata or use special firstNF data if task was not in the first NF
+              selectedTask.hasViolatingColumns &&
+              selectedTask.firstNormalFormTableData
+                ? selectedTask.firstNormalFormTableData
+                : selectedTask.tableData
+            }
+          />
+          <TrainerSubtaskDescription>
+            Bestimmen Sie alle funktionalen Abhängigkeiten, indem Sie auf die
+            entsprechenden Spalten (Primärschlüssel und abhängige Spalten)
+            klicken!
+          </TrainerSubtaskDescription>
 
-      {/* Task-specific response handler */}
-      <AssociationResponseHandler
-        keys={taskKeys}
-        associationsSolutions={functionalDependencies}
-        responseHandler={handleResponse}
-        disabled={canNavigate}
-      />
+          {/* Task-specific response handler */}
+          <AssociationResponseHandler
+            keys={Object.keys(selectedTask.tableData[0])}
+            associationsSolutions={selectedTask.functionalDependencies}
+            responseHandler={handleResponse}
+            disabled={canNavigate}
+          />
 
-      {/* Feedback */}
-      {isCorrect !== undefined && (
-        <FeedbackElement isCorrect={isCorrect} />
+          {/* Feedback */}
+          {isCorrect !== undefined && <FeedbackElement isCorrect={isCorrect} />}
+
+          {/* Solution container */}
+          {isCorrect !== undefined && (
+            <SampleSolution onClick={() => setCanNavigate(true)}>
+              {selectedTask.functionalDependencies.map((dependency, index) => {
+                const dependencyString = `${dependency.primaryKeys.join(
+                  ', '
+                )} ➔ ${dependency.columns.join(', ')}`
+                return <p key={index}>{dependencyString}</p>
+              })}
+            </SampleSolution>
+          )}
+
+          {/* Navigation */}
+          <PrevNextNavigation
+            prev={`/trainer/firstNormalForm`}
+            next={`/trainer/primaryKeys`}
+            nextIsEnabled={canNavigate}
+          />
+        </div>
       )}
-
-      {/* Solution container */}
-      {isCorrect !== undefined && (
-        <SampleSolution onClick={() => setCanNavigate(true)}>
-          {functionalDependencies.map((dependency, index) => {
-            const dependencyString = `${dependency.primaryKeys.join(
-              ', '
-            )} ➔ ${dependency.columns.join(', ')}`
-            return <p key={index}>{dependencyString}</p>
-          })}
-        </SampleSolution>
-      )}
-
-      {/* Navigation */}
-      <PrevNextNavigation
-        prev={`/tasks/${id}/firstNormalForm`}
-        next={`/tasks/${id}/primaryKeys`}
-        nextIsEnabled={canNavigate}
-      />
-    </div>
+    </>
   )
-}
-
-interface ParamTypes {
-  id: string
 }

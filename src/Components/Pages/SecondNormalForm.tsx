@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Redirect, useParams } from 'react-router'
+import React, { useEffect, useState } from 'react'
 import AssociationResponseHandler from '../UI/AssociationResponseHandler'
 import HintContainer from '../UI/HintContainer'
 import PrevNextNavigation from '../UI/PrevNextNavigation'
@@ -8,33 +7,28 @@ import TrainerHeader from '../UI/TrainerHeader'
 import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import Table from '../UI/Table'
-import tasks from '../../Tasks'
 import FeedbackElement from '../UI/FeedbackElement'
+import { Task } from '../../Types/Task'
+import { useNavigate } from 'react-router-dom'
 
-interface ParamTypes {
-  id: string
+interface Props {
+  selectedTask: Task | undefined
+  isLoading: boolean
 }
 
-export default function SecondNormalForm() {
-  // Get task from url param
-  const { id } = useParams<ParamTypes>()
-  const task = tasks.find((task) => task.id === Number(id))
-  const tableData = task?.hasViolatingColumns
-    ? task?.firstNormalFormTableData
-    : task?.tableData
+export default function SecondNormalForm({ selectedTask, isLoading }: Props) {
+  const navigate = useNavigate()
 
-  // Throw error and redirect back if an error occurs
-  if (!tableData) {
-    console.error('No suitable tableData found!')
-    return <Redirect to="/" />
-  }
+  useEffect(() => {
+    // Navigate back to selection if the task is neither selected nor loading
+    if (!isLoading && !selectedTask) {
+      navigate('/trainer/')
+    }
+  }, [isLoading, selectedTask])
 
-  // Redirect to index if there is no task with the given id
-  if (!task) return <Redirect to="/" />
-
-  // Task Variables
-  const taskKeys = Object.keys(task.tableData[0])
-  const associations = task.secondNormalForm
+  // // Task Variables
+  // const taskKeys = Object.keys(task.tableData[0])
+  // const associations = task.secondNormalForm
 
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>()
   const [canNavigate, setCanNavigate] = useState(false)
@@ -49,52 +43,67 @@ export default function SecondNormalForm() {
   }
 
   return (
-    <div className="space-y-4">
-      {/* Task description */}
-      <TrainerHeader>Zweite Normalform</TrainerHeader>
-      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <Table tableData={tableData} />
-      <TrainerSubtaskDescription>
-        Bringen Sie das Schema in die zweite Normalform, indem Sie auf die
-        entsprechenden Spalten (Primärschlüssel und abhängige Spalten) klicken!
-      </TrainerSubtaskDescription>
+    <>
+      {isLoading || !selectedTask ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="space-y-4">
+          {/* Task description */}
+          <TrainerHeader>Zweite Normalform</TrainerHeader>
+          <TrainerTaskDescription>
+            {selectedTask.description}
+          </TrainerTaskDescription>
+          <Table
+            tableData={
+              // Use regular tabledata or use special firstNF data if task was not in the first NF
+              selectedTask.hasViolatingColumns &&
+              selectedTask.firstNormalFormTableData
+                ? selectedTask.firstNormalFormTableData
+                : selectedTask.tableData
+            }
+          />
+          <TrainerSubtaskDescription>
+            Bringen Sie das Schema in die zweite Normalform, indem Sie auf die
+            entsprechenden Spalten (Primärschlüssel und abhängige Spalten)
+            klicken!
+          </TrainerSubtaskDescription>
 
-      {/* Task-specific response handler */}
-      <AssociationResponseHandler
-        keys={taskKeys}
-        associationsSolutions={associations}
-        responseHandler={handleResponse}
-        disabled={canNavigate}
-      />
+          {/* Task-specific response handler */}
+          <AssociationResponseHandler
+            keys={Object.keys(selectedTask.tableData[0])}
+            associationsSolutions={selectedTask.secondNormalForm}
+            responseHandler={handleResponse}
+            disabled={canNavigate}
+          />
 
-      {/* Feedback */}
-      {isCorrect !== undefined && (
-        <FeedbackElement isCorrect={isCorrect} />
+          {/* Feedback */}
+          {isCorrect !== undefined && <FeedbackElement isCorrect={isCorrect} />}
+
+          <HintContainer
+            functionalDependencies={selectedTask.functionalDependencies}
+            primaryKeys={selectedTask.primaryKeys}
+          />
+
+          {/* Solution container */}
+          {isCorrect !== undefined && (
+            <SampleSolution onClick={() => setCanNavigate(true)}>
+              {selectedTask.secondNormalForm.map((dependency, index) => {
+                const dependencyString = `${dependency.primaryKeys.join(
+                  ', '
+                )} ➔ ${dependency.columns.join(', ')}`
+                return <p key={index}>{dependencyString}</p>
+              })}
+            </SampleSolution>
+          )}
+
+          {/* Navigation */}
+          <PrevNextNavigation
+            prev={`/trainer/functionalDependencyTypes`}
+            next={`/trainer/checkThirdNormalForm`}
+            nextIsEnabled={canNavigate}
+          />
+        </div>
       )}
-
-      <HintContainer
-        functionalDependencies={task.functionalDependencies}
-        primaryKeys={task.primaryKeys}
-      />
-
-      {/* Solution container */}
-      {isCorrect !== undefined && (
-        <SampleSolution onClick={() => setCanNavigate(true)}>
-          {task.secondNormalForm.map((dependency, index) => {
-            const dependencyString = `${dependency.primaryKeys.join(
-              ', '
-            )} ➔ ${dependency.columns.join(', ')}`
-            return <p key={index}>{dependencyString}</p>
-          })}
-        </SampleSolution>
-      )}
-
-      {/* Navigation */}
-      <PrevNextNavigation
-        prev={`/tasks/${id}/functionalDependencyTypes`}
-        next={`/tasks/${id}/checkThirdNormalForm`}
-        nextIsEnabled={canNavigate}
-      />
-    </div>
+    </>
   )
 }

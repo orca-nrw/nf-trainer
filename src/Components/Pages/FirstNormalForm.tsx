@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { Redirect, useParams } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import BooleanResponseHandler from '../UI/BooleanResponseHandler'
 import PrevNextNavigation from '../UI/PrevNextNavigation'
 import SampleSolution from '../UI/SampleSolution'
@@ -7,26 +6,30 @@ import TrainerHeader from '../UI/TrainerHeader'
 import TrainerSubtaskDescription from '../UI/TrainerSubtaskDescription'
 import TrainerTaskDescription from '../UI/TrainerTaskDescription'
 import Table from '../UI/Table'
-import tasks from '../../Tasks'
 import FeedbackElement from '../UI/FeedbackElement'
+import { Task } from '../../Types/Task'
+import { useNavigate } from 'react-router-dom'
 
-export default function FirstNormalForm() {
-  // Get task from url param
-  const { id } = useParams<ParamTypes>()
-  const task = tasks.find((task) => task.id === Number(id))
+interface Props {
+  selectedTask: Task | undefined
+  isLoading: boolean
+}
 
-  // Redirect to index if there is no task with the given id
-  if (!task) return <Redirect to="/" />
+export default function FirstNormalForm({ selectedTask, isLoading }: Props) {
+  const navigate = useNavigate()
 
-  const nextPage = task.hasViolatingColumns
-    ? `/tasks/${id}/violatingColumns`
-    : `/tasks/${id}/functionalDependencies`
+  useEffect(() => {
+    // Navigate back to selection if the task is neither selected nor loading
+    if (!isLoading && !selectedTask) {
+      navigate('/trainer/')
+    }
+  }, [isLoading, selectedTask])
 
   const [isCorrect, setIsCorrect] = useState<boolean | undefined>()
   const [canNavigate, setCanNavigate] = useState(false)
 
   function handleResponse(response: boolean) {
-    if (response !== task?.hasViolatingColumns) {
+    if (response !== selectedTask?.hasViolatingColumns) {
       setIsCorrect(true)
       setCanNavigate(true)
     } else {
@@ -35,43 +38,47 @@ export default function FirstNormalForm() {
   }
 
   return (
-    <div className="space-y-4">
-      {/* Task description */}
-      <TrainerHeader>Erste Normalform</TrainerHeader>
-      <TrainerTaskDescription>{task.description}</TrainerTaskDescription>
-      <Table tableData={task.tableData} />
-      <TrainerSubtaskDescription>
-        Befindet sich die Tabelle in der ersten Normalform?
-      </TrainerSubtaskDescription>
+    <>
+      {isLoading || !selectedTask ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="space-y-4">
+          {/* Task description */}
+          <TrainerHeader>Erste Normalform</TrainerHeader>
+          <TrainerTaskDescription>
+            {selectedTask.description}
+          </TrainerTaskDescription>
+          <Table tableData={selectedTask.tableData} />
+          <TrainerSubtaskDescription>
+            Befindet sich die Tabelle in der ersten Normalform?
+          </TrainerSubtaskDescription>
 
-      {/* Task-specific response handler */}
-      <BooleanResponseHandler
-        disabled={canNavigate}
-        responseHandler={handleResponse}
-      />
+          {/* Task-specific response handler */}
+          <BooleanResponseHandler
+            disabled={canNavigate}
+            responseHandler={handleResponse}
+          />
 
-      {/* Feedback */}
-      {isCorrect !== undefined && (
-        <FeedbackElement isCorrect={isCorrect} />
+          {/* Feedback */}
+          {isCorrect !== undefined && <FeedbackElement isCorrect={isCorrect} />}
+
+          {/* Solution container */}
+          {isCorrect !== undefined && (
+            <SampleSolution onClick={() => setCanNavigate(true)}>
+              {selectedTask.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
+            </SampleSolution>
+          )}
+
+          {/* Navigation */}
+          <PrevNextNavigation
+            prev="/trainer"
+            next={selectedTask?.hasViolatingColumns
+              ? `/trainer/violatingColumns`
+              : `/trainer/functionalDependencies`}
+            nextIsEnabled={canNavigate}
+          />
+        </div>
       )}
-
-      {/* Solution container */}
-      {isCorrect !== undefined && (
-        <SampleSolution onClick={() => setCanNavigate(true)}>
-          {task.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
-        </SampleSolution>
-      )}
-
-      {/* Navigation */}
-      <PrevNextNavigation
-        prev="/tasks"
-        next={nextPage}
-        nextIsEnabled={canNavigate}
-      />
-    </div>
+    </>
   )
-}
-
-interface ParamTypes {
-  id: string
 }

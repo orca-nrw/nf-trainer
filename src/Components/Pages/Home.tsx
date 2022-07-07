@@ -24,7 +24,7 @@ export default function Home() {
         <a href="https://wikis.gm.fh-koeln.de/Datenbanken/Normalform">hier</a>.
       </p>
 
-      <Link to="/tasks">
+      <Link to="/trainer">
         <button
           className="mt-12 px-4 py-2 bg-th-red hover:bg-red-600 text-white text-lg font-semibold border shadow-md rounded-md cursor-pointer"
           type="button"
