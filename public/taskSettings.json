@@ -2,35 +2,35 @@
   "selectedTasks": [
     {
       "title": "Skriptverkauf",
-      "fileName": "aufgabe1"
+      "fileName": "skriptverkauf"
     },
     {
       "title": "Patienten der Arztpraxis",
-      "fileName": "aufgabe2"
+      "fileName": "arztpraxis"
     },
     {
       "title": "Küchen-Großhändler",
-      "fileName": "aufgabe3"
+      "fileName": "kuechenhaendler"
     },
     {
       "title": "Autohändler",
-      "fileName": "aufgabe4"
+      "fileName": "autohaendler"
     },
     {
       "title": "Prüfungsamt",
-      "fileName": "aufgabe5"
+      "fileName": "pruefungsamt"
     },
     {
       "title": "Lebensmittelprüfung",
-      "fileName": "aufgabe6"
+      "fileName": "lebensmittelpruefung"
     },
     {
       "title": "Zimmer im Krankenhaus",
-      "fileName": "aufgabe7"
+      "fileName": "krankenhaus"
     },
     {
       "title": "Autohändler 2",
-      "fileName": "aufgabe8"
+      "fileName": "autohaendler2"
     }
   ]
 }
