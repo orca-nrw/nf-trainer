@@ -16,7 +16,10 @@ interface TaskSettings {
   }[]
 }
 
-export default function TaskSelection({ selectedTaskFileName, setSelectedTaskFileName }: Props) {
+export default function TaskSelection({
+  selectedTaskFileName,
+  setSelectedTaskFileName,
+}: Props) {
   const navigate = useNavigate()
   const { response: taskSettings, isLoading } = useFetch<TaskSettings>(
     './taskSettings.json'
@@ -26,17 +29,17 @@ export default function TaskSelection({ selectedTaskFileName, setSelectedTaskFil
     setSelectedTaskFileName(fileName)
   }
 
+  // Reset selectedFileName to avoid instant navigation
+  useEffect(() => {
+    setSelectedTaskFileName('')
+  })
+
   // Navigate once the filename has been set
   useEffect(() => {
     if (selectedTaskFileName) {
       navigate('/trainer/firstNormalForm')
     }
   }, [selectedTaskFileName])
-
-  // Reset selectedFileName to avoid instant navigation
-  useEffect(() => {
-    setSelectedTaskFileName('')
-  }, [])
 
   return (
     <div className="space-y-8 mb-8">
