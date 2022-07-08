@@ -1,5 +1,4 @@
 {
-  "id": 5,
   "title": "Prüfungsamt",
   "description": "Betrachten Sie die folgende, im Prüfungsamt geführte Tabelle. \n\nDabei stehen die Präfixe P_ für Prüfer, S_ für Studierender und Fak_ für Fakultät. \nAußerdem ist die Fakultätsnummer einer Prüfung zugeordnet, nicht dem Studierenden.",
   "tableData": [
@@ -333,5 +332,13 @@
       "primaryKeys": ["Fak_NR"],
       "columns": ["Dekan", "Fak_Name"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

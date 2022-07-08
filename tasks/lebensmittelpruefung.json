@@ -1,5 +1,4 @@
 {
-  "id": 6,
   "title": "Lebensmittelprüfung",
   "description": "Der Lebensmittelprüfer Dr. Gesund hat für den Gehalt von Lebensmitteln an Vitaminen und Mineralstoffen folgende Relation entwickelt, wobei gilt: \n\nLebensmittel_ID: Eindeutige Nummer für das Lebensmittel. \nSTOFF: Name des Inhaltsstoffs \nMENGE: Gehalt an dem Inhaltsstoff in 100g des Lebensmittels. \nEINHEIT: Einheit für Mengenangaben des Inhaltsstoffs. \n\tDies hängt vom jeweiligen Stoff ab, im Beispiel wird z.B. Vitamin A in mcg angegeben, die anderen Stoffe in mg. \n\tDie Einheit hängt nicht vom Lebensmittel ab. \nEMPFOHLEN: Täglich empfohlene Menge eines Stoffes für einen Menschen \n\nDie Tabelle erscheint zu groß. Können Sie Dr. Gesund helfen, seine redundaten Daten zu verringern?",
   "tableData": [
@@ -378,5 +377,13 @@
       "primaryKeys": ["Lebensmittel_ID", "Stoff"],
       "columns": ["Menge"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

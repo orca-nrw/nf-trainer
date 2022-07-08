@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "title": "Skriptverkauf",
   "description": "In der folgenden Tabelle wird beschrieben, welche Personen in ihren Veranstaltungen Skripte in welcher Anzahl verkaufen.",
   "tableData": [
@@ -167,5 +166,13 @@
       "primaryKeys": ["Veranstaltungsnummer", "Personalnummer", "Skriptnummer"],
       "columns": ["Anzahl"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }
