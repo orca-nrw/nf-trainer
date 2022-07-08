@@ -1,5 +1,4 @@
 {
-  "id": 8,
   "title": "Autohändler 2",
   "description": "Die Autohändlerin Frau Weber möchte ihren Bestand gebrauchter Wagen in einem relationalen Datenbanksystem organisieren. \nDie Analyse ergibt eine ganze Liste zu speichernder Informationen für jedes Fahrzeug, die Frau Weber direkt in eine Tabelle umsetzt. \n\nJedes Fahrzeug ist durch die Fahrzeug_NR identifiziert. \nBei Fahrzeugen des gleichen Modells sind der Hersteller, der Neupreis, der Typ und die PS-Zahl übereinstimmend. \nSofort beginnt sie mit der Erfassung ihrer Daten und erhält die folgende Relation Autos. \n\nDer Präfix H_ steht hier für den Hersteller des Fahrzeugs. \n\nNach kurzer Zeit stellt Frau Weber fest, dass ihr die neue Datenbank nicht so recht Freude machen will - die Datenmodellierung scheint nicht gut durchdacht! \nKönnen Sie Frau Weber helfen?",
   "tableData": [

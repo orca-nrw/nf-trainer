@@ -1,0 +1,61 @@
+{
+  "title": "Title",
+  "description": "Description",
+  "tableData": [
+    {
+      "Column1": "Data",
+      "Column2": "Data"
+    }
+  ],
+  "hasViolatingColumns": true,
+  "violatingColumns": ["BadColumn1"],
+  "firstNormalFormTableData": [
+    {
+      "Column1": "Data",
+      "Column2": "Data"
+    }
+  ],
+  "functionalDependencies": [
+    {
+      "primaryKeys": ["Column1"],
+      "columns": ["Column2"],
+      "type": "voll"
+    }
+  ],
+  "primaryKeys": ["Column1"],
+  "secondNormalForm": [
+    {
+      "primaryKeys": ["Column1"],
+      "columns": ["Column2"]
+    }
+  ],
+  "secondFormTableData": [
+    [
+      {
+        "Column1": "Data",
+        "Column2": "Data"
+      }
+    ],
+    [
+      {
+        "Column3": "Data",
+        "Column4": "Data"
+      }
+    ]
+  ],
+  "alreadyThirdNormalForm": false,
+  "thirdNormalFormSolutions": [
+    {
+      "primaryKeys": ["Column1"],
+      "columns": ["Column2"]
+    }
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
+}

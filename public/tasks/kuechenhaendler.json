@@ -1,5 +1,4 @@
 {
-  "id": 3,
   "title": "Küchen-Großhändler",
   "description": "Ein Großhändler für Küchenartikel hat die Bestellungen seiner Kunden tabellarisch zusammengefasst. \nDabei stehen die Präfixe K_ für Kunden, A_ für Artikel und H_ für Hersteller. \n\nAußerdem gilt: \nDie Kombination Kunde-Artikel kommt in der Tabelle jeweils nur einmal vor, da alte Bestellungen gelöscht werden. \nEin Artikel wird immer nur von einem Hersteller geliefert.",
   "tableData": [

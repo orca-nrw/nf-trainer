@@ -1,5 +1,4 @@
 {
-  "id": 7,
   "title": "Zimmer im Krankenhaus",
   "description": "Betrachten Sie die folgende, in einem Krankenhaus geführte Tabelle, wobei der Arzt und der Pfleger dem Patienten(P_Nr) und einer Krankheit zugeordnet werden. \n\nEin Patient kann mehrere Krankheiten haben. \nDabei stehen die Präfixe S_ für Station, Z_ für Zimmer, P_ für Patient, A_ für Arzt und Pf_ für Pfleger. \n\nDie Anzahl der Betten soll von der SNR und der ZNR abhängen.",
   "tableData": [
