@@ -77,6 +77,7 @@ export default function FunctionalDependencyTypes({
                 ? selectedTask.firstNormalFormTableData
                 : selectedTask.tableData
             }
+            primaryKeys={selectedTask.primaryKeys}
           />
           <div className="flex flex-col items-center space-y-4">
             <TrainerSubtaskDescription>

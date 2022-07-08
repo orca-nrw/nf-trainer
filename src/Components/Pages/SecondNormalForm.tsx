@@ -61,6 +61,7 @@ export default function SecondNormalForm({ selectedTask, isLoading }: Props) {
                 ? selectedTask.firstNormalFormTableData
                 : selectedTask.tableData
             }
+            primaryKeys={selectedTask.primaryKeys}
           />
           <TrainerSubtaskDescription>
             Bringen Sie das Schema in die zweite Normalform, indem Sie auf die

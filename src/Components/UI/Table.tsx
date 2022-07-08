@@ -1,6 +1,17 @@
 import React from 'react'
 
-export default function Table({ tableData }: PropType) {
+interface PropType {
+  tableData: Object[]
+  primaryKeys?: string[]
+}
+
+export default function Table({ tableData, primaryKeys }: PropType) {
+  const columnHeaders = Object.keys(tableData[0])
+  const primaryKeyColumnIndices =
+    primaryKeys
+      ?.filter((key) => columnHeaders.includes(key))
+      .map((key) => columnHeaders.indexOf(key)) || []
+
   return (
     <div className="overflow-x-auto">
       <table className="shadow  w-full">
@@ -9,10 +20,10 @@ export default function Table({ tableData }: PropType) {
             {Object.keys(tableData[0]).map((key) => {
               return (
                 <th
-                  className="bg-gray-100 border text-left px-4 py-2"
+                  className="bg-gray-100 border text-left px-4 py-2 whitespace-nowrap"
                   key={key}
                 >
-                  {key}
+                  {key} {primaryKeys && primaryKeys.includes(key) ? '🔑' : ''}
                 </th>
               )
             })}
@@ -24,7 +35,15 @@ export default function Table({ tableData }: PropType) {
               <tr className={index % 2 === 1 ? 'bg-gray-50' : ''} key={index}>
                 {Object.values(row).map((entry, index) => {
                   return (
-                    <td className="border px-4 py-2" key={index}>
+                    <td
+                      className={`border px-4 py-2 ${
+                        // Primary Key columns should be highlighted
+                        primaryKeyColumnIndices?.includes(index)
+                          ? 'font-bold italic'
+                          : ''
+                      }`}
+                      key={index}
+                    >
                       {entry}
                     </td>
                   )
@@ -36,8 +55,4 @@ export default function Table({ tableData }: PropType) {
       </table>
     </div>
   )
-}
-
-interface PropType {
-  tableData: Object[]
 }

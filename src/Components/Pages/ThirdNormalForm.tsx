@@ -50,8 +50,13 @@ export default function ThirdNormalForm({ selectedTask, isLoading }: Props) {
         <div className="space-y-4">
           {/* Task description */}
           <TrainerHeader>Dritte Normalform</TrainerHeader>
-          <TrainerTaskDescription>{selectedTask.description}</TrainerTaskDescription>
-          <TableGrid gridData={selectedTask.secondFormTableData} />
+          <TrainerTaskDescription>
+            {selectedTask.description}
+          </TrainerTaskDescription>
+          <TableGrid
+            gridData={selectedTask.secondFormTableData}
+            primaryKeys={selectedTask.primaryKeys}
+          />
           <TrainerSubtaskDescription>
             Bringen Sie das Schema in die dritte Normalform, indem Sie auf die
             entsprechenden Spalten (Primärschlüssel und abhängige Spalten)
@@ -77,12 +82,14 @@ export default function ThirdNormalForm({ selectedTask, isLoading }: Props) {
           {/* Solution container */}
           {isCorrect !== undefined && (
             <SampleSolution onClick={() => setCanNavigate(true)}>
-              {selectedTask.thirdNormalFormSolutions.map((dependency, index) => {
-                const dependencyString = `${dependency.primaryKeys.join(
-                  ', '
-                )} ➔ ${dependency.columns.join(', ')}`
-                return <p key={index}>{dependencyString}</p>
-              })}
+              {selectedTask.thirdNormalFormSolutions.map(
+                (dependency, index) => {
+                  const dependencyString = `${dependency.primaryKeys.join(
+                    ', '
+                  )} ➔ ${dependency.columns.join(', ')}`
+                  return <p key={index}>{dependencyString}</p>
+                }
+              )}
             </SampleSolution>
           )}
 
