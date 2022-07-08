@@ -65,7 +65,9 @@ export default function FunctionalDependencyTypes({
       ) : (
         <div className="space-y-4">
           {/* Task description */}
-          <TrainerHeader>Typen der funktionalen Abhängigkeiten</TrainerHeader>
+          <TrainerHeader>
+            {selectedTask.title} - Typen der funktionalen Abhängigkeiten
+          </TrainerHeader>
           <TrainerTaskDescription>
             {selectedTask.description}
           </TrainerTaskDescription>
@@ -111,12 +113,14 @@ export default function FunctionalDependencyTypes({
             {/* Solution container */}
             {isCorrect !== undefined && (
               <SampleSolution onClick={() => setCanNavigate(true)}>
-                {selectedTask.functionalDependencies.map((dependency, index) => {
-                  const dependencyString = `${dependency.primaryKeys.join(
-                    ', '
-                  )} ➔ ${dependency.columns.join(', ')} : ${dependency.type}`
-                  return <p key={index}>{dependencyString}</p>
-                })}
+                {selectedTask.functionalDependencies.map(
+                  (dependency, index) => {
+                    const dependencyString = `${dependency.primaryKeys.join(
+                      ', '
+                    )} ➔ ${dependency.columns.join(', ')} : ${dependency.type}`
+                    return <p key={index}>{dependencyString}</p>
+                  }
+                )}
               </SampleSolution>
             )}
           </div>

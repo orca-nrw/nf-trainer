@@ -60,7 +60,7 @@ export default function PrimaryKeys({ selectedTask, isLoading }: Props) {
       ) : (
         <div className="space-y-4">
           {/* Task description */}
-          <TrainerHeader>Primärschlüssel</TrainerHeader>
+          <TrainerHeader>{selectedTask.title} - Primärschlüssel</TrainerHeader>
           <TrainerTaskDescription>
             {selectedTask.description}
           </TrainerTaskDescription>

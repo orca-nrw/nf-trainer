@@ -49,7 +49,7 @@ export default function SecondNormalForm({ selectedTask, isLoading }: Props) {
       ) : (
         <div className="space-y-4">
           {/* Task description */}
-          <TrainerHeader>Zweite Normalform</TrainerHeader>
+          <TrainerHeader>{selectedTask.title} - Zweite Normalform</TrainerHeader>
           <TrainerTaskDescription>
             {selectedTask.description}
           </TrainerTaskDescription>

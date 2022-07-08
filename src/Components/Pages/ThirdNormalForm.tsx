@@ -49,7 +49,7 @@ export default function ThirdNormalForm({ selectedTask, isLoading }: Props) {
       ) : (
         <div className="space-y-4">
           {/* Task description */}
-          <TrainerHeader>Dritte Normalform</TrainerHeader>
+          <TrainerHeader>{selectedTask.title} - Dritte Normalform</TrainerHeader>
           <TrainerTaskDescription>
             {selectedTask.description}
           </TrainerTaskDescription>

@@ -47,7 +47,9 @@ export default function FunctionalDependencies({
       ) : (
         <div className="space-y-4">
           {/* Task description */}
-          <TrainerHeader>Funktionale Abhängigkeiten</TrainerHeader>
+          <TrainerHeader>
+            {selectedTask.title} - Funktionale Abhängigkeiten
+          </TrainerHeader>
           <TrainerTaskDescription>
             {selectedTask.description}
           </TrainerTaskDescription>
