@@ -55,7 +55,7 @@ export default function ThirdNormalForm({ selectedTask, isLoading }: Props) {
           <TrainerSubtaskDescription>
             Bringen Sie das Schema in die dritte Normalform, indem Sie auf die
             entsprechenden Spalten (Primärschlüssel und abhängige Spalten)
-            klicken!!
+            klicken.
           </TrainerSubtaskDescription>
 
           {/* Task-specific response handler */}

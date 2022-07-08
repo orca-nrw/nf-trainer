@@ -63,7 +63,7 @@ export default function FunctionalDependencies({
           <TrainerSubtaskDescription>
             Bestimmen Sie alle funktionalen Abhängigkeiten, indem Sie auf die
             entsprechenden Spalten (Primärschlüssel und abhängige Spalten)
-            klicken!
+            klicken.
           </TrainerSubtaskDescription>
 
           {/* Task-specific response handler */}

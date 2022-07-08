@@ -75,7 +75,8 @@ export default function PrimaryKeys({ selectedTask, isLoading }: Props) {
           />
           <div className="flex flex-col items-center space-y-4">
             <TrainerSubtaskDescription>
-              Bestimmen Sie alle eindeutigen Schlüssel!
+              Bestimmen Sie alle Schlüsselattribute für einen eindeutigen
+              Schlüssel.
             </TrainerSubtaskDescription>
 
             {/* Task-specific response handler */}

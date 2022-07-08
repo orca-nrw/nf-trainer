@@ -80,7 +80,7 @@ export default function FunctionalDependencyTypes({
           />
           <div className="flex flex-col items-center space-y-4">
             <TrainerSubtaskDescription>
-              Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus!
+              Wählen Sie den jeweiligen Typ der funktionalen Abhängigkeiten aus.
             </TrainerSubtaskDescription>
 
             {/* Task-specific response handler */}

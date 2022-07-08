@@ -66,7 +66,7 @@ export default function ViolatingColumns({ selectedTask, isLoading }: Props) {
           <Table tableData={selectedTask.tableData} />
           <div className="flex flex-col items-center space-y-4">
             <TrainerSubtaskDescription>
-              Markieren Sie alle Spalten die die erste Normalform verletzen!
+              Markieren Sie alle Spalten die die erste Normalform verletzen.
             </TrainerSubtaskDescription>
 
             {/* Task-specific response handler */}
