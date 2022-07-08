@@ -77,6 +77,12 @@ export default function CheckThirdNormalForm({
           {isCorrect !== undefined && (
             <SampleSolution onClick={() => setCanNavigate(true)}>
               {selectedTask.alreadyThirdNormalForm ? <p>Ja</p> : <p>Nein</p>}
+              { selectedTask.alreadyThirdNormalFormExplanation &&
+                <div>
+                  <h3 className='font-bold'>Begründung:</h3>
+                  <p>{selectedTask.alreadyThirdNormalFormExplanation}</p>
+                </div>
+              }
             </SampleSolution>
           )}
 

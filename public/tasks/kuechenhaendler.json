@@ -259,5 +259,13 @@
       "primaryKeys": ["A_NR"],
       "columns": ["A_Bezeichnung", "H_NR", "A_Preis"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

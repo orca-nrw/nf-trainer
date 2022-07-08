@@ -28,7 +28,7 @@ export default function SampleSolution({ children, onClick }: PropTypes) {
           <h2 className="bg-th-violet text-white rounded-t-lg font-semibold px-3 py-2 select-none">
             Musterlösung
           </h2>
-          <div className="p-2 space-y-4 sm:space-y-0">{children}</div>
+          <div className="p-2 space-y-4">{children}</div>
         </div>
       )}
     </div>

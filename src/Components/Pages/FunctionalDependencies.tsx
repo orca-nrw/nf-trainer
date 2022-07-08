@@ -88,6 +88,12 @@ export default function FunctionalDependencies({
                 )} ➔ ${dependency.columns.join(', ')}`
                 return <p key={index}>{dependencyString}</p>
               })}
+              {selectedTask.functionalDependenciesExplanation && (
+                <div>
+                  <h3 className="font-bold">Begründung:</h3>
+                  <p>{selectedTask.functionalDependenciesExplanation}</p>
+                </div>
+              )}
             </SampleSolution>
           )}
 

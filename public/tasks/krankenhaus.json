@@ -300,5 +300,13 @@
       "primaryKeys": ["P_NR", "Krankheit"],
       "columns": ["A_Name", "A_Vorname", "Pf_Vorname", "Pf_Name"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

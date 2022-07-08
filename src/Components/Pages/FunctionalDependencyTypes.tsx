@@ -121,6 +121,12 @@ export default function FunctionalDependencyTypes({
                     return <p key={index}>{dependencyString}</p>
                   }
                 )}
+                {selectedTask.functionalDependencyTypesExplanation && (
+                  <div>
+                    <h3 className="font-bold">Begründung:</h3>
+                    <p>{selectedTask.functionalDependencyTypesExplanation}</p>
+                  </div>
+                )}
               </SampleSolution>
             )}
           </div>

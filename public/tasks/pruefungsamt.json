@@ -333,5 +333,13 @@
       "primaryKeys": ["Fak_NR"],
       "columns": ["Dekan", "Fak_Name"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

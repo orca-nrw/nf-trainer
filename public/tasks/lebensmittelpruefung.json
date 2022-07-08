@@ -378,5 +378,13 @@
       "primaryKeys": ["Lebensmittel_ID", "Stoff"],
       "columns": ["Menge"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

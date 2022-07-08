@@ -167,5 +167,13 @@
       "primaryKeys": ["Veranstaltungsnummer", "Personalnummer", "Skriptnummer"],
       "columns": ["Anzahl"]
     }
-  ]
+  ],
+  "hasViolatingColumnsExplanation": "",
+  "violatingColumnsExplanation": "",
+  "functionalDependenciesExplanation": "",
+  "primaryKeysExplanation": "",
+  "functionalDependencyTypesExplanation": "",
+  "secondNormalFormExplanation": "",
+  "alreadyThirdNormalFormExplanation": "",
+  "thirdNormalFormExplanation": ""
 }

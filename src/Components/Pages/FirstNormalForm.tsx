@@ -66,6 +66,12 @@ export default function FirstNormalForm({ selectedTask, isLoading }: Props) {
           {isCorrect !== undefined && (
             <SampleSolution onClick={() => setCanNavigate(true)}>
               {selectedTask.hasViolatingColumns ? <p>Nein</p> : <p>Ja</p>}
+              { selectedTask.hasViolatingColumnsExplanation &&
+                <div>
+                  <h3 className='font-bold'>Begründung:</h3>
+                  <p>{selectedTask.hasViolatingColumnsExplanation}</p>
+                </div>
+              }
             </SampleSolution>
           )}
 

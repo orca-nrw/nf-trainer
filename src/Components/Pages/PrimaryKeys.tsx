@@ -115,6 +115,12 @@ export default function PrimaryKeys({ selectedTask, isLoading }: Props) {
             {isCorrect !== undefined && (
               <SampleSolution onClick={() => setCanNavigate(true)}>
                 <p>{selectedTask.primaryKeys.join(', ')}</p>
+                {selectedTask.primaryKeysExplanation && (
+                  <div>
+                    <h3 className="font-bold">Begründung:</h3>
+                    <p>{selectedTask.primaryKeysExplanation}</p>
+                  </div>
+                )}
               </SampleSolution>
             )}
           </div>

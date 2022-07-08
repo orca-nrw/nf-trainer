@@ -49,7 +49,9 @@ export default function SecondNormalForm({ selectedTask, isLoading }: Props) {
       ) : (
         <div className="space-y-4">
           {/* Task description */}
-          <TrainerHeader>{selectedTask.title} - Zweite Normalform</TrainerHeader>
+          <TrainerHeader>
+            {selectedTask.title} - Zweite Normalform
+          </TrainerHeader>
           <TrainerTaskDescription>
             {selectedTask.description}
           </TrainerTaskDescription>
@@ -94,6 +96,12 @@ export default function SecondNormalForm({ selectedTask, isLoading }: Props) {
                 )} ➔ ${dependency.columns.join(', ')}`
                 return <p key={index}>{dependencyString}</p>
               })}
+              {selectedTask.secondNormalFormExplanation && (
+                <div>
+                  <h3 className="font-bold">Begründung:</h3>
+                  <p>{selectedTask.secondNormalFormExplanation}</p>
+                </div>
+              )}
             </SampleSolution>
           )}
 

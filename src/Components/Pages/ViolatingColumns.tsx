@@ -95,7 +95,13 @@ export default function ViolatingColumns({ selectedTask, isLoading }: Props) {
             {/* Solution container */}
             {isCorrect !== undefined && (
               <SampleSolution onClick={() => setCanNavigate(true)}>
-                {selectedTask.violatingColumns.join(', ')}
+                <p>{selectedTask.violatingColumns.join(', ')}</p>
+                {selectedTask.violatingColumnsExplanation && (
+                  <div>
+                    <h3 className="font-bold">Begründung:</h3>
+                    <p>{selectedTask.violatingColumnsExplanation}</p>
+                  </div>
+                )}
               </SampleSolution>
             )}
 

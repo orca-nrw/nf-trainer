@@ -90,13 +90,19 @@ export default function ThirdNormalForm({ selectedTask, isLoading }: Props) {
                   return <p key={index}>{dependencyString}</p>
                 }
               )}
+              { selectedTask.thirdNormalFormExplanation &&
+                <div>
+                  <h3 className='font-bold'>Begründung:</h3>
+                  <p>{selectedTask.thirdNormalFormExplanation}</p>
+                </div>
+              }
             </SampleSolution>
           )}
 
           {/* Navigation */}
           <PrevNextNavigation
-            prev={`./checkThirdNormalForm`}
-            next={'/done'}
+            prev={`/trainer/checkThirdNormalForm`}
+            next={'/trainer/done'}
             nextIsEnabled={canNavigate}
           />
         </div>
