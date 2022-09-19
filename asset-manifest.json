@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "./static/css/main.49954015.css",
-    "main.js": "./static/js/main.ef4daecc.js",
+    "main.js": "./static/js/main.f09629c2.js",
     "static/media/sponsor_logo.jpg": "./static/media/sponsor_logo.8d8b6f96328c23ebea57.jpg",
     "static/media/eild_header_logo.png": "./static/media/eild_header_logo.8bf7397206699f809428.png",
     "index.html": "./index.html",
     "main.49954015.css.map": "./static/css/main.49954015.css.map",
-    "main.ef4daecc.js.map": "./static/js/main.ef4daecc.js.map"
+    "main.f09629c2.js.map": "./static/js/main.f09629c2.js.map"
   },
   "entrypoints": [
     "static/css/main.49954015.css",
-    "static/js/main.ef4daecc.js"
+    "static/js/main.f09629c2.js"
   ]
 }
