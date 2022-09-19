@@ -6,7 +6,7 @@ export default function SponsorBar() {
     <div className="bg-white p-4">
       <div className="flex-auto">
         <a
-          href="https://eild.nrw/"
+          href="https://www.dh.nrw/"
           rel="noreferrer"
           target="_blank"
         >
